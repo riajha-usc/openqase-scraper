@@ -78,3 +78,19 @@ def show(candidate_id: int):
     row = db.get(db.connect(), candidate_id)
     if not row:
         raise typer.Exit(code=1)
+    record = dict(row)
+    for key in ("triage_json", "extraction_json"):
+        if record.get(key):
+            record[key] = json.loads(record[key])
+    print(json.dumps(record, indent=2, ensure_ascii=False))
+
+
+@app.command()
+def reset_skipped():
+    """Return skipped records to the queue (the start of a new review session)."""
+    from scraper import db
+    print(f"{db.reset_skipped(db.connect())} records back in the queue")
+
+
+if __name__ == "__main__":
+    app()
