@@ -30,23 +30,61 @@ def _local_path(url: str) -> Path:
     return Path(url[len("file://"):] if url.startswith("file://") else url)
 
 
-def fetch_html(url: str) -> str:
-    if is_local(url):
-        try:
-            return _local_path(url).read_text(encoding="utf-8", errors="replace")
-        except OSError as e:
-            raise FetchError(f"{url}: {e}") from e
+def _get(url: str) -> httpx.Response:
     try:
         response = httpx.get(
             url,
-            headers={"User-Agent": USER_AGENT, "Accept": "text/html,application/xhtml+xml,*/*;q=0.8"},
+            headers={"User-Agent": USER_AGENT, "Accept": "text/html,application/xhtml+xml,application/pdf,*/*;q=0.8"},
             follow_redirects=True,
             timeout=FETCH_TIMEOUT,
         )
         response.raise_for_status()
     except httpx.HTTPError as e:
         raise FetchError(f"{url}: {e}") from e
-    return response.text
+    return response
+
+
+def fetch_html(url: str) -> str:
+    if is_local(url):
+        try:
+            return _local_path(url).read_text(encoding="utf-8", errors="replace")
+        except OSError as e:
+            raise FetchError(f"{url}: {e}") from e
+    return _get(url).text
+
+
+def pdf_to_text(data: bytes) -> str:
+    """Text of a PDF (papers, reports). Page by page so one broken page does not lose the rest."""
+    import io
+    from pypdf import PdfReader
+    try:
+        reader = PdfReader(io.BytesIO(data))
+        pages = []
+        for page in reader.pages:
+            try:
+                pages.append(page.extract_text() or "")
+            except Exception:  # noqa: BLE001 - keep going on a malformed page
+                continue
+    except Exception as e:  # noqa: BLE001
+        raise FetchError(f"could not read PDF: {e}") from e
+    return re.sub(r"[ \t]+", " ", "\n".join(pages)).strip()
+
+
+def full_text_url(html: str, url: str) -> str | None:
+    """Where the full paper lives, for scholarly landing pages that only show an abstract.
+
+    Publishers (arXiv, AISeL, Springer, IEEE, ACM...) put the PDF in a citation_pdf_url meta tag.
+    arXiv abstract pages fall back to the constructed /pdf/ URL.
+    """
+    for tag in re.findall(r"<meta\b[^>]*>", html, re.I):
+        if re.search(r"""name\s*=\s*["'][\w.:-]*citation_pdf_url["']""", tag, re.I):
+            content = re.search(r"""content\s*=\s*["']([^"']+)["']""", tag, re.I)
+            if content:
+                return htmllib.unescape(content.group(1))
+    arxiv = re.match(r"https?://arxiv\.org/abs/([\w.\-/]+)", url)
+    if arxiv:
+        return f"https://arxiv.org/pdf/{arxiv.group(1)}"
+    return None
 
 
 def title_of(html: str) -> str:
