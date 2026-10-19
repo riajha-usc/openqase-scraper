@@ -35,6 +35,11 @@
   .runbar { display:flex; gap:8px; margin:0 0 12px; }
   .runbar input[type=url] { flex:1; font:inherit; padding:8px; border:1px solid var(--line); border-radius:6px; }
   .runbar select { font:inherit; padding:8px; border:1px solid var(--line); border-radius:6px; background:#fff; }
+  .result-head { display:flex; gap:10px; align-items:baseline; margin-bottom:6px; }
+  .result-head .status { font-family: ui-monospace, Menlo, monospace; font-weight:600; }
+  ul.evidence { margin:4px 0 0; padding-left:20px; }
+  ul.evidence li { margin:4px 0; line-height:1.45; }
+  .pass { color:var(--good); } .fail { color:var(--bad); }
   .ok { background:#e6f4ea; border:1px solid #b7e1c1; border-radius:6px; padding:8px 12px; font-size:13px; margin:0 0 12px; }
 </style>
 </head>
@@ -51,7 +56,22 @@
     </select>
     <button>Run agent</button>
   </form>
-  {% if message %}<div class="{{ 'ok' if message.startswith('queued') else 'warn' }}">{{ message }}</div>{% endif %}
+  {% if result %}
+  <div class="{{ 'ok' if result.status == 'queued' else 'warn' }}">
+    <div class="result-head">
+      <span class="status">{{ result.status }}</span>
+      {% if result.title %}<span>{{ result.title }}</span>{% endif %}
+      {% if result.status == 'already_seen' %}<span>this URL is already in the database</span>{% endif %}
+    </div>
+    {% if result.lines %}
+    <ul class="evidence">
+      {% for line in result.lines %}
+      <li>{% if line.passed is true %}<b class="pass">PASS</b>{% elif line.passed is false %}<b class="fail">FAIL</b>{% endif %} <b>{{ line.test }}:</b> {{ line.evidence }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </div>
+  {% endif %}
   {% if error %}<div class="error">{{ error }}</div>{% endif %}
   {% if not record %}
     <div class="card empty">Nothing left to review. Run <code>python cli.py discover</code> to find more candidates.</div>
@@ -73,8 +93,12 @@
       Source: <a href="{{ record.url }}" target="_blank" rel="noopener">{{ record.url }}</a><br>
       {{ record.source_name }} · {{ record.source_domain }} · {{ record.year or "year unknown" }} · agent confidence {{ "%.0f"|format(record.extraction.confidence * 100) }}%
     </div>
-    <details><summary>Page excerpt and triage reasoning</summary>
-      <pre>{{ record.triage.reasoning }}</pre>
+    <details><summary>Triage evidence and page excerpt</summary>
+      <ul class="evidence">
+        {% for line in record.evidence %}
+        <li>{% if line.passed is true %}<b class="pass">PASS</b>{% elif line.passed is false %}<b class="fail">FAIL</b>{% endif %} <b>{{ line.test }}:</b> {{ line.evidence }}</li>
+        {% endfor %}
+      </ul>
       <pre>{{ record.text_excerpt }}</pre>
     </details>
     <div class="actions">

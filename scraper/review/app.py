@@ -33,7 +33,7 @@ def _conn():
 
 
 @app.get("/", response_class=HTMLResponse)
-def card(request: Request, error: Optional[str] = None, message: Optional[str] = None):
+def card(request: Request, error: Optional[str] = None, result: Optional[str] = None):
     conn = _conn()
     try:
         row = db.next_queued(conn, include_skipped=INCLUDE_SKIPPED)
@@ -42,10 +42,23 @@ def card(request: Request, error: Optional[str] = None, message: Optional[str] =
         if record:
             record["extraction"] = json.loads(record["extraction_json"] or "{}")
             record["triage"] = json.loads(record["triage_json"] or "{}")
+            record["evidence"] = _evidence_from(record["triage"])
     finally:
         conn.close()
+    try:
+        run_result = json.loads(result) if result else None
+    except ValueError:
+        run_result = None
     return templates.TemplateResponse(request, "card.html",
-                                      {"record": record, "stats": stats, "error": error, "message": message})
+                                      {"record": record, "stats": stats, "error": error, "result": run_result})
+
+
+def _evidence_from(triage: dict) -> list[dict]:
+    """Per-test lines for display; falls back to the old single-paragraph reasoning for older rows."""
+    if "named_organisation_evidence" in triage:
+        from ..schemas import TriageResult
+        return TriageResult.model_validate(triage).evidence_lines()
+    return [{"test": "Reasoning", "passed": None, "evidence": triage.get("reasoning", "")}] if triage else []
 
 
 @app.post("/run")
@@ -55,13 +68,15 @@ def run_url(url: str = Form(...), provenance: Optional[int] = Form(None)):
     if not url.startswith(("http://", "https://")):
         return RedirectResponse("/?error=Enter+a+full+http(s)+URL", status_code=303)
     final = _get_runner().process(Seed(url=url, source_name="manual", provenance=provenance or None))
-    if final.get("already_seen"):
-        text = "Already seen: this URL is in the database"
-    else:
-        status = final.get("status", "unknown")
-        detail = final.get("reason") or (final.get("extraction") or {}).get("title") or ""
-        text = f"{status}: {detail}"[:400]
-    return RedirectResponse(f"/?message={quote(text)}", status_code=303)
+    result = {"url": url, "status": "already_seen" if final.get("already_seen") else final.get("status", "unknown"),
+              "title": (final.get("extraction") or {}).get("title"), "lines": []}
+    triage = final.get("triage")
+    if triage:
+        from ..schemas import TriageResult
+        result["lines"] = TriageResult.model_validate(triage).evidence_lines()
+    if final.get("status") in ("extract_failed", "fetch_failed", "duplicate", "llm_error"):
+        result["lines"].append({"test": "Reason", "passed": None, "evidence": final.get("reason", "")})
+    return RedirectResponse(f"/?result={quote(json.dumps(result))}", status_code=303)
 
 
 @app.post("/decide")
