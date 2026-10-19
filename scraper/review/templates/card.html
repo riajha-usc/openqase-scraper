@@ -32,6 +32,10 @@
   details { margin-top:12px; font-size:13px; color:var(--muted); }
   pre { white-space:pre-wrap; font:12px/1.4 ui-monospace, Menlo, monospace; background:#f6f6f6; padding:8px; border-radius:6px; }
   .empty { text-align:center; color:var(--muted); padding:48px 0; }
+  .runbar { display:flex; gap:8px; margin:0 0 12px; }
+  .runbar input[type=url] { flex:1; font:inherit; padding:8px; border:1px solid var(--line); border-radius:6px; }
+  .runbar select { font:inherit; padding:8px; border:1px solid var(--line); border-radius:6px; background:#fff; }
+  .ok { background:#e6f4ea; border:1px solid #b7e1c1; border-radius:6px; padding:8px 12px; font-size:13px; margin:0 0 12px; }
 </style>
 </head>
 <body>
@@ -40,6 +44,14 @@
     Queue: <b>{{ stats.queued }}</b> queued · {{ stats.approved }} approved · {{ stats.rejected }} rejected · {{ stats.skipped }} skipped · {{ stats.duplicate }} duplicate
     · agent dropped {{ stats.triaged_out + stats.extract_failed + stats.fetch_failed }}
   </div>
+  <form method="post" action="/run" class="runbar" onsubmit="this.querySelector('button').disabled=true;this.querySelector('button').textContent='Running…'">
+    <input type="url" name="url" placeholder="Paste a page URL to run the agent on it" required>
+    <select name="provenance" title="Provenance override (optional)">
+      <option value="">auto provenance</option><option value="3">3 first-party</option><option value="2">2 specialist</option><option value="1">1 general</option>
+    </select>
+    <button>Run agent</button>
+  </form>
+  {% if message %}<div class="{{ 'ok' if message.startswith('queued') else 'warn' }}">{{ message }}</div>{% endif %}
   {% if error %}<div class="error">{{ error }}</div>{% endif %}
   {% if not record %}
     <div class="card empty">Nothing left to review. Run <code>python cli.py discover</code> to find more candidates.</div>
