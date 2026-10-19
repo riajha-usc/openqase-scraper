@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OpenQase review queue</title>
+<style>
+  :root { --ink:#1a1a1a; --muted:#666; --line:#e2e2e2; --bg:#fafafa; --accent:#2a5bd7; --good:#1e8e3e; --bad:#c5221f; }
+  body { margin:0; font:15px/1.5 system-ui, -apple-system, Segoe UI, sans-serif; color:var(--ink); background:var(--bg); }
+  main { max-width:720px; margin:32px auto; padding:0 16px; }
+  .stats { color:var(--muted); font-size:13px; margin-bottom:16px; }
+  .stats b { color:var(--ink); }
+  .card { background:#fff; border:1px solid var(--line); border-radius:10px; padding:24px; }
+  .badge { display:inline-block; font-size:12px; font-weight:600; padding:2px 8px; border-radius:999px; border:1px solid var(--line); background:#f3f3f3; margin-left:8px; vertical-align:middle; }
+  .badge.p3 { background:#e6f4ea; color:var(--good); border-color:#b7e1c1; }
+  .badge.p2 { background:#fef7e0; color:#8a6d00; border-color:#f5e6a8; }
+  .badge.p1 { background:#fce8e6; color:var(--bad); border-color:#f6c6c3; }
+  h1 { font-size:20px; margin:0 0 4px; }
+  h2 { font-size:15px; color:var(--muted); font-weight:500; margin:0 0 16px; }
+  dl { margin:0 0 16px; }
+  dt { font-size:12px; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); margin-top:12px; }
+  dd { margin:2px 0 0; }
+  .meta { font-size:13px; color:var(--muted); border-top:1px solid var(--line); padding-top:12px; }
+  .meta a { color:var(--accent); word-break:break-all; }
+  .warn { background:#fef7e0; border:1px solid #f5e6a8; border-radius:6px; padding:8px 12px; font-size:13px; margin:12px 0; }
+  .error { background:#fce8e6; border:1px solid #f6c6c3; border-radius:6px; padding:8px 12px; font-size:13px; margin:0 0 12px; }
+  .actions { display:flex; gap:8px; flex-wrap:wrap; margin-top:20px; align-items:flex-start; }
+  button { font:inherit; padding:8px 16px; border-radius:6px; border:1px solid var(--line); background:#fff; cursor:pointer; }
+  button.approve { background:var(--good); color:#fff; border-color:var(--good); }
+  button.reject { background:var(--bad); color:#fff; border-color:var(--bad); }
+  input[type=text] { font:inherit; padding:8px; border:1px solid var(--line); border-radius:6px; width:260px; }
+  details { margin-top:12px; font-size:13px; color:var(--muted); }
+  pre { white-space:pre-wrap; font:12px/1.4 ui-monospace, Menlo, monospace; background:#f6f6f6; padding:8px; border-radius:6px; }
+  .empty { text-align:center; color:var(--muted); padding:48px 0; }
+</style>
+</head>
+<body>
+<main>
+  <div class="stats">
+    Queue: <b>{{ stats.queued }}</b> queued · {{ stats.approved }} approved · {{ stats.rejected }} rejected · {{ stats.skipped }} skipped · {{ stats.duplicate }} duplicate
+    · agent dropped {{ stats.triaged_out + stats.extract_failed + stats.fetch_failed }}
+  </div>
+  {% if error %}<div class="error">{{ error }}</div>{% endif %}
+  {% if not record %}
+    <div class="card empty">Nothing left to review. Run <code>python cli.py discover</code> to find more candidates.</div>
+  {% else %}
+  <div class="card">
+    <h1>{{ record.organisation or "Unknown organisation" }}
+      <span class="badge p{{ record.provenance }}">provenance {{ record.provenance }}</span>
+    </h1>
+    <h2>{{ record.problem }}</h2>
+    {% if record.possible_duplicate_of %}
+      <div class="warn">Possible duplicate of published case study <b>{{ record.possible_duplicate_of }}</b>. Check before approving.</div>
+    {% endif %}
+    <dl>
+      <dt>How</dt><dd>{{ record.method }}</dd>
+      <dt>Outcome</dt><dd>{{ record.outcome }}</dd>
+      {% if record.extraction.notes %}<dt>Reviewer notes from the agent</dt><dd>{{ record.extraction.notes }}</dd>{% endif %}
+    </dl>
+    <div class="meta">
+      Source: <a href="{{ record.url }}" target="_blank" rel="noopener">{{ record.url }}</a><br>
+      {{ record.source_name }} · {{ record.source_domain }} · {{ record.year or "year unknown" }} · agent confidence {{ "%.0f"|format(record.extraction.confidence * 100) }}%
+    </div>
+    <details><summary>Page excerpt and triage reasoning</summary>
+      <pre>{{ record.triage.reasoning }}</pre>
+      <pre>{{ record.text_excerpt }}</pre>
+    </details>
+    <div class="actions">
+      <form method="post" action="/decide">
+        <input type="hidden" name="candidate_id" value="{{ record.id }}">
+        <button class="approve" name="action" value="approve">Approve</button>
+        <button name="action" value="skip">Skip</button>
+      </form>
+      <form method="post" action="/decide">
+        <input type="hidden" name="candidate_id" value="{{ record.id }}">
+        <input type="text" name="reason" placeholder="Rejection reason (required)" required>
+        <button class="reject" name="action" value="reject">Reject</button>
+      </form>
+    </div>
+  </div>
