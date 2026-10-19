@@ -78,3 +78,17 @@ def discover_html(source: dict, limit: int) -> list[Seed]:
         if link.rstrip("/") == source["url"].rstrip("/"):
             continue
         seeds.append(Seed(url=link, source_name=source["name"], provenance=source.get("provenance")))
+        if len(seeds) >= limit:
+            break
+    return seeds
+
+
+def discover_source(source: dict, limit: int = 20) -> list[Seed]:
+    kind = source.get("type", "html")
+    if kind == "arxiv":
+        return discover_arxiv(source, limit)
+    if kind == "rss":
+        return discover_rss(source, limit)
+    if kind == "html":
+        return discover_html(source, limit)
+    raise ValueError(f"unknown source type {kind!r} for {source['name']}")
