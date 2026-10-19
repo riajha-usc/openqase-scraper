@@ -89,18 +89,44 @@ def _parse_openai_compatible(system: str, user: str, schema: Type[T], max_tokens
     raise RuntimeError(f"Model output did not match {schema.__name__}: {last_error}")
 
 
-def _with_rate_limit_backoff(call, attempts: int = 8):
-    """Free tiers meter tokens per minute; wait out a 429 instead of failing the page."""
+class RequestTooLarge(RuntimeError):
+    pass
+
+
+def _parse_wait_seconds(message: str) -> float | None:
+    """Groq writes 'try again in 442.5ms', '16.2s', '1m3.5s' or '2h10m'."""
+    match = re.search(r"try again in ((?:\d+h)?(?:\d+m)?(?:[\d.]+m?s)?)", message)
+    if not match or not match.group(1):
+        return None
+    total = 0.0
+    for value, unit in re.findall(r"([\d.]+)(h|ms|m|s)", match.group(1)):
+        total += float(value) * {"h": 3600, "m": 60, "s": 1, "ms": 0.001}[unit]
+    return total or None
+
+
+def _with_rate_limit_backoff(call, attempts: int = 6):
+    """Free tiers meter tokens per minute; wait out a 429 instead of failing the page.
+
+    A request whose own size exceeds the per-minute limit can never succeed, so that case
+    raises at once with advice instead of retrying.
+    """
     from openai import RateLimitError
     for attempt in range(attempts):
         try:
             return call()
         except RateLimitError as e:
+            message = str(e)
+            sizes = re.search(r"Limit (\d+), Used (\d+), Requested (\d+)", message)
+            if sizes and int(sizes.group(3)) > int(sizes.group(1)):
+                raise RequestTooLarge(
+                    f"This request needs {sizes.group(3)} tokens but the provider allows {sizes.group(1)} per minute. "
+                    "Lower OQ_MAX_PAGE_CHARS in .env.local (e.g. 12000) or use a provider with a higher limit.") from e
             if attempt == attempts - 1:
                 raise
-            match = re.search(r"try again in ([\d.]+)(ms|s)", str(e))
-            wait = float(match.group(1)) / (1000 if match.group(2) == "ms" else 1) if match else 15.0
-            wait = min(max(wait, 2.0), 90.0) + 1.0
+            wait = _parse_wait_seconds(message) or 15.0
+            if wait > 300:
+                raise RuntimeError(f"Provider rate limit: retry possible in {wait/60:.0f} minutes. {message[:200]}") from e
+            wait = min(max(wait, 2.0), 120.0) + 1.0
             print(f"   rate limited; waiting {wait:.0f}s")
             time.sleep(wait)
 

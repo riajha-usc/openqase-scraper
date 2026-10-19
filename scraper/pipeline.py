@@ -36,6 +36,8 @@ class Runner:
             final = {"url": seed.url, "status": "llm_error", "reason": e.message}
         except anthropic.APIError as e:  # rate limits, 5xx: skip this page, keep the run going; it is not stored, so a rerun retries it
             final = {"url": seed.url, "status": "llm_error", "reason": f"{type(e).__name__}: {e}"}
+        except RuntimeError as e:  # provider limits on the OpenAI-compatible path (request too large, long cooldown)
+            final = {"url": seed.url, "status": "llm_error", "reason": str(e)}
         if not self.quiet:
             status = "already seen" if final.get("already_seen") else final.get("status")
             detail = ""

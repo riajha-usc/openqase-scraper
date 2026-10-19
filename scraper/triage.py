@@ -28,7 +28,7 @@ Be strict and literal. In reasoning, give one line per test with the evidence qu
 
 def triage(page_text: str, url: str) -> TriageResult:
     user = f"URL: {url}\n\nPAGE TEXT:\n{page_text}"
-    return parse(TRIAGE_SYSTEM, user, TriageResult, max_tokens=4000)
+    return parse(TRIAGE_SYSTEM, user, TriageResult, max_tokens=1500)
 
 
 def provenance_score(result: TriageResult, override: Optional[int] = None) -> int:

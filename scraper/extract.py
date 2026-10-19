@@ -19,4 +19,4 @@ Also provide:
 
 def extract(page_text: str, url: str) -> Extraction:
     user = f"URL: {url}\n\nPAGE TEXT:\n{page_text}"
-    return parse(EXTRACT_SYSTEM, user, Extraction, max_tokens=4000)
+    return parse(EXTRACT_SYSTEM, user, Extraction, max_tokens=1800)
