@@ -7,6 +7,8 @@ Two providers, chosen with OQ_PROVIDER:
 """
 import json
 import os
+import re
+import time
 from typing import Type, TypeVar
 
 from pydantic import BaseModel, ValidationError
@@ -57,7 +59,7 @@ def _openai():
         base_url = os.environ.get("OQ_BASE_URL")
         if not base_url:
             raise SystemExit("OQ_PROVIDER=openai_compatible needs OQ_BASE_URL (and OQ_API_KEY) in .env.local")
-        _openai_client = OpenAI(base_url=base_url, api_key=os.environ.get("OQ_API_KEY", "none"))
+        _openai_client = OpenAI(base_url=base_url, api_key=os.environ.get("OQ_API_KEY", "none"), max_retries=2)
     return _openai_client
 
 
@@ -73,10 +75,10 @@ def _parse_openai_compatible(system: str, user: str, schema: Type[T], max_tokens
     messages = [{"role": "system", "content": system_with_schema}, {"role": "user", "content": user}]
     last_error = None
     for _ in range(2):
-        completion = _openai().chat.completions.create(
+        completion = _with_rate_limit_backoff(lambda: _openai().chat.completions.create(
             model=MODEL, messages=messages, max_tokens=max_tokens, temperature=0,
             response_format={"type": "json_object"},
-        )
+        ))
         content = completion.choices[0].message.content or ""
         try:
             return schema.model_validate_json(_strip_fences(content))
@@ -85,6 +87,22 @@ def _parse_openai_compatible(system: str, user: str, schema: Type[T], max_tokens
             messages += [{"role": "assistant", "content": content},
                          {"role": "user", "content": f"That JSON did not validate: {e}. Return a corrected JSON object only."}]
     raise RuntimeError(f"Model output did not match {schema.__name__}: {last_error}")
+
+
+def _with_rate_limit_backoff(call, attempts: int = 8):
+    """Free tiers meter tokens per minute; wait out a 429 instead of failing the page."""
+    from openai import RateLimitError
+    for attempt in range(attempts):
+        try:
+            return call()
+        except RateLimitError as e:
+            if attempt == attempts - 1:
+                raise
+            match = re.search(r"try again in ([\d.]+)(ms|s)", str(e))
+            wait = float(match.group(1)) / (1000 if match.group(2) == "ms" else 1) if match else 15.0
+            wait = min(max(wait, 2.0), 90.0) + 1.0
+            print(f"   rate limited; waiting {wait:.0f}s")
+            time.sleep(wait)
 
 
 def _strip_fences(text: str) -> str:

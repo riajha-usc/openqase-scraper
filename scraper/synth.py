@@ -55,7 +55,26 @@ def _wrap_html(title: str, body: str) -> str:
     return f"<!doctype html><html><head><meta charset='utf-8'><title>{escape(title)}</title></head><body><article><h1>{escape(title)}</h1>\n{paragraphs}\n</article></body></html>\n"
 
 
-def generate(n: int = 5, seed: int = 0, slugs: list[str] | None = None) -> list[dict]:
+def _label(path: Path, slug: str, category: str, source_title: str) -> dict:
+    _, expect_triage, expect_queued = CATEGORIES[category]
+    return {"file": path.name, "url": path.resolve().as_uri(), "slug": slug, "category": category,
+            "expected_triage_pass": expect_triage, "expected_queued": expect_queued, "source_title": source_title}
+
+
+def _labels_from_disk(published: list[dict]) -> list[dict]:
+    """The files on disk are the source of truth; labels.json is rebuilt from them."""
+    titles = {cs["slug"]: cs["title"] for cs in published}
+    saved = {l["file"]: l for l in json.loads(LABELS_FILE.read_text())} if LABELS_FILE.exists() else {}
+    labels = []
+    for path in sorted(SYNTH_DIR.glob("*__*.html")):
+        slug, category = path.stem.rsplit("__", 1)
+        if category not in CATEGORIES:
+            continue
+        labels.append(saved.get(path.name) or _label(path, slug, category, titles.get(slug, slug)))
+    return labels
+
+
+def generate(n: int = 5, seed: int = 0, slugs: list[str] | None = None, force: bool = False) -> list[dict]:
     """Write n case studies x len(CATEGORIES) articles to data/synthetic and return the labels."""
     SYNTH_DIR.mkdir(parents=True, exist_ok=True)
     published = fetch_published()
@@ -64,9 +83,13 @@ def generate(n: int = 5, seed: int = 0, slugs: list[str] | None = None) -> list[
     else:
         rng = random.Random(seed)
         chosen = rng.sample(published, min(n, len(published)))
-    labels: list[dict] = json.loads(LABELS_FILE.read_text()) if LABELS_FILE.exists() else []
+    labels = _labels_from_disk(published)
     existing = {label["file"] for label in labels}
     for case_study in chosen:
+        have = [c for c in CATEGORIES if f"{case_study['slug']}__{c}.html" in existing]
+        if len(have) == len(CATEGORIES) and not force:
+            print(f"== {case_study['slug']}: already generated, skipping")
+            continue
         print(f"== generating {len(CATEGORIES)} articles for {case_study['slug']}")
         result = parse(SYNTH_SYSTEM, _prompt(case_study), SyntheticSet, max_tokens=16000)
         for article in result.articles:
@@ -79,16 +102,9 @@ def generate(n: int = 5, seed: int = 0, slugs: list[str] | None = None) -> list[
             if filename in existing:
                 labels = [label for label in labels if label["file"] != filename]
             _, expect_triage, expect_queued = CATEGORIES[article.category]
-            labels.append({
-                "file": filename,
-                "url": path.resolve().as_uri(),
-                "slug": case_study["slug"],
-                "category": article.category,
-                "expected_triage_pass": expect_triage,
-                "expected_queued": expect_queued,
-                "source_title": case_study["title"],
-            })
+            labels.append(_label(path, case_study["slug"], article.category, case_study["title"]))
             existing.add(filename)
+        LABELS_FILE.write_text(json.dumps(labels, ensure_ascii=False, indent=1))  # save after each case study
     LABELS_FILE.write_text(json.dumps(labels, ensure_ascii=False, indent=1))
     print(f"{len(labels)} labelled articles in {SYNTH_DIR}")
     return labels

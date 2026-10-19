@@ -48,10 +48,11 @@ def review(port: int = 8000, include_skipped: bool = typer.Option(False, help="A
 @app.command()
 def synth(n: int = typer.Option(5, help="Number of published case studies to base articles on"),
           seed: int = 0,
-          slug: Optional[list[str]] = typer.Option(None, help="Specific case study slug(s) instead of a random sample")):
+          slug: Optional[list[str]] = typer.Option(None, help="Specific case study slug(s) instead of a random sample"),
+          force: bool = typer.Option(False, help="Regenerate case studies that already have articles")):
     """Generate labelled synthetic articles from published OpenQase case studies."""
     from scraper.synth import generate
-    generate(n=n, seed=seed, slugs=slug or None)
+    generate(n=n, seed=seed, slugs=slug or None, force=force)
 
 
 @app.command("eval")
