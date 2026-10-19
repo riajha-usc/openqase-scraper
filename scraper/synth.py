@@ -78,3 +78,17 @@ def generate(n: int = 5, seed: int = 0, slugs: list[str] | None = None) -> list[
             path.write_text(_wrap_html(article.title, article.body), encoding="utf-8")
             if filename in existing:
                 labels = [label for label in labels if label["file"] != filename]
+            _, expect_triage, expect_queued = CATEGORIES[article.category]
+            labels.append({
+                "file": filename,
+                "url": path.resolve().as_uri(),
+                "slug": case_study["slug"],
+                "category": article.category,
+                "expected_triage_pass": expect_triage,
+                "expected_queued": expect_queued,
+                "source_title": case_study["title"],
+            })
+            existing.add(filename)
+    LABELS_FILE.write_text(json.dumps(labels, ensure_ascii=False, indent=1))
+    print(f"{len(labels)} labelled articles in {SYNTH_DIR}")
+    return labels
