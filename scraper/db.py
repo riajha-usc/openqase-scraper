@@ -78,3 +78,45 @@ def set_decision(conn: sqlite3.Connection, candidate_id: int, status: str, reaso
     conn.execute(
         "UPDATE candidates SET status = ?, reason = ?, decided_at = ? WHERE id = ?",
         (status, reason, now(), candidate_id),
+    )
+    conn.commit()
+
+
+def get(conn: sqlite3.Connection, candidate_id: int) -> Optional[sqlite3.Row]:
+    return conn.execute("SELECT * FROM candidates WHERE id = ?", (candidate_id,)).fetchone()
+
+
+def next_queued(conn: sqlite3.Connection, include_skipped: bool = False) -> Optional[sqlite3.Row]:
+    """Highest provenance first, then oldest first, so reviewers see the best-sourced records early."""
+    statuses = ("queued", "skipped") if include_skipped else ("queued",)
+    marks = ", ".join("?" for _ in statuses)
+    return conn.execute(
+        f"SELECT * FROM candidates WHERE status IN ({marks}) ORDER BY provenance DESC, discovered_at ASC LIMIT 1",
+        statuses,
+    ).fetchone()
+
+
+def list_status(conn: sqlite3.Connection, status: str, limit: int = 50) -> list[sqlite3.Row]:
+    return conn.execute(
+        "SELECT * FROM candidates WHERE status = ? ORDER BY discovered_at DESC LIMIT ?", (status, limit)
+    ).fetchall()
+
+
+def counts(conn: sqlite3.Connection) -> dict[str, int]:
+    rows = conn.execute("SELECT status, COUNT(*) AS n FROM candidates GROUP BY status").fetchall()
+    result = {s: 0 for s in ALL_STATUSES}
+    result.update({r["status"]: r["n"] for r in rows})
+    return result
+
+
+def reset_skipped(conn: sqlite3.Connection) -> int:
+    cur = conn.execute("UPDATE candidates SET status = 'queued', decided_at = NULL WHERE status = 'skipped'")
+    conn.commit()
+    return cur.rowcount
+
+
+def known_organisations(conn: sqlite3.Connection) -> list[tuple[str, str]]:
+    rows = conn.execute(
+        "SELECT organisation, url FROM candidates WHERE status IN ('queued', 'approved') AND organisation IS NOT NULL"
+    ).fetchall()
+    return [(r["organisation"], r["url"]) for r in rows]
