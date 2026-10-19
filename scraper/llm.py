@@ -78,3 +78,27 @@ def _parse_openai_compatible(system: str, user: str, schema: Type[T], max_tokens
             response_format={"type": "json_object"},
         )
         content = completion.choices[0].message.content or ""
+        try:
+            return schema.model_validate_json(_strip_fences(content))
+        except ValidationError as e:
+            last_error = e
+            messages += [{"role": "assistant", "content": content},
+                         {"role": "user", "content": f"That JSON did not validate: {e}. Return a corrected JSON object only."}]
+    raise RuntimeError(f"Model output did not match {schema.__name__}: {last_error}")
+
+
+def _strip_fences(text: str) -> str:
+    text = text.strip()
+    if text.startswith("```"):
+        text = text.split("\n", 1)[1] if "\n" in text else text[3:]
+        text = text.rsplit("```", 1)[0]
+    return text.strip()
+
+
+# ------------------------------------------------------------------ public
+def parse(system: str, user: str, schema: Type[T], max_tokens: int = 8000) -> T:
+    if PROVIDER == "anthropic":
+        return _parse_anthropic(system, user, schema, max_tokens)
+    if PROVIDER == "openai_compatible":
+        return _parse_openai_compatible(system, user, schema, max_tokens)
+    raise SystemExit(f"Unknown OQ_PROVIDER {PROVIDER!r}; use anthropic or openai_compatible")
