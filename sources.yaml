@@ -1,0 +1,34 @@
+# Discovery sources. provenance overrides the model's source-type score (3 first-party, 2 specialist, 1 general).
+# type: arxiv queries the arXiv API; type: rss reads a feed; type: html crawls one listing page for article links
+# (link_pattern keeps only paths containing that string).
+sources:
+  - name: arXiv quant-ph applied
+    type: arxiv
+    query: 'cat:quant-ph AND (abs:"case study" OR abs:industrial OR abs:"real-world" OR abs:portfolio OR abs:logistics OR abs:"drug discovery")'
+    max_results: 25
+    provenance: 3
+
+  - name: D-Wave newsroom
+    type: html
+    url: https://www.dwavequantum.com/company/newsroom/
+    link_pattern: /company/newsroom/press-release/
+    provenance: 3
+
+  - name: IonQ resources
+    type: html
+    url: https://ionq.com/resources
+    link_pattern: /resources/
+    provenance: 3
+
+  - name: The Quantum Insider
+    type: rss
+    url: https://thequantuminsider.com/feed/
+    provenance: 2
+
+  - name: Quantum Computing Report
+    type: rss
+    url: https://quantumcomputingreport.com/feed/
+    provenance: 2
+
+  # IBM's and Quantinuum's listing pages are rendered client-side, so a plain crawl finds few article links.
+  # Their individual pages still work with `python cli.py run URL`.
