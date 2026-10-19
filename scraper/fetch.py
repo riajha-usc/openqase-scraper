@@ -111,8 +111,33 @@ def html_to_text(html: str, url: str | None = None) -> str:
 
 
 def fetch_page(url: str) -> Page:
-    html = fetch_html(url)
-    return Page(url=url, title=title_of(html), text=html_to_text(html, url))
+    if is_local(url):
+        path = _local_path(url)
+        if path.suffix.lower() == ".pdf":
+            try:
+                return Page(url=url, title=path.stem, text=pdf_to_text(path.read_bytes())[:MAX_PAGE_CHARS])
+            except OSError as e:
+                raise FetchError(f"{url}: {e}") from e
+        html = fetch_html(url)
+        return Page(url=url, title=title_of(html), text=html_to_text(html, url))
+    response = _get(url)
+    if "application/pdf" in response.headers.get("content-type", "") or response.content[:5] == b"%PDF-":
+        return Page(url=url, title="", text=pdf_to_text(response.content)[:MAX_PAGE_CHARS])
+    html = response.text
+    title = title_of(html)
+    text = html_to_text(html, url)
+    pdf_url = full_text_url(html, url)
+    if pdf_url:
+        # Abstract pages are short; the judgement should be made on the paper itself.
+        try:
+            pdf = _get(pdf_url)
+            if "application/pdf" in pdf.headers.get("content-type", "") or pdf.content[:5] == b"%PDF-":
+                body = pdf_to_text(pdf.content)
+                if len(body) > len(text):
+                    text = (f"{text}\n\n[FULL TEXT from {pdf_url}]\n{body}")[:MAX_PAGE_CHARS]
+        except FetchError:
+            pass  # keep the landing-page text
+    return Page(url=url, title=title, text=text)
 
 
 def extract_links(html: str, base_url: str) -> list[str]:
