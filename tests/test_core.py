@@ -10,7 +10,8 @@ from scraper.triage import provenance_score
 
 
 def test_triage_passes_only_when_all_three_hold():
-    base = dict(organisation="VW", problem="routing", result_summary="9%", source_type="first_party", reasoning="")
+    base = dict(organisation="VW", problem="routing", result_summary="9%", source_type="first_party",
+                named_organisation_evidence="VW named", specific_problem_evidence="routing", work_done_evidence="9% result")
     assert TriageResult(named_organisation=True, specific_problem=True, work_done_with_result=True, **base).passes
     failing = TriageResult(named_organisation=True, specific_problem=True, work_done_with_result=False, **base)
     assert not failing.passes
@@ -18,8 +19,9 @@ def test_triage_passes_only_when_all_three_hold():
 
 
 def test_provenance_override_beats_model_classification():
-    result = TriageResult(named_organisation=True, specific_problem=True, work_done_with_result=True,
-                          source_type="general", reasoning="")
+    result = TriageResult(named_organisation=True, specific_problem=True, work_done_with_result=True, source_type="general",
+                          named_organisation_evidence="a", specific_problem_evidence="b", work_done_evidence="c")
+    assert [e["passed"] for e in result.evidence_lines()] == [True, True, True]
     assert provenance_score(result) == 1
     assert provenance_score(result, override=3) == 3
 
