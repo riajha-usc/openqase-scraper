@@ -78,3 +78,24 @@ def fetch_page(url: str) -> Page:
 
 
 def extract_links(html: str, base_url: str) -> list[str]:
+    """All absolute http(s) links on a listing page, fragments stripped, order preserved."""
+    seen: set[str] = set()
+    links: list[str] = []
+    for href in re.findall(r"""href\s*=\s*["']([^"']+)["']""", html, flags=re.I):
+        absolute, _ = urldefrag(urljoin(base_url, href.strip()))
+        if urlparse(absolute).scheme not in ("http", "https"):
+            continue
+        if absolute not in seen:
+            seen.add(absolute)
+            links.append(absolute)
+    return links
+
+
+def normalize_url(url: str) -> str:
+    """Canonical form used for duplicate checks: lowercase host, no fragment, no trailing slash, no tracking params."""
+    url, _ = urldefrag(url.strip())
+    parsed = urlparse(url)
+    query = "&".join(p for p in parsed.query.split("&") if p and not p.lower().startswith(("utm_", "fbclid", "gclid")))
+    path = parsed.path.rstrip("/") or "/"
+    rebuilt = f"{parsed.scheme.lower()}://{parsed.netloc.lower()}{path}"
+    return f"{rebuilt}?{query}" if query else rebuilt
