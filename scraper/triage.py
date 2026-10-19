@@ -23,7 +23,7 @@ Also classify the source type of the page itself:
 - specialist: specialist quantum press (The Quantum Insider, Quantum Computing Report), consulting firm reports, conference proceedings.
 - general: general tech or business press, aggregators, investor or VC blogs.
 
-Be strict and literal. In reasoning, give one line per test with the evidence quoted or paraphrased from the page. Do not infer work that the page does not describe."""
+Be strict and literal. Fill the three evidence fields with one sentence each, quoting or closely paraphrasing the page. Do not infer work that the page does not describe."""
 
 
 def triage(page_text: str, url: str) -> TriageResult:

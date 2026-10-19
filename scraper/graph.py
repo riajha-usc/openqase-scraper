@@ -65,7 +65,8 @@ def build_graph(conn: sqlite3.Connection, published: list[dict]):
         update: CandidateState = {"triage": result.model_dump(), "provenance": score}
         if not result.passes:
             update["status"] = "triaged_out"
-            update["reason"] = f"failed {', '.join(result.failed_tests())}: {result.reasoning}"
+            lines = [f"{'PASS' if e['passed'] else 'FAIL'} {e['test']}: {e['evidence']}" for e in result.evidence_lines()]
+            update["reason"] = "\n".join(lines)
         return update
 
     def extract_node(state: CandidateState) -> CandidateState:
