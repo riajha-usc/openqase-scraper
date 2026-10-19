@@ -158,6 +158,8 @@ def normalize_url(url: str) -> str:
     """Canonical form used for duplicate checks: lowercase host, no fragment, no trailing slash, no tracking params."""
     url, _ = urldefrag(url.strip())
     parsed = urlparse(url)
+    if parsed.scheme not in ("http", "https"):  # local files (synthetic data, downloaded PDFs) stay as given
+        return url
     query = "&".join(p for p in parsed.query.split("&") if p and not p.lower().startswith(("utm_", "fbclid", "gclid")))
     path = parsed.path.rstrip("/") or "/"
     rebuilt = f"{parsed.scheme.lower()}://{parsed.netloc.lower()}{path}"
