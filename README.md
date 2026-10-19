@@ -40,6 +40,14 @@ python cli.py eval                     # precision / recall of the agent on the 
 pytest                                 # unit tests (no network, no API key)
 ```
 
+## Full text for papers
+
+For scholarly landing pages (arXiv, AISeL, most publishers) the agent follows the `citation_pdf_url`
+tag and judges the full paper, not the abstract. Some publishers block automated PDF downloads
+(AISeL returns 403); for those, download the PDF yourself and run the agent on the file:
+`python cli.py run /path/to/paper.pdf`. Sources that need a login or forbid automation are out of
+scope by design.
+
 ## Statuses
 
 `queued`, `approved`, `rejected`, `duplicate`, `skipped` are the review states from the design.
