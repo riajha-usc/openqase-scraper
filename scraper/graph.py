@@ -78,3 +78,49 @@ def build_graph(conn: sqlite3.Connection, published: list[dict]):
         update["status"] = "queued"
         update["possible_duplicate_of"] = find_possible_duplicate(published, result.who, result.what)
         return update
+
+    def store(state: CandidateState) -> CandidateState:
+        triage_data = state.get("triage") or {}
+        extraction = state.get("extraction") or {}
+        candidate_id = db.upsert_candidate(
+            conn,
+            url=state["url"],
+            source_name=state.get("source_name"),
+            source_domain=urlparse(state["url"]).netloc.lower().removeprefix("www."),
+            provenance=state.get("provenance"),
+            status=state["status"],
+            title=extraction.get("title") or state.get("title"),
+            organisation=extraction.get("who") or triage_data.get("organisation"),
+            problem=extraction.get("what") or triage_data.get("problem"),
+            method=extraction.get("how"),
+            outcome=extraction.get("outcome"),
+            year=extraction.get("year"),
+            triage_json=triage_data or None,
+            extraction_json=extraction or None,
+            text_excerpt=(state.get("text") or "")[:1500],
+            possible_duplicate_of=state.get("possible_duplicate_of"),
+            reason=state.get("reason"),
+        )
+        return {"candidate_id": candidate_id}
+
+    def after_check(state: CandidateState) -> str:
+        if state.get("already_seen"):
+            return END
+        return "store" if state.get("status") else "fetch"
+
+    def continue_or_store(state: CandidateState) -> str:
+        return "store" if state.get("status") else "next"
+
+    graph = StateGraph(CandidateState)
+    graph.add_node("check_url", check_url)
+    graph.add_node("fetch", fetch)
+    graph.add_node("triage", triage_node)
+    graph.add_node("extract", extract_node)
+    graph.add_node("store", store)
+    graph.add_edge(START, "check_url")
+    graph.add_conditional_edges("check_url", after_check, {END: END, "store": "store", "fetch": "fetch"})
+    graph.add_conditional_edges("fetch", continue_or_store, {"store": "store", "next": "triage"})
+    graph.add_conditional_edges("triage", continue_or_store, {"store": "store", "next": "extract"})
+    graph.add_edge("extract", "store")
+    graph.add_edge("store", END)
+    return graph.compile()
