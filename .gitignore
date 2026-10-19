@@ -1,0 +1,32 @@
+# Secrets
+.env
+.env.local
+.env.*.local
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+
+# Generated data (keep the data/ folder itself)
+data/*.db
+data/*.db-journal
+data/openqase_published.json
+data/synthetic/
+data/eval_report.json
+
+# macOS
+.DS_Store
+._*
+
+# Editors and tools
+.idea/
+.vscode/
+*.swp
+.claude/
