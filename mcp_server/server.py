@@ -78,3 +78,16 @@ def get_item(type: str, slug: str) -> dict:
 @server.tool()
 def content_types() -> dict:
     """The content types available on OpenQase and the public page prefix for each."""
+    return {api: {"page_prefix": prefix} for api, (_, prefix) in TYPES.items()}
+
+
+def main(argv: Optional[list[str]] = None) -> None:
+    import argparse
+    parser = argparse.ArgumentParser(description="OpenQase MCP server")
+    parser.add_argument("--http", action="store_true", help="serve over Streamable HTTP instead of stdio")
+    parser.add_argument("--port", type=int, default=8765)
+    args = parser.parse_args(argv)
+    if args.http:
+        server.run(transport="streamable-http", host="127.0.0.1", port=args.port)
+    else:
+        server.run()
