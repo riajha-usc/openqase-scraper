@@ -1,0 +1,80 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>OpenQase scraper and MCP architecture</title>
+<style>
+  body { margin:0; background:#F7F7F2; font-family: "IBM Plex Sans", -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; color:#1B1F3B; }
+  svg text { font-family: inherit; }
+</style></head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="960" viewBox="0 0 1600 960" font-size="18">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#5B6478"/></marker>
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2A5BD7"/></marker>
+    <marker id="arrow-dash" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#8A5A00"/></marker>
+  </defs>
+  <text x="40" y="48" font-size="30" font-weight="700">OpenQase scraper PoC and MCP server: how the pieces fit</text>
+  <text x="40" y="78" font-size="17" fill="#5B6478">Solid arrows: built and running. Dashed: next step, after verification and database access.</text>
+
+  <!-- Row 1: ingestion pipeline -->
+  <rect x="40" y="110" width="1520" height="320" rx="14" fill="#FFFFFF" stroke="#DDE0E6"/>
+  <text x="64" y="142" font-size="15" font-weight="700" fill="#5B6478" letter-spacing="1.5">INGESTION PIPELINE  (python cli.py discover | run URL)</text>
+
+  <!-- Sources -->
+  <rect x="64" y="170" width="220" height="230" rx="12" fill="#F3F4F8" stroke="#C9CDD8"/>
+  <text x="174" y="200" text-anchor="middle" font-weight="700">Sources</text>
+  <text x="174" y="230" text-anchor="middle" font-size="16" fill="#3F4557">arXiv API</text>
+  <text x="174" y="254" text-anchor="middle" font-size="16" fill="#3F4557">RSS feeds (TQI, QCR)</text>
+  <text x="174" y="278" text-anchor="middle" font-size="16" fill="#3F4557">Vendor newsrooms</text>
+  <text x="174" y="302" text-anchor="middle" font-size="16" fill="#3F4557">Pasted URLs, local PDFs</text>
+  <text x="174" y="372" text-anchor="middle" font-size="14" fill="#8B93A7">sources.yaml</text>
+
+  <!-- Agent (LangGraph) -->
+  <rect x="340" y="170" width="640" height="230" rx="12" fill="#E8F0FF" stroke="#2A5BD7" stroke-width="2"/>
+  <text x="660" y="200" text-anchor="middle" font-weight="700" fill="#2A5BD7">Agent: one LangGraph run per candidate</text>
+  <g font-size="15" font-family="Menlo, monospace">
+    <rect x="360" y="222" width="104" height="40" rx="8" fill="#FFFFFF" stroke="#C3D4F7"/><text x="412" y="247" text-anchor="middle">check_url</text>
+    <rect x="484" y="222" width="80" height="40" rx="8" fill="#FFFFFF" stroke="#C3D4F7"/><text x="524" y="247" text-anchor="middle">fetch</text>
+    <rect x="584" y="222" width="120" height="40" rx="8" fill="#2A5BD7" stroke="#2A5BD7"/><text x="644" y="247" text-anchor="middle" fill="#FFFFFF">triage LLM</text>
+    <rect x="724" y="222" width="130" height="40" rx="8" fill="#2A5BD7" stroke="#2A5BD7"/><text x="789" y="247" text-anchor="middle" fill="#FFFFFF">extract LLM</text>
+    <rect x="874" y="222" width="86" height="40" rx="8" fill="#FFFFFF" stroke="#C3D4F7"/><text x="917" y="247" text-anchor="middle">store</text>
+  </g>
+  <g stroke="#5B6478" stroke-width="1.5" fill="none" marker-end="url(#arrow)">
+    <path d="M464 242H482"/><path d="M564 242H582"/><path d="M704 242H722"/><path d="M854 242H872"/>
+  </g>
+  <text x="360" y="292" font-size="15" fill="#3F4557">check_url: normalise the URL; skip if already seen or already published</text>
+  <text x="360" y="314" font-size="15" fill="#3F4557">fetch: page text, or the full PDF behind a scholarly landing page</text>
+  <text x="360" y="336" font-size="15" fill="#3F4557">triage: three-part test with evidence per test; provenance score 1 to 3</text>
+  <text x="360" y="358" font-size="15" fill="#3F4557">extract: Who / What / How / Outcome; dropped if any field is missing</text>
+  <text x="360" y="386" font-size="14" fill="#8B93A7">Structured outputs on every LLM call · Anthropic SDK or any OpenAI-compatible endpoint</text>
+
+  <!-- Queue DB -->
+  <rect x="1036" y="170" width="200" height="230" rx="12" fill="#F3F4F8" stroke="#C9CDD8"/>
+  <text x="1136" y="200" text-anchor="middle" font-weight="700">Candidate store</text>
+  <text x="1136" y="226" text-anchor="middle" font-size="15" fill="#3F4557">SQLite (PoC)</text>
+  <text x="1136" y="256" text-anchor="middle" font-size="14" fill="#3F4557">queued · approved</text>
+  <text x="1136" y="276" text-anchor="middle" font-size="14" fill="#3F4557">rejected · skipped</text>
+  <text x="1136" y="296" text-anchor="middle" font-size="14" fill="#3F4557">duplicate · triaged_out</text>
+  <text x="1136" y="316" text-anchor="middle" font-size="14" fill="#3F4557">extract_failed · fetch_failed</text>
+  <text x="1136" y="372" text-anchor="middle" font-size="14" fill="#8B93A7">every row keeps its reason</text>
+
+  <!-- Review UI -->
+  <rect x="1292" y="170" width="244" height="230" rx="12" fill="#1B1F3B"/>
+  <text x="1414" y="200" text-anchor="middle" font-weight="700" fill="#F7F7F2">Review UI (FastAPI)</text>
+  <text x="1414" y="230" text-anchor="middle" font-size="15" fill="#C9D2E3">one card at a time</text>
+  <text x="1414" y="256" text-anchor="middle" font-size="15" fill="#C9D2E3">Approve · Skip · Reject + reason</text>
+  <text x="1414" y="282" text-anchor="middle" font-size="15" fill="#C9D2E3">paste a URL to run the agent</text>
+  <text x="1414" y="340" text-anchor="middle" font-size="14" fill="#8B93A7">maintainer decides;</text>
+  <text x="1414" y="360" text-anchor="middle" font-size="14" fill="#8B93A7">nothing publishes without a yes</text>
+
+  <g stroke="#5B6478" stroke-width="2" fill="none" marker-end="url(#arrow)">
+    <path d="M284 285H338"/><path d="M980 285H1034"/><path d="M1236 285H1290"/>
+  </g>
+
+  <!-- Row 2: OpenQase + MCP + eval -->
+  <!-- OpenQase -->
+  <rect x="40" y="470" width="520" height="220" rx="14" fill="#FFFFFF" stroke="#DDE0E6"/>
+  <text x="64" y="502" font-size="15" font-weight="700" fill="#5B6478" letter-spacing="1.5">OPENQASE.COM</text>
+  <rect x="64" y="524" width="220" height="140" rx="12" fill="#F3F4F8" stroke="#C9CDD8"/>
+  <text x="174" y="554" text-anchor="middle" font-weight="700">Supabase DB</text>
+  <text x="174" y="580" text-anchor="middle" font-size="15" fill="#3F4557">case_studies + taxonomy</text>
+  <text x="174" y="604" text-anchor="middle" font-size="15" fill="#3F4557">56 published case studies</text>
+  <text x="174" y="640" text-anchor="middle" font-size="14" fill="#8B93A7">Next.js admin CMS</text>
