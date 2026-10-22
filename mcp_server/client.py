@@ -78,3 +78,48 @@ class OpenQaseClient:
             if e.response.status_code == 404:
                 return None
             raise
+        if isinstance(data, dict) and "error" in data:
+            return None
+        data = dict(data)
+        data["url"] = page_url(api_type, slug)
+        for key in ("deleted_at", "deleted_by", "import_batch_id", "import_batch_name", "import_timestamp",
+                    "original_qookie_id", "original_qookie_slug"):
+            data.pop(key, None)
+        return data
+
+    def _compact(self, api_type: str, item: dict) -> dict:
+        out = {k: item[k] for k in LIST_FIELDS if item.get(k) not in (None, [], "")}
+        out["url"] = page_url(api_type, item["slug"])
+        return out
+
+    # ---- search ---------------------------------------------------------
+    def search_index(self) -> list[dict]:
+        return self._get("search-data")
+
+    def search(self, query: str, api_type: Optional[str] = None, limit: int = 10) -> list[dict]:
+        """Keyword search over the site's search index: titles weigh most, then companies, then descriptions."""
+        wanted = TYPES[api_type][0] if api_type else None
+        q = _tokens(query)
+        if not q:
+            return []
+        scored = []
+        for item in self.search_index():
+            if wanted and item.get("type") != wanted:
+                continue
+            title, desc = _tokens(item.get("title")), _tokens(item.get("description"))
+            meta = item.get("metadata") or {}
+            companies = _tokens(" ".join(meta.get("companies") or []))
+            score = 3 * len(q & title) + 2 * len(q & companies) + len(q & desc)
+            phrase = query.lower().strip()
+            if phrase and phrase in str(item.get("title", "")).lower():
+                score += 5
+            if score:
+                scored.append((score, item))
+        scored.sort(key=lambda s: (-s[0], s[1].get("title", "")))
+        results = []
+        for score, item in scored[:max(1, min(limit, 50))]:
+            api = SEARCH_TYPE_TO_API.get(item["type"], item["type"])
+            results.append({"type": api, "title": item.get("title"), "slug": item.get("slug"),
+                            "description": item.get("description"), "metadata": item.get("metadata") or {},
+                            "url": page_url(api, item["slug"]) if api in TYPES else None, "score": score})
+        return results
