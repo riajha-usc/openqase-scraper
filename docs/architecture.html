@@ -78,3 +78,61 @@
   <text x="174" y="580" text-anchor="middle" font-size="15" fill="#3F4557">case_studies + taxonomy</text>
   <text x="174" y="604" text-anchor="middle" font-size="15" fill="#3F4557">56 published case studies</text>
   <text x="174" y="640" text-anchor="middle" font-size="14" fill="#8B93A7">Next.js admin CMS</text>
+  <rect x="316" y="524" width="220" height="140" rx="12" fill="#F3F4F8" stroke="#C9CDD8"/>
+  <text x="426" y="554" text-anchor="middle" font-weight="700">Public API</text>
+  <text x="426" y="580" text-anchor="middle" font-size="15" fill="#3F4557">/api/case-studies</text>
+  <text x="426" y="604" text-anchor="middle" font-size="15" fill="#3F4557">/api/search-data, /api/*</text>
+  <text x="426" y="640" text-anchor="middle" font-size="14" fill="#8B93A7">read-only, no credentials</text>
+  <path d="M284 594H314" stroke="#5B6478" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- MCP server -->
+  <rect x="640" y="470" width="420" height="220" rx="14" fill="#E8F0FF" stroke="#2A5BD7" stroke-width="2"/>
+  <text x="664" y="502" font-size="15" font-weight="700" fill="#2A5BD7" letter-spacing="1.5">MCP SERVER  (python -m mcp_server)</text>
+  <g font-size="15" font-family="Menlo, monospace" fill="#1B1F3B">
+    <text x="664" y="540">search_openqase(query, type, limit)</text>
+    <text x="664" y="566">get_case_study(slug)</text>
+    <text x="664" y="592">list_case_studies · list_items(type)</text>
+    <text x="664" y="618">get_item(type, slug) · content_types()</text>
+  </g>
+  <text x="664" y="660" font-size="14" fill="#5B6478">stdio or Streamable HTTP · 15-minute cache · read-only</text>
+
+  <!-- Agents -->
+  <rect x="1140" y="470" width="420" height="220" rx="14" fill="#1B1F3B"/>
+  <text x="1164" y="502" font-size="15" font-weight="700" fill="#7FA3FF" letter-spacing="1.5">AI AGENTS (MCP CLIENTS)</text>
+  <text x="1164" y="540" font-size="16" fill="#F7F7F2">Claude Code · Claude Desktop · Cursor · others</text>
+  <text x="1164" y="574" font-size="15" fill="#C9D2E3">“What has quantum computing done for banks?”</text>
+  <text x="1164" y="598" font-size="15" fill="#C9D2E3">“Which case studies use QAOA on D-Wave?”</text>
+  <text x="1164" y="640" font-size="14" fill="#8B93A7">answers grounded in the catalogue, with page URLs</text>
+
+  <g stroke="#2A5BD7" stroke-width="2" fill="none" marker-end="url(#arrow-blue)">
+    <path d="M560 594H638"/><path d="M1060 594H1138"/>
+  </g>
+
+  <!-- Cross links -->
+  <!-- agent dedupe reads public API (up from API to check_url) -->
+  <path d="M426 522V402" stroke="#5B6478" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+  <text x="414" y="470" font-size="14" fill="#5B6478" text-anchor="end">published list for dedupe (live)</text>
+  <!-- approved -> Supabase, dashed (next) -->
+  <path d="M1414 402V446H174V522" stroke="#8A5A00" stroke-width="2" fill="none" stroke-dasharray="8 6" marker-end="url(#arrow-dash)"/>
+  <text x="900" y="438" font-size="14" fill="#8A5A00" text-anchor="middle">next: approved records written into OpenQase (needs DB credentials) · email notifications</text>
+
+  <!-- Row 3: synthetic data and eval -->
+  <rect x="40" y="740" width="1520" height="180" rx="14" fill="#FFFFFF" stroke="#DDE0E6"/>
+  <text x="64" y="772" font-size="15" font-weight="700" fill="#5B6478" letter-spacing="1.5">TEST HARNESS  (python cli.py synth | eval)</text>
+  <rect x="64" y="794" width="440" height="100" rx="12" fill="#F3F4F8" stroke="#C9CDD8"/>
+  <text x="284" y="824" text-anchor="middle" font-weight="700">Synthetic articles from published case studies</text>
+  <text x="284" y="850" text-anchor="middle" font-size="15" fill="#3F4557">6 labelled categories per case study: 2 should queue, 4 should stop</text>
+  <text x="284" y="874" text-anchor="middle" font-size="14" fill="#8B93A7">seeded from the public API</text>
+  <rect x="560" y="794" width="440" height="100" rx="12" fill="#F3F4F8" stroke="#C9CDD8"/>
+  <text x="780" y="824" text-anchor="middle" font-weight="700">Eval: same agent, separate database</text>
+  <text x="780" y="850" text-anchor="middle" font-size="15" fill="#3F4557">60 articles: precision 0.95, recall 1.00, 59/60 correct</text>
+  <text x="780" y="874" text-anchor="middle" font-size="14" fill="#8B93A7">docs/eval-2026-10-19.md</text>
+  <rect x="1056" y="794" width="480" height="100" rx="12" fill="#FFF4E5" stroke="#F3D9A4"/>
+  <text x="1296" y="824" text-anchor="middle" font-weight="700" fill="#8A5A00">Open decisions</text>
+  <text x="1296" y="850" text-anchor="middle" font-size="15" fill="#3F4557">hardware research passes the test · mine leads from survey papers?</text>
+  <text x="1296" y="874" text-anchor="middle" font-size="15" fill="#3F4557">blocked publishers (403 PDFs) · LLM key and provider choice</text>
+  <path d="M504 844H558" stroke="#5B6478" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <path d="M284 792V716H600V402" stroke="#5B6478" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+  <text x="612" y="712" font-size="14" fill="#5B6478">synthetic articles feed the agent</text>
+</svg>
+</body></html>
