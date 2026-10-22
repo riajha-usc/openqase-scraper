@@ -62,6 +62,12 @@ roadmap, anonymous organisation, result with no method named). `eval` runs the a
 in a separate database and reports precision and recall against the labels. This is the seed of
 the eval framework for the AI agent training track.
 
+## MCP server for AI agents
+
+`python -m mcp_server` starts a Model Context Protocol server exposing the public catalogue as tools
+(`search_openqase`, `get_case_study`, `list_case_studies`, `list_items`, `get_item`). Read-only, no
+credentials. Client setup and the tool reference are in [docs/mcp.md](docs/mcp.md).
+
 ## Storage
 
 SQLite at `data/candidates.db` (one row per URL the agent looked at). Swapping in the OpenQase

@@ -12,3 +12,4 @@ python-multipart>=0.0.9
 langgraph>=0.2
 pytest>=8.0
 pypdf>=4.0
+mcp[cli]>=2.0
