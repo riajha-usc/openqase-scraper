@@ -30,3 +30,4 @@ data/eval_report.json
 .vscode/
 *.swp
 .claude/
+data/spreadsheet/
