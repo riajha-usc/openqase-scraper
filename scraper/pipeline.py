@@ -38,6 +38,10 @@ class Runner:
             final = {"url": seed.url, "status": "llm_error", "reason": f"{type(e).__name__}: {e}"}
         except RuntimeError as e:  # provider limits on the OpenAI-compatible path (request too large, long cooldown)
             final = {"url": seed.url, "status": "llm_error", "reason": str(e)}
+        except Exception as e:  # noqa: BLE001 - any other provider or parsing failure: skip this page, keep the run going
+            if type(e).__module__.split(".")[0] not in ("openai", "httpx", "httpx2", "json", "pydantic"):
+                raise
+            final = {"url": seed.url, "status": "llm_error", "reason": f"{type(e).__name__}: {str(e)[:200]}"}
         if not self.quiet:
             status = "already seen" if final.get("already_seen") else final.get("status")
             detail = ""
