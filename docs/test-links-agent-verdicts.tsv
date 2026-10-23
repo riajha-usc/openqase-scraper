@@ -1,0 +1,72 @@
+url	Agent verdict (Oct 2026; agent output, not a label; model in brackets)	Agent evidence
+https://aisel.aisnet.org/acis2023/87/	dropped at triage [gpt-oss-120b]	FAIL Named organisation: The abstract refers to "major corporations" but does not name any specific organisation.
+https://aisel.aisnet.org/hicss-55/os/innovation/9/	dropped at triage [gpt-oss-120b]	FAIL Named organisation: The article discusses firms in general and does not name any specific company, lab, or agency.
+https://cmr.berkeley.edu/assets/documents/pdf/2023-12-quantum-computing-and-the-business-transformation-journey.pdf	dropped at triage [gpt-oss-120b]	PASS Named organisation: Deutsche Bahn partnered with Cambridge Computing to optimize train scheduling and increase network capacity.
+https://link.springer.com/chapter/10.1007/978-1-4842-6774-5_2	dropped at triage [gpt-oss-120b]	FAIL Named organisation: The abstract mentions tech companies such as Google, Microsoft, IBM, and Honeywell, but does not name a specific organisation as the user of quantum computing.
+https://www.nature.com/articles/s41598-019-47298-y	dropped at triage [gpt-oss-120b]	FAIL Named organisation: The paper does not name any specific company, lab, or government agency as the user of the quantum computing approach.
+https://arxiv.org/pdf/2407.12618	dropped at triage [gpt-oss-120b]	FAIL Named organisation: The paper lists authors from NatWest Group but does not describe a specific project by NatWest or any other named customer.
+https://www.diva-portal.org/smash/get/diva2:1780203/FULLTEXT01.pdf	queued [gpt-oss-120b]	Svenska Handelsbanken; IBM; Microsoft; Amazon; D-Wave; IonQ | Optimizing mean-variance portfolio selection to improve investment decisions | Gate-based quantum computers (IBM Quantum Lab, Microsoft Azure Quantum, Amazon Braket) using a QUBO formulation; quantum annealing hybrid solver on D-Wave Leap
+https://web-assets.bcg.com/68/3f/5a204c3c407cab7d6c965860adb8/bcg-its-time-for-financial-institutions-to-place-their-quantum-bets-oct-2020.pdf	dropped at extraction [gpt-oss-120b]	passed triage; missing who, what, how, outcome
+https://www.accenture.com/en/case-studies/life-sciences/quantum-computing-advanced-drug-discovery	queued [gpt-oss-120b]	Biogen; Accenture Labs; 1QBit | Accelerating drug discovery by enabling more accurate and larger‑scale molecular comparisons | quantum‑enabled molecular comparison algorithm
+https://arxiv.org/abs/1902.00352	duplicate of a published case study [gpt-oss-120b]	source URL already cited by a published OpenQase case study
+https://www.rolls-royce.com/media/press-releases/2022/21-03-2022-rr-and-classiq-collaborate-on-quantum-computing.aspx	unreachable [gpt-oss-120b]	page could not be fetched: Client error '404 Not Found' for url 'https://www.rolls-royce.com/media/press-releases/2022/21-03-2022-rr-and-classiq-co
+https://www.classiq.io/company/news/classiq-and-rolls-royce-announce-strategic-partnership	unreachable [gpt-oss-120b]	page could not be fetched: Client error '404 Not Found' for url 'https://www.classiq.io/company/news/classiq-and-rolls-royce-announce-strategic-par
+https://doi.org/10.1038/s41567-019-0704-4	dropped at triage [gpt-oss-120b]	FAIL Named organisation: The paper reports computations were performed on the Rigetti quantum virtual machine and Aspen‑1 quantum processing unit, but no external company or agency is identified as the user of the quantu
+https://doi.org/10.1021/acs.chemrev.9b00829	unreachable [gpt-oss-120b]	page could not be fetched: Client error '403 Forbidden' for url 'https://pubs.acs.org/doi/10.1021/acs.chemrev.9b00829' For more information check:
+https://link.springer.com/article/10.1186/s40854-025-00751-6	dropped at triage [gpt-oss-120b]	FAIL Named organisation: The article does not name any specific company, laboratory, or government agency as the user of quantum computing.
+https://arxiv.org/abs/2606.20489	dropped at triage [gpt-oss-120b]	FAIL Named organisation: The paper lists authors from Università degli Studi di Napoli Federico II and INFN Napoli, but does not state that these organisations are using quantum computing to solve their own operational p
+https://arxiv.org/abs/2606.12449	dropped at triage [gpt-oss-120b]	PASS Named organisation: The authors are listed as being from the Departments of Biology and Physics & Astronomy, Waterloo Institute for Nanotechnology, University of Waterloo, Canada.
+https://arxiv.org/abs/2606.17668	dropped at triage [gpt-oss-120b]	FAIL Named organisation: The paper lists authors from Fudan University and Shanghai Jiao Tong University, but no external company, lab, or government agency is named as the user of the method.
+https://arxiv.org/abs/2606.01611	queued [gpt-oss-120b]	Korea Advanced Institute of Science and Technology (KAIST); Pukyong National University; PharmCADD | Accurately predict the three-dimensional structure of short peptides, which is difficult for existing computational methods. | Counter-Diabatic Quantum Approximate Optimization Algorithm (CD-QAOR)
+https://arxiv.org/abs/2603.25762	dropped at triage [gpt-oss-120b]	FAIL Named organisation: The paper lists authors from University of Chinese Academy of Sciences, BGI Research, MGI Tech, etc., but does not name a specific external organisation whose problem is being addressed.
+https://arxiv.org/abs/2602.15451	queued [gpt-oss-120b]	Japan Tobacco Inc.; D-Wave Systems Inc. | Low frequency of drug‑like compounds generated by deep generative models for drug discovery | D-Wave Advantage quantum annealer (quantum annealing computer)
+https://arxiv.org/abs/2609.09228	dropped at triage [gpt-oss-120b]	FAIL Named organisation: The article is authored by Massimiliano Sassoli de Bianchi of Center Leo Apostel for Interdisciplinary Studies, Brussels Free University, and does not name a client organization using quantum com
+https://arxiv.org/abs/2509.11046	dropped at extraction [gpt-oss-120b]	passed triage; missing who
+https://arxiv.org/abs/2508.11190	dropped at triage [gpt-oss-120b]	FAIL Named organisation: The paper lists authors from Guangzhou National Laboratory and Beijing QBoson Quantum Technology Co., Ltd., but does not name a specific company, lab or agency as the user of the quantum computin
+https://arxiv.org/abs/2507.08955	queued [gpt-oss-120b]	Cleveland Clinic; IBM Quantum | Predicting protein three‑dimensional structures using a quantum algorithm to overcome limitations of classical free‑modeling methods | PolyFit and Variational Quantum Eigensolver with constraints (VQEC) executed on IBM Eagle R3 (ibm_cleveland) and Heron R2 (ibm_kingston) quantum processors
+https://arxiv.org/abs/2507.00848	dropped at triage [gpt-oss-120b]	FAIL Named organisation: The paper lists authors from Merrimack College, University of Texas Southwestern Medical Center, University of Nebraska Medical Center, Tekurai Inc., and University of Georgia, but no external cu
+https://arxiv.org/abs/2506.15671	dropped at extraction [gpt-oss-120b]	passed triage; missing who, what, outcome
+https://arxiv.org/abs/2506.02213	queued [gpt-oss-120b]	Cleveland Clinic; IBM Research; Oak Ridge National Laboratory | Predicting renal cell carcinoma patient response to immunotherapy from gene expression data using limited sample sizes | Quantum cosine classifier (QCC) and quantum ensemble cosine classifier (QEC) implemented on up to 56 qubits of quantum hardware
+https://arxiv.org/abs/2505.02033	queued [gpt-oss-120b]	Yildiz Technical University; Bolu Abant Izzet Baysal University | Classifying multiple brain tumor types and healthy samples from high‑dimensional DNA microarray gene expression data | Variational Quantum Classifier (VQC)
+https://arxiv.org/abs/2503.00080	queued [gpt-oss-120b]	Neuro Industry, Inc.; Brookhaven National Laboratory | Improving EEG signal decoding across multiple datasets using quantum-enhanced neural networks | Hybrid neural network incorporating a variational quantum circuit (VQC)
+https://arxiv.org/abs/2609.01930	queued [gpt-oss-120b]	Yonsei University; University of Waterloo; IBM | Determine the minimum set of UAV waypoints that provides at least threefold coverage of every potential target location in search-and-rescue missions. | Quantum approximate optimization algorithm (QAOA) on IBM’s 127-qubit Eagle processor
+https://arxiv.org/abs/2605.16454	dropped at triage [gpt-oss-120b]	FAIL Named organisation: The paper lists only the author Emir Kaan Özdemir from Istanbul Erkek High School, Ministry of National Education, with no company, lab, or agency named as a user of quantum computing.
+https://arxiv.org/abs/2606.28470	dropped at extraction [gpt-oss-120b]	passed triage; missing who, what
+https://arxiv.org/abs/2512.06141	queued [gpt-oss-120b]	inCerebro, Co., Ltd.; Korea University | Predicting protein–ligand binding free energies more accurately and cheaply for drug discovery | variational quantum eigensolver (VQE)-based electronic energy correction within a hybrid quantum‑classical workflow
+https://arxiv.org/abs/2508.21438	queued [gpt-oss-120b]	Novo Nordisk; ORCA Computing | Early detection of anomalies in continuous biomanufacturing processes to prevent yield loss and scheduling disruptions | Hybrid quantum-classical GAN using a simulated quantum circuit and a real photonic quantum processor (ORCA Computing PT-2)
+https://arxiv.org/abs/2508.16895	dropped at extraction [gpt-oss-120b]	passed triage; missing who, what
+https://arxiv.org/abs/2508.04743	queued [gpt-oss-120b]	Purdue University; Indian Institute of Technology Tirupati; Lancaster University | Understanding gene‑gene interactions underlying Alzheimer’s disease to inform therapeutic strategies | Quantum regression network (Alz‑QNet) using quantum machine learning
+https://arxiv.org/abs/2507.22710	queued [gpt-oss-20b]	IBM Research; IBM Quantum | Predicting CAR T‑cell cytotoxicity from combinatorial co‑stimulatory domain libraries | Projected Quantum Kernel (PQK) using a 61‑qubit gate‑based quantum computer
+https://arxiv.org/abs/2506.03199	dropped at extraction [gpt-oss-20b]	passed triage; missing how
+https://arxiv.org/abs/2505.23289	queued [gpt-oss-20b]	RWTH Aachen University; University of Northern Iowa; Peter Grünberg Institute (PGI-12), Forschungszentrum Jülich; D-Wave | Efficiently sampling topologically associating chromatin domains (TADs) using an epigenetic Ising model | quantum annealing on D-Wave quantum processors
+https://arxiv.org/abs/2505.08956	dropped at triage [gpt-oss-20b]	PASS Named organisation: The authors are affiliated with Lighthouse Disruptive Innovation Group Europe, SL and MIT Media Lab.
+https://arxiv.org/abs/2505.00777	not judged yet	
+https://arxiv.org/abs/2505.00037	not judged yet	
+https://arxiv.org/abs/2502.06883	not judged yet	
+https://arxiv.org/abs/2412.10260	not judged yet	
+https://arxiv.org/abs/2407.19852	not judged yet	
+https://arxiv.org/abs/2607.20168	not judged yet	
+https://arxiv.org/abs/2607.12990	not judged yet	
+https://arxiv.org/abs/2602.15474	not judged yet	
+https://arxiv.org/abs/2510.15903	not judged yet	
+https://arxiv.org/abs/2509.17715	not judged yet	
+https://arxiv.org/abs/2505.14645	not judged yet	
+https://arxiv.org/abs/2308.05237	not judged yet	
+https://arxiv.org/abs/2305.19865	not judged yet	
+https://hal.science/hal-05046884v1	dropped at triage [gpt-oss-120b]	FAIL Named organisation: The page refers to 'several institutions' and 'healthcare providers' without naming a specific organisation.
+https://hal.science/hal-05408143v1	not judged yet	
+https://hal.science/hal-05472180v3	not judged yet	
+https://hal.science/hal-05728179v1	dropped at triage [gpt-oss-120b]	FAIL Named organisation: The abstract begins with "This study explores Quantum Natural Language Processing (QNLP)..." and does not mention any specific company, lab, or agency.
+https://hal.science/hal-05568055v1	not judged yet	
+https://hal.science/hal-05557136v1	dropped at triage [gpt-oss-120b]	FAIL Named organisation: The paper does not mention any specific company, lab, or government agency, referring only to "global telecommunications" and generic terms.
+https://hal.science/hal-05586763v1	not judged yet	
+https://hal.science/hal-05349492v1	not judged yet	
+https://hal.science/hal-05329724v1	dropped at triage [gpt-oss-120b]	FAIL Named organisation: The paper does not name any specific company, lab, or agency as the user of quantum computing.
+https://hal.science/hal-05283497v1	not judged yet	
+https://arxiv.org/abs/2504.01567	not judged yet	
+https://arxiv.org/abs/2609.21115	not judged yet	
+https://arxiv.org/abs/2609.26750	not judged yet	
+https://arxiv.org/abs/2503.15403	not judged yet	
+https://arxiv.org/abs/2308.13642	not judged yet	
+https://arxiv.org/abs/2609.09226	not judged yet	
+https://arxiv.org/abs/2308.01305	not judged yet	
