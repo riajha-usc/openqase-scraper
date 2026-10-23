@@ -1,0 +1,77 @@
+# Test links from the maintainers' "Quantum use cases" spreadsheet (22 Oct 2026), one per line.
+# Journal home pages and a search results page are listed but not pages the agent can judge; they are skipped.
+https://aisel.aisnet.org/acis2023/87/
+https://aisel.aisnet.org/hicss-55/os/innovation/9/
+https://cmr.berkeley.edu/assets/documents/pdf/2023-12-quantum-computing-and-the-business-transformation-journey.pdf
+https://link.springer.com/chapter/10.1007/978-1-4842-6774-5_2
+https://www.nature.com/articles/s41598-019-47298-y
+https://arxiv.org/pdf/2407.12618
+https://www.diva-portal.org/smash/get/diva2:1780203/FULLTEXT01.pdf
+https://web-assets.bcg.com/68/3f/5a204c3c407cab7d6c965860adb8/bcg-its-time-for-financial-institutions-to-place-their-quantum-bets-oct-2020.pdf
+https://www.accenture.com/en/case-studies/life-sciences/quantum-computing-advanced-drug-discovery
+https://arxiv.org/abs/1902.00352
+https://www.rolls-royce.com/media/press-releases/2022/21-03-2022-rr-and-classiq-collaborate-on-quantum-computing.aspx
+https://www.classiq.io/company/news/classiq-and-rolls-royce-announce-strategic-partnership
+https://doi.org/10.1038/s41567-019-0704-4
+https://doi.org/10.1021/acs.chemrev.9b00829
+# skipped (journal home page): https://www.tandfonline.com/journals/rquf20
+https://link.springer.com/article/10.1186/s40854-025-00751-6
+# skipped (journal home page): https://journals.sagepub.com/loi/QEF
+https://arxiv.org/abs/2606.20489
+https://arxiv.org/abs/2606.12449
+https://arxiv.org/abs/2606.17668
+https://arxiv.org/abs/2606.01611
+https://arxiv.org/abs/2603.25762
+https://arxiv.org/abs/2602.15451
+https://arxiv.org/abs/2609.09228
+https://arxiv.org/abs/2509.11046
+https://arxiv.org/abs/2508.11190
+https://arxiv.org/abs/2507.08955
+https://arxiv.org/abs/2507.00848
+https://arxiv.org/abs/2506.15671
+https://arxiv.org/abs/2506.02213
+https://arxiv.org/abs/2505.02033
+https://arxiv.org/abs/2503.00080
+https://arxiv.org/abs/2609.01930
+https://arxiv.org/abs/2605.16454
+# skipped (search results page): https://ui.adsabs.harvard.edu/search/...
+https://arxiv.org/abs/2606.28470
+https://arxiv.org/abs/2512.06141
+https://arxiv.org/abs/2508.21438
+https://arxiv.org/abs/2508.16895
+https://arxiv.org/abs/2508.04743
+https://arxiv.org/abs/2507.22710
+https://arxiv.org/abs/2506.03199
+https://arxiv.org/abs/2505.23289
+https://arxiv.org/abs/2505.08956
+https://arxiv.org/abs/2505.00777
+https://arxiv.org/abs/2505.00037
+https://arxiv.org/abs/2502.06883
+https://arxiv.org/abs/2412.10260
+https://arxiv.org/abs/2407.19852
+https://arxiv.org/abs/2607.20168
+https://arxiv.org/abs/2607.12990
+https://arxiv.org/abs/2602.15474
+https://arxiv.org/abs/2510.15903
+https://arxiv.org/abs/2509.17715
+https://arxiv.org/abs/2505.14645
+https://arxiv.org/abs/2308.05237
+https://arxiv.org/abs/2305.19865
+https://hal.science/hal-05046884v1
+https://hal.science/hal-05408143v1
+https://hal.science/hal-05472180v3
+https://hal.science/hal-05728179v1
+https://hal.science/hal-05568055v1
+https://hal.science/hal-05557136v1
+https://hal.science/hal-05586763v1
+https://hal.science/hal-05349492v1
+https://hal.science/hal-05329724v1
+https://hal.science/hal-05283497v1
+https://arxiv.org/abs/2504.01567
+https://arxiv.org/abs/2609.21115
+https://arxiv.org/abs/2609.26750
+# second tab, "Papers/Studies for Alex"
+https://arxiv.org/abs/2503.15403
+https://arxiv.org/abs/2308.13642
+https://arxiv.org/abs/2609.09226
+https://arxiv.org/abs/2308.01305
