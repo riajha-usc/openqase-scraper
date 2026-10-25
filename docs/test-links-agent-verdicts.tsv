@@ -40,33 +40,33 @@ https://arxiv.org/abs/2507.22710	queued [gpt-oss-20b]	IBM Research; IBM Quantum 
 https://arxiv.org/abs/2506.03199	dropped at extraction [gpt-oss-20b]	passed triage; missing how
 https://arxiv.org/abs/2505.23289	queued [gpt-oss-20b]	RWTH Aachen University; University of Northern Iowa; Peter Grünberg Institute (PGI-12), Forschungszentrum Jülich; D-Wave | Efficiently sampling topologically associating chromatin domains (TADs) using an epigenetic Ising model | quantum annealing on D-Wave quantum processors
 https://arxiv.org/abs/2505.08956	dropped at triage [gpt-oss-20b]	PASS Named organisation: The authors are affiliated with Lighthouse Disruptive Innovation Group Europe, SL and MIT Media Lab.
-https://arxiv.org/abs/2505.00777	not judged yet	
-https://arxiv.org/abs/2505.00037	not judged yet	
-https://arxiv.org/abs/2502.06883	not judged yet	
-https://arxiv.org/abs/2412.10260	not judged yet	
-https://arxiv.org/abs/2407.19852	not judged yet	
-https://arxiv.org/abs/2607.20168	not judged yet	
-https://arxiv.org/abs/2607.12990	not judged yet	
-https://arxiv.org/abs/2602.15474	not judged yet	
-https://arxiv.org/abs/2510.15903	not judged yet	
-https://arxiv.org/abs/2509.17715	not judged yet	
-https://arxiv.org/abs/2505.14645	not judged yet	
-https://arxiv.org/abs/2308.05237	not judged yet	
-https://arxiv.org/abs/2305.19865	not judged yet	
+https://arxiv.org/abs/2505.00777	dropped at triage [gpt-oss-120b]	FAIL Named organisation: The paper lists authors Diederik Aerts, Jonito Aerts Arguelles and Sandro Sozzo but does not name a specific company, lab or agency as the user of quantum computing.
+https://arxiv.org/abs/2505.00037	queued [gpt-oss-120b]	Cleveland Clinic | Identifying key biomarkers for COVID-19 from high-dimensional multi-omics data | Quantum Support Vector Machine (QSVM) algorithm with quantum kernels (amplitude encoding, angle encoding, ZZ feature map, projected quantum kernel)
+https://arxiv.org/abs/2502.06883	dropped at triage [gpt-oss-120b]	FAIL Named organisation: The paper lists the authors’ affiliations (Ulm University, Tensor AI Solutions GmbH, etc.) but does not name an external organisation whose problem is being addressed.
+https://arxiv.org/abs/2412.10260	dropped at extraction [gpt-oss-120b]	passed triage; missing how
+https://arxiv.org/abs/2407.19852	dropped at triage [gpt-oss-120b]	FAIL Named organisation: The paper lists authors from Tianjin University of Science and Technology and Yiwei Quantum Technology Co., Ltd, but no specific client organization is named as the user of the quantum solution.
+https://arxiv.org/abs/2607.20168	dropped at triage [gpt-oss-120b]	FAIL Named organisation: The paper does not mention any specific company, lab, or government agency; it is authored by Junchi Shen and presents an academic study.
+https://arxiv.org/abs/2607.12990	queued [gpt-oss-120b]	BBVA; IBM Quantum | BBVA needed to compute Credit Valuation Adjustments (CVA) more efficiently than classical Monte‑Carlo sampling allows | contrast‑aware Bayesian iterative quantum amplitude estimation (CABIQAE) on IBM Quantum hardware
+https://arxiv.org/abs/2602.15474	queued [gpt-oss-120b]	University of Salamanca | Classifying probability distributions and volatility regimes in financial time series | Quantum Reservoir Computing (QRC) implemented on a superconducting circuit with Josephson junctions
+https://arxiv.org/abs/2510.15903	queued [gpt-oss-120b]	Omnis Labs | Improving performance of Automated Market Makers (AMM) and DeFi trading strategies | VQE Classifier, Quantum Neural Network (QNN), Quantum Support Vector Machine (QSVM), and hybrid models QASA Hybrid, QASA Sequence, QuantumRWKV
+https://arxiv.org/abs/2509.17715	queued [gpt-oss-120b]	HSBC Holdings Plc.; IBM Quantum | Estimating fill probabilities for corporate bond trade orders to improve algorithmic trading performance. | IBM Heron processors
+https://arxiv.org/abs/2505.14645	dropped at triage [gpt-oss-120b]	PASS Named organisation: The authors are listed as being from Financial Risk Analytics, Market Intelligence, S&P Global, London, UK.
+https://arxiv.org/abs/2308.05237	dropped at triage [gpt-oss-120b]	FAIL Named organisation: The paper does not name a specific company, lab, or government agency that applied the quantum models; it only lists the authors' affiliations.
+https://arxiv.org/abs/2305.19865	dropped at triage [gpt-oss-120b]	FAIL Named organisation: The paper proposes a quantum Proof‑of‑Work scheme but does not name a specific company, lab or government agency as the user of the technology.
 https://hal.science/hal-05046884v1	dropped at triage [gpt-oss-120b]	FAIL Named organisation: The page refers to 'several institutions' and 'healthcare providers' without naming a specific organisation.
-https://hal.science/hal-05408143v1	not judged yet	
-https://hal.science/hal-05472180v3	not judged yet	
+https://hal.science/hal-05408143v1	dropped at triage [gpt-oss-120b]	FAIL Named organisation: The page does not mention a specific company, lab, or agency as the user of the quantum computing approach.
+https://hal.science/hal-05472180v3	dropped at triage [gpt-oss-120b]	FAIL Named organisation: The article does not name any specific company, laboratory, or government agency as the user of quantum computing.
 https://hal.science/hal-05728179v1	dropped at triage [gpt-oss-120b]	FAIL Named organisation: The abstract begins with "This study explores Quantum Natural Language Processing (QNLP)..." and does not mention any specific company, lab, or agency.
-https://hal.science/hal-05568055v1	not judged yet	
+https://hal.science/hal-05568055v1	dropped at triage [gpt-oss-120b]	FAIL Named organisation: The paper refers to "transmission system operators" without naming a specific company, lab, or agency.
 https://hal.science/hal-05557136v1	dropped at triage [gpt-oss-120b]	FAIL Named organisation: The paper does not mention any specific company, lab, or government agency, referring only to "global telecommunications" and generic terms.
-https://hal.science/hal-05586763v1	not judged yet	
-https://hal.science/hal-05349492v1	not judged yet	
+https://hal.science/hal-05586763v1	dropped at triage [gpt-oss-120b]	FAIL Named organisation: The page does not name any company, lab, or agency as a user of quantum computing.
+https://hal.science/hal-05349492v1	dropped at triage [gpt-oss-120b]	FAIL Named organisation: The paper lists authors and institutions but does not name a specific organisation using quantum computing.
 https://hal.science/hal-05329724v1	dropped at triage [gpt-oss-120b]	FAIL Named organisation: The paper does not name any specific company, lab, or agency as the user of quantum computing.
-https://hal.science/hal-05283497v1	not judged yet	
-https://arxiv.org/abs/2504.01567	not judged yet	
-https://arxiv.org/abs/2609.21115	not judged yet	
-https://arxiv.org/abs/2609.26750	not judged yet	
-https://arxiv.org/abs/2503.15403	not judged yet	
-https://arxiv.org/abs/2308.13642	not judged yet	
-https://arxiv.org/abs/2609.09226	not judged yet	
-https://arxiv.org/abs/2308.01305	not judged yet	
+https://hal.science/hal-05283497v1	dropped at triage [gpt-oss-120b]	FAIL Named organisation: The paper does not name any specific company, lab, or government agency as a user of quantum computing.
+https://arxiv.org/abs/2504.01567	queued [gpt-oss-120b]	Airbus; IonQ | Optimizing aircraft loading to maximize payload while respecting weight, balance and structural constraints | Multi-Angle Layered Variational Quantum Algorithm (MAL-VQA) executed on IonQ ion‑trap quantum processors Aria and Forte
+https://arxiv.org/abs/2609.21115	queued [gpt-oss-120b]	IBM Research | Improving molecular profiling from routine histopathology for cancers where sequencing is unavailable, tissue is limited, or training cohorts are small | IBM quantum processors (quantum conditional optimal transport generating a doubly stochastic attention matrix)
+https://arxiv.org/abs/2609.26750	dropped at triage [gpt-oss-120b]	FAIL Named organisation: The paper lists authors from the Institute for Quantum Computing, University of Waterloo, Perimeter Institute, and the Dahlem Center, but no external organisation is identified as a user of quant
+https://arxiv.org/abs/2503.15403	dropped at extraction [gpt-oss-120b]	passed triage; missing who
+https://arxiv.org/abs/2308.13642	dropped at triage [gpt-oss-120b]	PASS Named organisation: The authors are listed as Naman Srivastava, Gaurang Belekar, Neel Shahakar, Aswath Babu H. from IIIT Dharwad.
+https://arxiv.org/abs/2609.09226	dropped at triage [gpt-oss-120b]	FAIL Named organisation: The paper lists authors from several institutions (e.g., University of Science and Technology of China, Red Horse Investments Group) but does not name a specific organisation as the user of quant
+https://arxiv.org/abs/2308.01305	dropped at triage [gpt-oss-120b]	FAIL Named organisation: The paper lists the authors' affiliations (FastEagle Holdings and Imperial College) but does not name a specific organization that is applying quantum computing to a problem.
