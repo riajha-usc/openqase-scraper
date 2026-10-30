@@ -92,3 +92,9 @@ def test_work_type_is_optional_and_recorded():
                 named_organisation_evidence="a", specific_problem_evidence="b", work_done_evidence="c")
     assert TriageResult(**base).work_type is None
     assert TriageResult(**base, work_type="applied_research").passes
+
+
+def test_page_text_column_is_added_and_stored(tmp_path: Path):
+    conn = db.connect(tmp_path / "t.db")
+    db.upsert_candidate(conn, url="https://x.test/p", status="queued", page_text="full paper text")
+    assert conn.execute("SELECT page_text FROM candidates").fetchone()[0] == "full paper text"

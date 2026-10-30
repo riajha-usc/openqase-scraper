@@ -63,6 +63,14 @@ def eval_cmd():
 
 
 @app.command()
+def rejudge(source_name: str = typer.Option("spreadsheet", help="Re-judge every stored page from this source")):
+    """Re-run triage and extraction on the stored page text, without fetching anything."""
+    from scraper.pipeline import Runner
+    Runner().rejudge(source_name)
+    stats()
+
+
+@app.command()
 def stats():
     """Counts by status."""
     from scraper import db

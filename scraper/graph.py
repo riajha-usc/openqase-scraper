@@ -100,6 +100,7 @@ def build_graph(conn: sqlite3.Connection, published: list[dict]):
             triage_json=triage_data or None,
             extraction_json=extraction or None,
             text_excerpt=(state.get("text") or "")[:1500],
+            page_text=state.get("text"),
             possible_duplicate_of=state.get("possible_duplicate_of"),
             reason=state.get("reason"),
         )

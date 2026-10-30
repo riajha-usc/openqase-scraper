@@ -46,6 +46,8 @@ def connect(path: Optional[Path] = None) -> sqlite3.Connection:
     conn = sqlite3.connect(str(path or DB_PATH), check_same_thread=False)
     conn.row_factory = sqlite3.Row
     conn.executescript(SCHEMA)
+    if "page_text" not in {r["name"] for r in conn.execute("PRAGMA table_info(candidates)")}:
+        conn.execute("ALTER TABLE candidates ADD COLUMN page_text TEXT")  # full fetched text, for re-judging from disk
     return conn
 
 
