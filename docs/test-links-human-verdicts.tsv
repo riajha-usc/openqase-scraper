@@ -7,7 +7,7 @@ n	url	label	note	decided_at
 6	https://arxiv.org/pdf/2407.12618	lead		2026-10-30T19:51:15+00:00
 7	https://www.diva-portal.org/smash/get/diva2:1780203/FULLTEXT01.pdf	lead		2026-10-30T19:57:41+00:00
 8	https://web-assets.bcg.com/68/3f/5a204c3c407cab7d6c965860adb8/bcg-its-time-for-financial-institutions-to-place-their-quantum-bets-oct-2020.pdf	no		2026-10-30T21:22:49+00:00
-9	https://www.accenture.com/en/case-studies/life-sciences/quantum-computing-advanced-drug-discovery	no		2026-10-30T19:58:05+00:00
+9	https://www.accenture.com/en/case-studies/life-sciences/quantum-computing-advanced-drug-discovery	lead	Accenture marketing page for the Biogen/1QBit molecular-comparison work: confirms it happened, no substance. The published work is item 10 (Hernandez et al., J. Chem. Inf. Model. 2019, arXiv:1902.00352, Biogen and Accenture coauthors).	2026-10-30T21:57:31+00:00
 10	https://arxiv.org/abs/1902.00352	yes		2026-10-30T21:24:28+00:00
 11	https://www.rolls-royce.com/media/press-releases/2022/21-03-2022-rr-and-classiq-collaborate-on-quantum-computing.aspx	no		2026-10-30T21:11:53+00:00
 12	https://www.classiq.io/company/news/classiq-and-rolls-royce-announce-strategic-partnership	no		2026-10-30T21:11:56+00:00
