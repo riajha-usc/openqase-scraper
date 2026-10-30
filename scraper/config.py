@@ -29,3 +29,4 @@ OPENQASE_API = os.environ.get("OQ_API", "https://www.openqase.com/api/case-studi
 USER_AGENT = "OpenQaseScraperPoC/0.1 (+https://openqase.com)"
 FETCH_TIMEOUT = 30.0
 MAX_PAGE_CHARS = int(os.environ.get("OQ_MAX_PAGE_CHARS", 40_000))  # cap on page text sent to the model
+TRIAGE_CHARS = int(os.environ.get("OQ_TRIAGE_CHARS", 6_000))  # triage sees the abstract and introduction only

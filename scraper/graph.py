@@ -13,6 +13,7 @@ from urllib.parse import urlparse
 from langgraph.graph import END, START, StateGraph
 
 from . import db
+from .config import TRIAGE_CHARS
 from .extract import extract
 from .fetch import FetchError, fetch_page, normalize_url
 from .openqase_api import find_possible_duplicate, known_urls
@@ -60,7 +61,7 @@ def build_graph(conn: sqlite3.Connection, published: list[dict]):
         return {"title": page.title, "text": page.text}
 
     def triage_node(state: CandidateState) -> CandidateState:
-        result = triage(state["text"], state["url"])
+        result = triage(state["text"][:TRIAGE_CHARS], state["url"])  # full text goes only to extraction
         score = provenance_score(result, state.get("provenance_override"))
         update: CandidateState = {"triage": result.model_dump(), "provenance": score}
         if not result.passes:
