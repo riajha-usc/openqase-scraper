@@ -1,0 +1,72 @@
+n	url	label	note	decided_at
+1	https://aisel.aisnet.org/acis2023/87/	lead	Not a case study itself: a literature review of other case studies. Follow its references.	2026-10-30T19:45:49+00:00
+2	https://aisel.aisnet.org/hicss-55/os/innovation/9/	no	Maybe a lead source, but no.	2026-10-30T18:53:10+00:00
+3	https://cmr.berkeley.edu/assets/documents/pdf/2023-12-quantum-computing-and-the-business-transformation-journey.pdf	no	High level; not even a lead source.	2026-10-30T18:53:10+00:00
+4	https://link.springer.com/chapter/10.1007/978-1-4842-6774-5_2	no		2026-10-30T19:49:24+00:00
+5	https://www.nature.com/articles/s41598-019-47298-y	yes		2026-10-30T19:51:01+00:00
+6	https://arxiv.org/pdf/2407.12618	lead		2026-10-30T19:51:15+00:00
+7	https://www.diva-portal.org/smash/get/diva2:1780203/FULLTEXT01.pdf	lead		2026-10-30T19:57:41+00:00
+8	https://web-assets.bcg.com/68/3f/5a204c3c407cab7d6c965860adb8/bcg-its-time-for-financial-institutions-to-place-their-quantum-bets-oct-2020.pdf	no		2026-10-30T21:22:49+00:00
+9	https://www.accenture.com/en/case-studies/life-sciences/quantum-computing-advanced-drug-discovery	no		2026-10-30T19:58:05+00:00
+10	https://arxiv.org/abs/1902.00352	yes		2026-10-30T21:24:28+00:00
+11	https://www.rolls-royce.com/media/press-releases/2022/21-03-2022-rr-and-classiq-collaborate-on-quantum-computing.aspx	no		2026-10-30T21:11:53+00:00
+12	https://www.classiq.io/company/news/classiq-and-rolls-royce-announce-strategic-partnership	no		2026-10-30T21:11:56+00:00
+13	https://doi.org/10.1038/s41567-019-0704-4	no	Methods paper: introduces the QITE/QLanczos algorithms (Nature Physics 2020). Real QC, but delivers an algorithm, not an application.	2026-10-30T20:47:06+00:00
+14	https://doi.org/10.1021/acs.chemrev.9b00829	lead		2026-10-30T21:12:42+00:00
+15	https://link.springer.com/article/10.1186/s40854-025-00751-6	lead		2026-10-30T20:47:22+00:00
+16	https://arxiv.org/abs/2606.20489	yes		2026-10-30T20:47:56+00:00
+17	https://arxiv.org/abs/2606.12449	no	Quantum cognition: quantum formalism as a model of human memory; no quantum computing.	2026-10-30T20:55:00+00:00
+18	https://arxiv.org/abs/2606.17668	yes		2026-10-30T20:55:31+00:00
+19	https://arxiv.org/abs/2606.01611	yes		2026-10-30T21:15:04+00:00
+20	https://arxiv.org/abs/2603.25762	yes		2026-10-30T20:55:46+00:00
+21	https://arxiv.org/abs/2602.15451	yes		2026-10-30T21:15:18+00:00
+22	https://arxiv.org/abs/2609.09228	no	Quantum cognition: quantum formalism applied to the liar paradox; no quantum computing.	2026-10-30T20:56:40+00:00
+23	https://arxiv.org/abs/2509.11046	yes		2026-10-30T21:22:58+00:00
+24	https://arxiv.org/abs/2508.11190	yes		2026-10-30T21:35:58+00:00
+25	https://arxiv.org/abs/2507.08955	yes		2026-10-30T21:15:22+00:00
+26	https://arxiv.org/abs/2507.00848	yes		2026-10-30T20:57:52+00:00
+27	https://arxiv.org/abs/2506.15671	yes		2026-10-30T21:23:02+00:00
+28	https://arxiv.org/abs/2506.02213	yes	Applied research, exploratory: IBM hardware on RCC patient gene-expression data, predicting immunotherapy response (Cleveland Clinic, IBM Research, ORNL).	2026-10-30T21:43:09+00:00
+29	https://arxiv.org/abs/2505.02033	yes		2026-10-30T21:15:53+00:00
+30	https://arxiv.org/abs/2503.00080	yes		2026-10-30T21:16:07+00:00
+31	https://arxiv.org/abs/2609.01930	yes		2026-10-30T21:16:13+00:00
+32	https://arxiv.org/abs/2605.16454	yes		2026-10-30T20:57:56+00:00
+33	https://arxiv.org/abs/2606.28470	yes		2026-10-30T21:23:29+00:00
+34	https://arxiv.org/abs/2512.06141	yes		2026-10-30T21:16:31+00:00
+35	https://arxiv.org/abs/2508.21438	yes		2026-10-30T21:16:50+00:00
+36	https://arxiv.org/abs/2508.16895	yes		2026-10-30T21:23:36+00:00
+37	https://arxiv.org/abs/2508.04743	yes		2026-10-30T21:17:12+00:00
+38	https://arxiv.org/abs/2507.22710	yes		2026-10-30T21:17:27+00:00
+39	https://arxiv.org/abs/2506.03199	yes		2026-10-30T21:23:44+00:00
+40	https://arxiv.org/abs/2505.23289	yes		2026-10-30T21:17:36+00:00
+41	https://arxiv.org/abs/2505.08956	yes		2026-10-30T20:58:01+00:00
+42	https://arxiv.org/abs/2505.00777	no	Quantum cognition: quantum measurement as a model of human perception; no quantum computing.	2026-10-30T21:04:14+00:00
+43	https://arxiv.org/abs/2505.00037	yes		2026-10-30T21:17:40+00:00
+44	https://arxiv.org/abs/2502.06883	yes		2026-10-30T21:04:29+00:00
+45	https://arxiv.org/abs/2412.10260	yes		2026-10-30T21:23:50+00:00
+46	https://arxiv.org/abs/2407.19852	yes		2026-10-30T21:04:40+00:00
+47	https://arxiv.org/abs/2607.20168	yes		2026-10-30T21:04:50+00:00
+48	https://arxiv.org/abs/2607.12990	yes		2026-10-30T21:17:43+00:00
+49	https://arxiv.org/abs/2602.15474	no	Methods paper: quantum reservoir computing simulated numerically on synthetic econometric data. Finance is motivation, not an applied result.	2026-10-30T21:37:34+00:00
+50	https://arxiv.org/abs/2510.15903	yes		2026-10-30T21:18:58+00:00
+51	https://arxiv.org/abs/2509.17715	yes		2026-10-30T21:19:25+00:00
+52	https://arxiv.org/abs/2505.14645	yes		2026-10-30T21:04:57+00:00
+53	https://arxiv.org/abs/2308.05237	yes		2026-10-30T21:05:01+00:00
+54	https://arxiv.org/abs/2305.19865	yes		2026-10-30T21:05:19+00:00
+55	https://hal.science/hal-05046884v1	yes		2026-10-30T21:25:26+00:00
+56	https://hal.science/hal-05408143v1	yes		2026-10-30T21:05:33+00:00
+57	https://hal.science/hal-05472180v3	yes		2026-10-30T21:06:35+00:00
+58	https://hal.science/hal-05728179v1	yes		2026-10-30T21:25:37+00:00
+59	https://hal.science/hal-05568055v1	yes		2026-10-30T21:07:10+00:00
+60	https://hal.science/hal-05557136v1	yes		2026-10-30T21:25:59+00:00
+61	https://hal.science/hal-05586763v1	yes		2026-10-30T21:07:26+00:00
+62	https://hal.science/hal-05349492v1	no	Not quantum: MRI preprocessing pipeline comparison. Crawl noise.	2026-10-30T21:08:27+00:00
+63	https://hal.science/hal-05329724v1	yes		2026-10-30T21:26:12+00:00
+64	https://hal.science/hal-05283497v1	no	Not quantum: deep-learning MRI lymphoma segmentation. Crawl noise.	2026-10-30T21:08:49+00:00
+65	https://arxiv.org/abs/2504.01567	yes		2026-10-30T21:19:27+00:00
+66	https://arxiv.org/abs/2609.21115	yes		2026-10-30T21:19:36+00:00
+67	https://arxiv.org/abs/2609.26750	no	Theory only: capacity bounds for quantum broadcast channels. No problem instance, data or hardware.	2026-10-30T21:11:08+00:00
+68	https://arxiv.org/abs/2503.15403	yes		2026-10-30T21:23:55+00:00
+69	https://arxiv.org/abs/2308.13642	yes		2026-10-30T21:11:21+00:00
+70	https://arxiv.org/abs/2609.09226	yes		2026-10-30T21:11:35+00:00
+71	https://arxiv.org/abs/2308.01305	no	Theory only: quantum game-theory thought experiment solved numerically; 'quantum finance' in name only.	2026-10-30T20:46:35+00:00
