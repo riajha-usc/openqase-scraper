@@ -7,7 +7,7 @@ from .schemas import Extraction
 EXTRACT_SYSTEM = """You extract a structured case-study record from ONE web page for OpenQase, an open catalogue of real-world quantum computing case studies. Use only what the page says. Never invent, never fill a field from general knowledge. If the page does not support a field, leave it null.
 
 Four required fields:
-- who: the named organisation(s) whose problem was addressed. If a quantum vendor or partner is named, append it after a semicolon, e.g. "Volkswagen; D-Wave".
+- who: the named organisation(s) doing or using the quantum work; for a research paper, the authors' institution. If a quantum vendor or partner is named, append it after a semicolon, e.g. "Volkswagen; D-Wave".
 - what: the specific business or operational problem addressed, in one sentence.
 - how: the quantum method or hardware used. Must name an algorithm, method, hardware class or specific machine (QAOA, VQE, quantum annealing, trapped-ion, superconducting, D-Wave Advantage, IBM Heron, IonQ Forte...). "Used quantum computing" or "a quantum algorithm" is NOT sufficient: leave how null. Copy only what the page states: do not add qualifiers from general knowledge (if the page says "IBM's quantum processors", write that, not "IBM superconducting processors").
 - outcome: the reported result, even preliminary, partial or negative. A plan, intention or future milestone is NOT an outcome: leave outcome null.

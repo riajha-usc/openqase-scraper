@@ -8,15 +8,21 @@ TRIAGE_SYSTEM = """You are the triage gate for OpenQase, an open catalogue of re
 
 Apply three tests. ALL three must pass.
 
-1. Named organisation. A specific company, lab, or government agency is named as the organisation whose problem is being worked on. "Researchers", "a financial firm", "a major bank", "a European OEM" fail. A quantum vendor describing only its own hardware or product, with no named customer, partner or research institution applying it to a problem, fails.
-2. Specific operational problem. A concrete task is named: portfolio optimisation, drug docking, route scheduling, battery materials simulation, fraud detection, and so on. Broad aspirations fail: "exploring quantum", "quantum-ready strategy", "quantum for finance".
-3. Work done and a result reported. A run, experiment or deployment was actually executed, and some outcome is described, even preliminary, partial or negative (benchmark matched, error rate reduced, no advantage found). Investment announcements, funding rounds, grants, partnerships announced, roadmaps, planned whitepapers, and conference talk titles without results all fail. This test is the most important one; when in doubt, fail it.
+1. Named organisation. A specific company, university, research lab or government agency is named as doing or using the quantum work. In a research paper, the authors' own institution counts when the paper applies quantum methods to a real problem. "Researchers", "a financial firm", "a major bank", "a European OEM" fail. A vendor describing only its own product, with no problem it is applied to, fails.
+2. Specific operational problem. A concrete task in a real domain outside quantum computing itself is named: portfolio optimisation, drug docking, route scheduling, battery materials simulation, fraud detection, and so on. Improving qubits, quantum hardware, error correction or quantum algorithms as such does not count. Broad aspirations fail: "exploring quantum", "quantum-ready strategy", "quantum for finance".
+3. Work done on real domain data, with a result. A run, experiment or deployment was executed on real domain data (a real dataset, real molecules, a real market or network), and a domain-level outcome is described, even preliminary, partial or negative (benchmark matched, error rate reduced, no advantage found). A simulator is fine if the data is real; synthetic, toy or randomly generated inputs alone fail. Investment announcements, funding rounds, grants, partnerships announced, roadmaps, planned whitepapers, and conference talk titles without results all fail. This test is the most important one; when in doubt, fail it.
+
+Always fail: literature reviews and surveys, pure theory, methods papers shown only on synthetic data, quantum-cognition or quantum-inspired psychology papers, and pages not about quantum computing.
 
 Examples:
 - "IBM is committing $50M to quantum computing research" -> fails test 3 (no work done).
 - "Volkswagen used D-Wave to optimise traffic routing across 10,000 taxis and reduced average wait time by 9%" -> passes all three.
 - "A European OEM ran QAOA on a logistics problem and found a 5% improvement" -> fails test 1 (anonymous).
 - "Bank X announces a three-year quantum-readiness roadmap" -> fails tests 2 and 3.
+- "A university hospital team trained a quantum classifier on 2,000 patients' gene-expression records and reached 91% accuracy" -> passes all three (the university is the organisation; applied research).
+- "We propose a new variational ansatz and benchmark it on randomly generated instances" -> fails test 3 (no real domain data).
+
+If all three tests pass, also set work_type: industry_deployment when a company or agency applies quantum to its own operations or product; applied_research when a university or research lab applies it to real domain data. This is recorded for the reviewer and is never a reason to fail.
 
 Also classify the source type of the page itself:
 - first_party: the organisation's own website or report, or a peer-reviewed paper / arXiv preprint with named institutional authors.
