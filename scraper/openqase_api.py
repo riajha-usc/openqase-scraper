@@ -48,6 +48,15 @@ def _tokens(text: str) -> set[str]:
     return {t for t in re.findall(r"[a-z0-9]+", (text or "").lower()) if len(t) > 2}
 
 
+# Quantum vendors and generic words: sharing these with a published case study says nothing about a duplicate.
+NOT_THE_CUSTOMER = {
+    "wave", "dwave", "ibm", "ionq", "quantinuum", "rigetti", "pasqal", "quera", "xanadu", "zapata", "1qbit", "classiq",
+    "honeywell", "orca", "google", "microsoft", "amazon", "braket", "azure", "quantum", "computing", "research", "labs",
+    "lab", "inc", "ltd", "llc", "plc", "gmbh", "corp", "corporation", "company", "group", "holdings", "systems",
+    "technologies", "technology", "university", "institute", "laboratory", "national", "college", "the", "and",
+}
+
+
 def find_possible_duplicate(items: list[dict], organisation: Optional[str], problem: Optional[str]) -> Optional[str]:
     """Flag a published case study that names the same organisation and overlaps on the problem.
 
@@ -56,7 +65,10 @@ def find_possible_duplicate(items: list[dict], organisation: Optional[str], prob
     """
     if not organisation:
         return None
-    org_tokens = _tokens(organisation)
+    customer = organisation.split(";")[0]  # "who" is "customer; vendor": match on the customer only
+    org_tokens = _tokens(customer) - NOT_THE_CUSTOMER
+    if not org_tokens:
+        return None
     problem_tokens = _tokens(problem or "")
     best: tuple[int, Optional[str]] = (0, None)
     for item in items:

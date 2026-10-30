@@ -74,6 +74,8 @@ def test_possible_duplicate_needs_org_and_problem_overlap():
     assert find_possible_duplicate(published, "Volkswagen; D-Wave", "optimise taxi routing in Lisbon") == "vw-dwave-traffic"
     assert find_possible_duplicate(published, "Volkswagen", "battery materials simulation") is None
     assert find_possible_duplicate(published, "Airbus", "taxi routing") is None
+    # a shared quantum vendor is not a shared customer
+    assert find_possible_duplicate(published, "SkyWater Technology; D-Wave", "optimise taxi routing in Lisbon") is None
 
 
 def test_extraction_keeps_triage_organisation_and_problem():
