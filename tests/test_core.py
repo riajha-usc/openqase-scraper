@@ -74,3 +74,12 @@ def test_possible_duplicate_needs_org_and_problem_overlap():
     assert find_possible_duplicate(published, "Volkswagen; D-Wave", "optimise taxi routing in Lisbon") == "vw-dwave-traffic"
     assert find_possible_duplicate(published, "Volkswagen", "battery materials simulation") is None
     assert find_possible_duplicate(published, "Airbus", "taxi routing") is None
+
+
+def test_extraction_keeps_triage_organisation_and_problem():
+    from scraper.extract import reconcile
+    missing = Extraction(who=None, what="", how="QAOA", outcome="5% better", title="t", confidence=0.7)
+    fixed = reconcile(missing, "Airbus", "aircraft loading")
+    assert fixed.who == "Airbus" and fixed.what == "aircraft loading" and fixed.complete
+    kept = reconcile(Extraction(who="BBVA", what="CVA", how="QAE", outcome="ok", title="t", confidence=0.9), "Other", "x")
+    assert kept.who == "BBVA" and kept.what == "CVA"

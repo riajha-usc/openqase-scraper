@@ -1,4 +1,6 @@
 """Stage 2: fill the four required fields. A record missing any of them never reaches the queue."""
+from typing import Optional
+
 from .llm import parse
 from .schemas import Extraction
 
@@ -17,6 +19,20 @@ Also provide:
 - notes: anything a human reviewer should double-check (unverified numbers, vendor-authored page, missing second source)."""
 
 
-def extract(page_text: str, url: str) -> Extraction:
-    user = f"URL: {url}\n\nPAGE TEXT:\n{page_text}"
-    return parse(EXTRACT_SYSTEM, user, Extraction, max_tokens=1800)
+def extract(page_text: str, url: str, organisation: Optional[str] = None, problem: Optional[str] = None) -> Extraction:
+    """organisation/problem: what triage found on this same page, so both stages agree on who and what."""
+    hint = ""
+    if organisation or problem:
+        hint = (f"TRIAGE FINDINGS for this page: organisation: {organisation or 'unknown'}; problem: {problem or 'unknown'}. "
+                "Use them for who and what unless the page clearly contradicts them.\n\n")
+    user = f"{hint}URL: {url}\n\nPAGE TEXT:\n{page_text}"
+    return reconcile(parse(EXTRACT_SYSTEM, user, Extraction, max_tokens=1800), organisation, problem)
+
+
+def reconcile(result: Extraction, organisation: Optional[str], problem: Optional[str]) -> Extraction:
+    """Triage already passed 'named organisation' and 'specific problem': never let extraction lose them."""
+    if not (result.who or "").strip() and organisation:
+        result.who = organisation
+    if not (result.what or "").strip() and problem:
+        result.what = problem
+    return result

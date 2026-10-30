@@ -70,7 +70,8 @@ def build_graph(conn: sqlite3.Connection, published: list[dict]):
         return update
 
     def extract_node(state: CandidateState) -> CandidateState:
-        result = extract(state["text"], state["url"])
+        triage_data = state.get("triage") or {}
+        result = extract(state["text"], state["url"], triage_data.get("organisation"), triage_data.get("problem"))
         update: CandidateState = {"extraction": result.model_dump()}
         if not result.complete:
             update["status"] = "extract_failed"
