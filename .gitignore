@@ -31,3 +31,7 @@ data/eval_report.json
 *.swp
 .claude/
 data/spreadsheet/
+
+# link-review tool: fetched PDFs and extracted text (hundreds of MB; rebuilt on demand)
+data/linkreview/
+data/linkreview-prefetch.log

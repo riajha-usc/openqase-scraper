@@ -1,0 +1,2936 @@
+[
+ {
+  "n": 1,
+  "url": "https://aisel.aisnet.org/acis2023/87/",
+  "domain": "aisel.aisnet.org",
+  "kind": "web",
+  "agent_verdict": "dropped at triage",
+  "agent_model": "gpt-oss-120b",
+  "agent_evidence": "FAIL Named organisation: The abstract refers to \"major corporations\" but does not name any specific organisation.",
+  "checks": [
+   {
+    "test": "Named organisation",
+    "passed": false,
+    "evidence": "The abstract refers to \"major corporations\" but does not name any specific organisation."
+   }
+  ],
+  "title": "Early Diffusion of Innovations with Quantum Computing",
+  "authors": [
+   "Stein, Amanda",
+   "Wang, Ping",
+   "Lutters, Wayne"
+  ],
+  "abstract": "Quantum Computing (QC) is an emerging technology with a long development road for mass adoption. Nonetheless, there is excitement around the potential for QC to add business value. Through a literature review and interviews with key stakeholders currently using QC, informed by the literature, we conducted four case studies of major corporations adopting QC in various industries. The case studies show that companies are beginning to innovate with quantum computing, adding value to their current high-performance computing systems. The findings from the case studies illustrate and enrich the Diffusion of Innovations (DoI) theory as a framework for adopting and managing technological innovations, along with Crossing the Chasm as a follow-on to DoI. Specifically, the paper identifies the current adopters that have actively engaged in developing QC applications with other players and analyzes the four elements of innovation diffusion led by these innovators.",
+  "date": "2023",
+  "year": 2023,
+  "venue": "AIS Electronic Library (AISeL)",
+  "categories": [],
+  "doi": "",
+  "arxiv_id": "",
+  "landing_url": "https://aisel.aisnet.org/acis2023/87/",
+  "pdf_url": "https://aisel.aisnet.org/cgi/viewcontent.cgi?article=1087&context=acis2023",
+  "meta_source": "page-meta",
+  "meta_error": ""
+ },
+ {
+  "n": 2,
+  "url": "https://aisel.aisnet.org/hicss-55/os/innovation/9/",
+  "domain": "aisel.aisnet.org",
+  "kind": "web",
+  "agent_verdict": "dropped at triage",
+  "agent_model": "gpt-oss-120b",
+  "agent_evidence": "FAIL Named organisation: The article discusses firms in general and does not name any specific company, lab, or agency.",
+  "checks": [
+   {
+    "test": "Named organisation",
+    "passed": false,
+    "evidence": "The article discusses firms in general and does not name any specific company, lab, or agency."
+   }
+  ],
+  "title": "The Quantum Computing Business Ecosystem and Firm Strategies",
+  "authors": [
+   "Jenkins, Joseph",
+   "Berente, Nicholas",
+   "Angst, Corey"
+  ],
+  "abstract": "Quantum computing is an emerging technology that promises to revolutionize business and society. Although it is still in its early stages, firms have begun to invest heavily in the technology. In this article, we review some key themes of quantum computing from a business-oriented perspective, and construct a framework of the quantum computing business ecosystem. We also conduct an analysis of the contemporary discourse to identify four general strategies that firms are following as they invest in quantum computing. We refer to these as conventional, options, discovery, and adversarial strategies and describe and offer examples of each.",
+  "date": "2022",
+  "year": 2022,
+  "venue": "Hawaii International Conference on System Sciences 2022 (HICSS-55)",
+  "categories": [],
+  "doi": "",
+  "arxiv_id": "",
+  "landing_url": "https://aisel.aisnet.org/hicss-55/os/innovation/9/",
+  "pdf_url": "https://aisel.aisnet.org/cgi/viewcontent.cgi?article=1884&context=hicss-55",
+  "meta_source": "page-meta",
+  "meta_error": ""
+ },
+ {
+  "n": 3,
+  "url": "https://cmr.berkeley.edu/assets/documents/pdf/2023-12-quantum-computing-and-the-business-transformation-journey.pdf",
+  "domain": "cmr.berkeley.edu",
+  "kind": "pdf",
+  "agent_verdict": "dropped at triage",
+  "agent_model": "gpt-oss-120b",
+  "agent_evidence": "PASS Named organisation: Deutsche Bahn partnered with Cambridge Computing to optimize train scheduling and increase network capacity.",
+  "checks": [
+   {
+    "test": "Named organisation",
+    "passed": true,
+    "evidence": "Deutsche Bahn partnered with Cambridge Computing to optimize train scheduling and increase network capacity."
+   }
+  ],
+  "title": "Quantum computing and the business transformation journey",
+  "authors": [],
+  "abstract": "Image Credit | Bartek Wróblewski STRATEGY Quantum Computing and the Business Transformation Journey by J. Mark Munoz, Roberto García-Castro, and Samuel Mugel Quantum Computing impacts business transformation in \u0000rms and requires a new mindset for operational excellence.  INSIGHT | NOTE 12 Dec 2023 1. Introduction The utilization of quantum computing in organizations has risen in recent years and has led to remarkable changes in business operations around the world. A Fortune Business Insights report indicated that the quantum computing market was valued at $717 Million in 2022 and is expected to reach $6,528 Million in 2030. RELATED CMR ARTICLES “Circular Business Model Transformation: A Roadmap for Incumbent Firms” by Johan Frishammar & Vinit Parida Essentially, a quantum computer resembles a classical computer, however it replaces the binary bit system (0 and 1s) with quantum bits, which are commonly called qubits. Unlike binary bits, qubits can be both 0 and 1 at once, exponentially increasing the computational power with each new qubit added to the machine. The dramatic increase in computational power promised by quantum computing is drawing the interest of governments and",
+  "date": "2023-12-13",
+  "year": 2023,
+  "venue": "cmr.berkeley.edu",
+  "categories": [],
+  "doi": "",
+  "arxiv_id": "",
+  "landing_url": "https://cmr.berkeley.edu/assets/documents/pdf/2023-12-quantum-computing-and-the-business-transformation-journey.pdf",
+  "pdf_url": "https://cmr.berkeley.edu/assets/documents/pdf/2023-12-quantum-computing-and-the-business-transformation-journey.pdf",
+  "meta_source": "pdf",
+  "meta_error": ""
+ },
+ {
+  "n": 4,
+  "url": "https://link.springer.com/chapter/10.1007/978-1-4842-6774-5_2",
+  "domain": "link.springer.com",
+  "kind": "doi",
+  "agent_verdict": "dropped at triage",
+  "agent_model": "gpt-oss-120b",
+  "agent_evidence": "FAIL Named organisation: The abstract mentions tech companies such as Google, Microsoft, IBM, and Honeywell, but does not name a specific organisation as the user of quantum computing.",
+  "checks": [
+   {
+    "test": "Named organisation",
+    "passed": false,
+    "evidence": "The abstract mentions tech companies such as Google, Microsoft, IBM, and Honeywell, but does not name a specific organisation as the user of quantum computing."
+   }
+  ],
+  "title": "Quantum Computing",
+  "authors": [
+   "Volker Lang"
+  ],
+  "abstract": "",
+  "date": "2021",
+  "year": 2021,
+  "venue": "Digital Fluency",
+  "categories": [
+   "book-chapter"
+  ],
+  "doi": "10.1007/978-1-4842-6774-5_2",
+  "arxiv_id": "",
+  "landing_url": "https://doi.org/10.1007/978-1-4842-6774-5_2",
+  "pdf_url": "",
+  "meta_source": "crossref+page-meta",
+  "meta_error": ""
+ },
+ {
+  "n": 5,
+  "url": "https://www.nature.com/articles/s41598-019-47298-y",
+  "domain": "nature.com",
+  "kind": "web",
+  "agent_verdict": "dropped at triage",
+  "agent_model": "gpt-oss-120b",
+  "agent_evidence": "FAIL Named organisation: The paper does not name any specific company, lab, or government agency as the user of the quantum computing approach.",
+  "checks": [
+   {
+    "test": "Named organisation",
+    "passed": false,
+    "evidence": "The paper does not name any specific company, lab, or government agency as the user of the quantum computing approach."
+   }
+  ],
+  "title": "A Variable Neighbourhood Descent Heuristic for Conformational Search Using a Quantum Annealer",
+  "authors": [
+   "Marchand, D. J. J.",
+   "Noori, M.",
+   "Roberts, A.",
+   "Rosenberg, G.",
+   "Woods, B.",
+   "Yildiz, U.",
+   "Coons, M.",
+   "Devore, D.",
+   "Margl, P."
+  ],
+  "abstract": "Discovering the low-energy conformations of a molecule is of great interest to computational chemists, with applications in in silico materials design and drug discovery. In this paper, we propose a variable neighbourhood search heuristic for the conformational search problem. Using the structure of a molecule, neighbourhoods are chosen to allow for the efficient use of a binary quadratic optimizer for conformational search. The method is flexible with respect to the choice of molecular force field and the number of discretization levels in the search space, and can be further generalized to take advantage of higher-order binary polynomial optimizers. It is well-suited for the use of devices such as quantum annealers. After carefully defining neighbourhoods, the method easily adapts to the size and topology of these devices, allowing for seamless scaling alongside their future improvements.",
+  "date": "2019-09-23",
+  "year": 2019,
+  "venue": "Scientific Reports",
+  "categories": [],
+  "doi": "10.1038/s41598-019-47298-y",
+  "arxiv_id": "",
+  "landing_url": "https://www.nature.com/articles/s41598-019-47298-y",
+  "pdf_url": "https://www.nature.com/articles/s41598-019-47298-y.pdf",
+  "meta_source": "page-meta",
+  "meta_error": ""
+ },
+ {
+  "n": 6,
+  "url": "https://arxiv.org/pdf/2407.12618",
+  "domain": "arxiv.org",
+  "kind": "arxiv",
+  "agent_verdict": "dropped at triage",
+  "agent_model": "gpt-oss-120b",
+  "agent_evidence": "FAIL Named organisation: The paper lists authors from NatWest Group but does not describe a specific project by NatWest or any other named customer.",
+  "checks": [
+   {
+    "test": "Named organisation",
+    "passed": false,
+    "evidence": "The paper lists authors from NatWest Group but does not describe a specific project by NatWest or any other named customer."
+   }
+  ],
+  "title": "A Brief Review of Quantum Machine Learning for Financial Services",
+  "authors": [
+   "Mina Doosti",
+   "Petros Wallden",
+   "Conor Brian Hamill",
+   "Robert Hankache",
+   "Oliver Thomson Brown",
+   "Chris Heunen"
+  ],
+  "abstract": "This review paper examines state-of-the-art algorithms and techniques in quantum machine learning with potential applications in finance. We discuss QML techniques in supervised learning tasks, such as Quantum Variational Classifiers, Quantum Kernel Estimation, and Quantum Neural Networks (QNNs), along with quantum generative AI techniques like Quantum Transformers and Quantum Graph Neural Networks (QGNNs). The financial applications considered include risk management, credit scoring, fraud detection, and stock price prediction. We also provide an overview of the challenges, potential, and limitations of QML, both in these specific areas and more broadly across the field. We hope that this can serve as a quick guide for data scientists, professionals in the financial sector, and enthusiasts in this area to understand why quantum computing and QML in particular could be interesting to explore in their field of expertise.",
+  "date": "2024-07-17",
+  "year": 2024,
+  "venue": "Mach. Learn.: Sci. Technol. 7, 021002 (2026)",
+  "categories": [
+   "quant-ph",
+   "cs.CE"
+  ],
+  "doi": "10.1088/2632-2153/ae51df",
+  "arxiv_id": "2407.12618",
+  "landing_url": "https://arxiv.org/abs/2407.12618",
+  "pdf_url": "https://arxiv.org/pdf/2407.12618",
+  "meta_source": "arxiv-api",
+  "meta_error": ""
+ },
+ {
+  "n": 7,
+  "url": "https://www.diva-portal.org/smash/get/diva2:1780203/FULLTEXT01.pdf",
+  "domain": "diva-portal.org",
+  "kind": "pdf",
+  "agent_verdict": "queued",
+  "agent_model": "gpt-oss-120b",
+  "agent_evidence": "Svenska Handelsbanken; IBM; Microsoft; Amazon; D-Wave; IonQ | Optimizing mean-variance portfolio selection to improve investment decisions | Gate-based quantum computers (IBM Quantum Lab, Microsoft Azure Quantum, Amazon Braket) using a QUBO formulation; quantum annealing hybrid solver on D-Wave Leap",
+  "checks": [
+   {
+    "test": "Who",
+    "passed": true,
+    "evidence": "Svenska Handelsbanken; IBM; Microsoft; Amazon; D-Wave; IonQ"
+   },
+   {
+    "test": "What",
+    "passed": true,
+    "evidence": "Optimizing mean-variance portfolio selection to improve investment decisions"
+   },
+   {
+    "test": "How",
+    "passed": true,
+    "evidence": "Gate-based quantum computers (IBM Quantum Lab, Microsoft Azure Quantum, Amazon Braket) using a QUBO formulation; quantum annealing hybrid solver on D-Wave Leap"
+   }
+  ],
+  "title": "Quantum Computing for Financial Applications through",
+  "authors": [],
+  "abstract": "Link¨ oping University| Department of Management and Engineering Master’s thesis, 30 ECTS | Industrial Engineering and Management Spring 2023 | ISRN: LIU-IEI-TEK-A–23/04654–SE The Impact of Quantum Computing on the Financial Sector Exploring the Current Performance and Prospects of Quantum Computing for Financial Applications through Mean-Variance Optimization Ante Fahlkvist Alfred Kheiltash Supervisor: Bo Sj¨ o Examiner: Ou Tang External supervisor: Wilhelm ˚Agren Link¨ oping University SE-581 83 Link¨ oping, Sweden +46 013 28 10 00, www.liu.se",
+  "date": "2023-07-05",
+  "year": 2023,
+  "venue": "diva-portal.org",
+  "categories": [],
+  "doi": "",
+  "arxiv_id": "",
+  "landing_url": "https://www.diva-portal.org/smash/get/diva2:1780203/FULLTEXT01.pdf",
+  "pdf_url": "https://www.diva-portal.org/smash/get/diva2:1780203/FULLTEXT01.pdf",
+  "meta_source": "pdf",
+  "meta_error": ""
+ },
+ {
+  "n": 8,
+  "url": "https://web-assets.bcg.com/68/3f/5a204c3c407cab7d6c965860adb8/bcg-its-time-for-financial-institutions-to-place-their-quantum-bets-oct-2020.pdf",
+  "domain": "web-assets.bcg.com",
+  "kind": "pdf",
+  "agent_verdict": "dropped at extraction",
+  "agent_model": "gpt-oss-120b",
+  "agent_evidence": "passed triage; missing who, what, how, outcome",
+  "checks": [
+   {
+    "test": "Agent note",
+    "passed": null,
+    "evidence": "passed triage; missing who, what, how, outcome"
+   }
+  ],
+  "title": "Bcg its time for financial institutions to place their quantum bets oct 2020",
+  "authors": [],
+  "abstract": "",
+  "date": "",
+  "year": null,
+  "venue": "",
+  "categories": [],
+  "doi": "",
+  "arxiv_id": "",
+  "landing_url": "https://web-assets.bcg.com/68/3f/5a204c3c407cab7d6c965860adb8/bcg-its-time-for-financial-institutions-to-place-their-quantum-bets-oct-2020.pdf",
+  "pdf_url": "https://web-assets.bcg.com/68/3f/5a204c3c407cab7d6c965860adb8/bcg-its-time-for-financial-institutions-to-place-their-quantum-bets-oct-2020.pdf",
+  "meta_source": "",
+  "meta_error": "page: Client error '403 Forbidden' for url 'https://web-assets.bcg.com/68/3f/5a204c3c407cab7d6c965860adb8/bcg-its-time-for-financial-institutions-to-place-their-quantum-bets-oct-2020.pdf'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403"
+ },
+ {
+  "n": 9,
+  "url": "https://www.accenture.com/en/case-studies/life-sciences/quantum-computing-advanced-drug-discovery",
+  "domain": "accenture.com",
+  "kind": "web",
+  "agent_verdict": "queued",
+  "agent_model": "gpt-oss-120b",
+  "agent_evidence": "Biogen; Accenture Labs; 1QBit | Accelerating drug discovery by enabling more accurate and larger‑scale molecular comparisons | quantum‑enabled molecular comparison algorithm",
+  "checks": [
+   {
+    "test": "Who",
+    "passed": true,
+    "evidence": "Biogen; Accenture Labs; 1QBit"
+   },
+   {
+    "test": "What",
+    "passed": true,
+    "evidence": "Accelerating drug discovery by enabling more accurate and larger‑scale molecular comparisons"
+   },
+   {
+    "test": "How",
+    "passed": true,
+    "evidence": "quantum‑enabled molecular comparison algorithm"
+   }
+  ],
+  "title": "Quantum Computing Pharma R&D | Biogen Case Study",
+  "authors": [],
+  "abstract": "Accenture helped Biogen with quantum computing to accelerate its pharmaceutical R&D & drug discovery process for improved patient outcomes. Learn more.",
+  "date": "",
+  "year": null,
+  "venue": "accenture.com",
+  "categories": [],
+  "doi": "",
+  "arxiv_id": "",
+  "landing_url": "https://www.accenture.com/en/case-studies/life-sciences/quantum-computing-advanced-drug-discovery",
+  "pdf_url": "",
+  "meta_source": "page-meta",
+  "meta_error": ""
+ },
+ {
+  "n": 10,
+  "url": "https://arxiv.org/abs/1902.00352",
+  "domain": "arxiv.org",
+  "kind": "arxiv",
+  "agent_verdict": "duplicate of a published case study",
+  "agent_model": "gpt-oss-120b",
+  "agent_evidence": "source URL already cited by a published OpenQase case study",
+  "checks": [
+   {
+    "test": "Agent note",
+    "passed": null,
+    "evidence": "source URL already cited by a published OpenQase case study"
+   }
+  ],
+  "title": "A Quantum-Inspired Method for Three-Dimensional Ligand-Based Virtual Screening",
+  "authors": [
+   "Maritza Hernandez",
+   "Guo Liang Gan",
+   "Kirby Linvill",
+   "Carl Dukatz",
+   "Jun Feng",
+   "Govinda Bhisetti"
+  ],
+  "abstract": "Measuring similarity between molecules is an important part of virtual screening (VS) experiments deployed during the early stages of drug discovery. Most widely used methods for evaluating the similarity of molecules use molecular fingerprints to encode structural information. While similarity methods using fingerprint encodings are efficient, they do not consider all the relevant aspects of molecular structure. In this paper, we describe a quantum-inspired graph-based molecular similarity (GMS) method for ligand-based VS. The GMS method is formulated as a quadratic unconstrained binary optimization problem that can be solved using a quantum annealer, providing the opportunity to take advantage of this nascent and potentially groundbreaking technology. In this study, we consider various features relevant to ligand-based VS, such as pharmacophore features and three-dimensional atomic coordinates, and include them in the GMS method. We evaluate this approach on various datasets from the DUD_LIB_VS_1.0 library. Our results show that using three-dimensional atomic coordinates as features for comparison yields higher early enrichment values. In addition, we evaluate the performance of the GMS method against conventional fingerprint approaches. The results demonstrate that the GMS method outperforms fingerprint methods for most of the datasets, presenting a new alternative in ligand-based VS with the potential for future enhancement.",
+  "date": "2019-01-28",
+  "year": 2019,
+  "venue": "Journal of Chemical Information and Modeling, 2019, 59, 10, 4475-4485",
+  "categories": [
+   "q-bio.QM",
+   "quant-ph"
+  ],
+  "doi": "10.1021/acs.jcim.9b00195",
+  "arxiv_id": "1902.00352",
+  "landing_url": "https://arxiv.org/abs/1902.00352",
+  "pdf_url": "https://arxiv.org/pdf/1902.00352",
+  "meta_source": "arxiv-api",
+  "meta_error": ""
+ },
+ {
+  "n": 11,
+  "url": "https://www.rolls-royce.com/media/press-releases/2022/21-03-2022-rr-and-classiq-collaborate-on-quantum-computing.aspx",
+  "domain": "rolls-royce.com",
+  "kind": "web",
+  "agent_verdict": "unreachable",
+  "agent_model": "gpt-oss-120b",
+  "agent_evidence": "page could not be fetched: Client error '404 Not Found' for url 'https://www.rolls-royce.com/media/press-releases/2022/21-03-2022-rr-and-classiq-co",
+  "checks": [
+   {
+    "test": "Agent note",
+    "passed": null,
+    "evidence": "page could not be fetched: Client error '404 Not Found' for url 'https://www.rolls-royce.com/media/press-releases/2022/21-03-2022-rr-and-classiq-co"
+   }
+  ],
+  "title": "",
+  "authors": [],
+  "abstract": "",
+  "date": "",
+  "year": null,
+  "venue": "",
+  "categories": [],
+  "doi": "",
+  "arxiv_id": "",
+  "landing_url": "https://www.rolls-royce.com/media/press-releases/2022/21-03-2022-rr-and-classiq-collaborate-on-quantum-computing.aspx",
+  "pdf_url": "",
+  "meta_source": "",
+  "meta_error": "page: Client error '404 Not Found' for url 'https://www.rolls-royce.com/media/press-releases/2022/21-03-2022-rr-and-classiq-collaborate-on-quantum-computing.aspx'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404"
+ },
+ {
+  "n": 12,
+  "url": "https://www.classiq.io/company/news/classiq-and-rolls-royce-announce-strategic-partnership",
+  "domain": "classiq.io",
+  "kind": "web",
+  "agent_verdict": "unreachable",
+  "agent_model": "gpt-oss-120b",
+  "agent_evidence": "page could not be fetched: Client error '404 Not Found' for url 'https://www.classiq.io/company/news/classiq-and-rolls-royce-announce-strategic-par",
+  "checks": [
+   {
+    "test": "Agent note",
+    "passed": null,
+    "evidence": "page could not be fetched: Client error '404 Not Found' for url 'https://www.classiq.io/company/news/classiq-and-rolls-royce-announce-strategic-par"
+   }
+  ],
+  "title": "",
+  "authors": [],
+  "abstract": "",
+  "date": "",
+  "year": null,
+  "venue": "",
+  "categories": [],
+  "doi": "",
+  "arxiv_id": "",
+  "landing_url": "https://www.classiq.io/company/news/classiq-and-rolls-royce-announce-strategic-partnership",
+  "pdf_url": "",
+  "meta_source": "",
+  "meta_error": "page: Client error '404 Not Found' for url 'https://www.classiq.io/company/news/classiq-and-rolls-royce-announce-strategic-partnership'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404"
+ },
+ {
+  "n": 13,
+  "url": "https://doi.org/10.1038/s41567-019-0704-4",
+  "domain": "doi.org",
+  "kind": "doi",
+  "agent_verdict": "dropped at triage",
+  "agent_model": "gpt-oss-120b",
+  "agent_evidence": "FAIL Named organisation: The paper reports computations were performed on the Rigetti quantum virtual machine and Aspen‑1 quantum processing unit, but no external company or agency is identified as the user of the quantu",
+  "checks": [
+   {
+    "test": "Named organisation",
+    "passed": false,
+    "evidence": "The paper reports computations were performed on the Rigetti quantum virtual machine and Aspen‑1 quantum processing unit, but no external company or agency is identified as the user of the quantu"
+   }
+  ],
+  "title": "Determining eigenstates and thermal states on a quantum computer using quantum imaginary time evolution",
+  "authors": [
+   "Mario Motta",
+   "Chong Sun",
+   "Adrian T. K. Tan",
+   "Matthew J. O’Rourke",
+   "Erika Ye",
+   "Austin J. Minnich",
+   "Fernando G. S. L. Brandão",
+   "Garnet Kin-Lic Chan"
+  ],
+  "abstract": "The accurate computation of Hamiltonian ground, excited and thermal states on quantum computers stands to impact many problems in the physical and computer sciences, from quantum simulation to machine learning. Given the challenges posed in constructing large-scale quantum computers, these tasks should be carried out in a resource-efficient way. In this regard, existing techniques based on phase estimation or variational algorithms display potential disadvantages; phase estimation requires deep circuits with ancillae, that are hard to execute reliably without error correction, while variational algorithms, while flexible with respect to circuit depth, entail additional high-dimensional classical optimization. Here, we introduce the quantum imaginary time evolution and quantum Lanczos algorithms, which are analogues of classical algorithms for finding ground and excited states. Compared with their classical counterparts, they require exponentially less space and time per iteration, and can be implemented without deep circuits and ancillae, or high-dimensional optimization. We furthermore discuss quantum imaginary time evolution as a subroutine to generate Gibbs averages through an analogue of minimally entangled typical thermal states. Finally, we demonstrate the potential of these algorithms via an implementation using exact classical emulation as well as through prototype circuits on the Rigetti quantum virtual machine and Aspen-1 quantum processing unit. The quantum imaginary time evolution and Lanczos algorithms offer a resource-efficient way to compute ground or excited states of target Hamiltonians on quantum computers. This offers promise for quantum simulation on near-term noisy devices.",
+  "date": "2020-02-02",
+  "year": 2020,
+  "venue": "Nature Physics",
+  "categories": [
+   "journal-article"
+  ],
+  "doi": "10.1038/s41567-019-0704-4",
+  "arxiv_id": "",
+  "landing_url": "https://doi.org/10.1038/s41567-019-0704-4",
+  "pdf_url": "http://www.nature.com/articles/s41567-019-0704-4.pdf",
+  "meta_source": "crossref+page-meta",
+  "meta_error": ""
+ },
+ {
+  "n": 14,
+  "url": "https://doi.org/10.1021/acs.chemrev.9b00829",
+  "domain": "doi.org",
+  "kind": "doi",
+  "agent_verdict": "unreachable",
+  "agent_model": "gpt-oss-120b",
+  "agent_evidence": "page could not be fetched: Client error '403 Forbidden' for url 'https://pubs.acs.org/doi/10.1021/acs.chemrev.9b00829' For more information check:",
+  "checks": [
+   {
+    "test": "Agent note",
+    "passed": null,
+    "evidence": "page could not be fetched: Client error '403 Forbidden' for url 'https://pubs.acs.org/doi/10.1021/acs.chemrev.9b00829' For more information check:"
+   }
+  ],
+  "title": "Quantum Algorithms for Quantum Chemistry and Quantum Materials Science",
+  "authors": [
+   "Bela Bauer",
+   "Sergey Bravyi",
+   "Mario Motta",
+   "Garnet Kin-Lic Chan"
+  ],
+  "abstract": "",
+  "date": "2020-11-25",
+  "year": 2020,
+  "venue": "Chemical Reviews",
+  "categories": [
+   "journal-article"
+  ],
+  "doi": "10.1021/acs.chemrev.9b00829",
+  "arxiv_id": "",
+  "landing_url": "https://doi.org/10.1021/acs.chemrev.9b00829",
+  "pdf_url": "",
+  "meta_source": "crossref",
+  "meta_error": "page: Client error '403 Forbidden' for url 'https://pubs.acs.org/doi/10.1021/acs.chemrev.9b00829'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403"
+ },
+ {
+  "n": 15,
+  "url": "https://link.springer.com/article/10.1186/s40854-025-00751-6",
+  "domain": "link.springer.com",
+  "kind": "doi",
+  "agent_verdict": "dropped at triage",
+  "agent_model": "gpt-oss-120b",
+  "agent_evidence": "FAIL Named organisation: The article does not name any specific company, laboratory, or government agency as the user of quantum computing.",
+  "checks": [
+   {
+    "test": "Named organisation",
+    "passed": false,
+    "evidence": "The article does not name any specific company, laboratory, or government agency as the user of quantum computing."
+   }
+  ],
+  "title": "From portfolio optimization to quantum blockchain and security: a systematic review of quantum computing in finance",
+  "authors": [
+   "Abha Satyavan Naik",
+   "Esra Yeniaras",
+   "Gerhard Hellstern",
+   "Grishma Prasad",
+   "Sanjay Kumar Lalta Prasad Vishwakarma"
+  ],
+  "abstract": "Abstract The rapid advancement of quantum computing has sparked a considerable increase in research attention to quantum technologies. These advances span fundamental theoretical inquiries into quantum information and the exploration of diverse applications arising from this evolving quantum computing paradigm. The scope of the related research is notably diverse. This paper consolidates and presents quantum computing research related to the financial sector. The finance applications considered in this study include portfolio optimization, fraud detection, and Monte Carlo methods for derivative pricing and risk calculation. In addition, we provide a comprehensive analysis of quantum computing’s applications and effects on blockchain technologies, particularly in relation to cryptocurrencies, which are central to financial technology research. As discussed in this study, quantum computing applications in finance are based on fundamental quantum physics principles and key quantum algorithms. This review aims to bridge the research gap between quantum computing and finance. We adopt a two-fold methodology, involving an analysis of quantum algorithms , followed by a discussion of their applications in specific financial contexts. Our study is based on an extensive review of online academic databases, search tools, online journal repositories, and whitepapers from 1952 to 2023, including CiteSeerX, DBLP, ResearchGate, Semantic Scholar, and scientific conference publications. We present state-of-the-art findings at the intersection of finance and quantum technology and highlight open research questions that will be valuable for industry practitioners and academicians as they shape future research agendas.",
+  "date": "2025-02-26",
+  "year": 2025,
+  "venue": "Financial Innovation",
+  "categories": [
+   "journal-article"
+  ],
+  "doi": "10.1186/s40854-025-00751-6",
+  "arxiv_id": "",
+  "landing_url": "https://doi.org/10.1186/s40854-025-00751-6",
+  "pdf_url": "https://link.springer.com/content/pdf/10.1186/s40854-025-00751-6.pdf",
+  "meta_source": "crossref",
+  "meta_error": ""
+ },
+ {
+  "n": 16,
+  "url": "https://arxiv.org/abs/2606.20489",
+  "domain": "arxiv.org",
+  "kind": "arxiv",
+  "agent_verdict": "dropped at triage",
+  "agent_model": "gpt-oss-120b",
+  "agent_evidence": "FAIL Named organisation: The paper lists authors from Università degli Studi di Napoli Federico II and INFN Napoli, but does not state that these organisations are using quantum computing to solve their own operational p",
+  "checks": [
+   {
+    "test": "Named organisation",
+    "passed": false,
+    "evidence": "The paper lists authors from Università degli Studi di Napoli Federico II and INFN Napoli, but does not state that these organisations are using quantum computing to solve their own operational p"
+   }
+  ],
+  "title": "West Nile virus outbreak in Italy modelled with the quantum Game of Life",
+  "authors": [
+   "Andrea Fontana",
+   "Simone Tambascia",
+   "Ciro Di Carluccio",
+   "Andrea Esposito",
+   "Bernardo Spagnolo",
+   "Andrea M. Chiariello"
+  ],
+  "abstract": "In the last years, an anomalously high spreading of West Nile virus (WNV) has been observed in Italy, with particularly high peaks of infections in southern Lazio, Campania and Veneto regions. The main disease vector for WNV is represented by Culex pipiens mosquitoes, which spread human infections through their bites. Here, we investigate WNV fever epidemic diffusion during summer season 2025 in Italy through a computational approach based on a quantum version of the Game of Life (GOL) cellular automaton model. Specifically, human dynamics evolves according to the GOL rules, while stochastic dynamics of disease vectors, i.e., mosquitoes, as well as their interaction with humans, simultaneously occur. We show that this model fits the curves of cumulative infected individuals with high accuracy, either at local and average-regional level, with only optimization of mosquito birth and removal rates parameters. Furthermore, leveraging model flexibility, we show that changes in model parameters values elucidate system response to environmental variations. For instance, we quantify, e.g., the impact of mosquito spreading containment measures or sudden mosquito increasing abundance due to climatic and ecological changes. Overall, we provide a general, quantitative description of WNV infection spreading in Italy which could represent a supportive tool to test different environmental scenarios and could be useful to devise strategies for decision makers to monitor disease vector dynamics and to control consequent virus diffusion.",
+  "date": "2026-06-18",
+  "year": 2026,
+  "venue": "arXiv preprint",
+  "categories": [
+   "q-bio.PE",
+   "nlin.CG",
+   "physics.bio-ph",
+   "stat.AP"
+  ],
+  "doi": "",
+  "arxiv_id": "2606.20489",
+  "landing_url": "https://arxiv.org/abs/2606.20489",
+  "pdf_url": "https://arxiv.org/pdf/2606.20489",
+  "meta_source": "arxiv-api",
+  "meta_error": ""
+ },
+ {
+  "n": 17,
+  "url": "https://arxiv.org/abs/2606.12449",
+  "domain": "arxiv.org",
+  "kind": "arxiv",
+  "agent_verdict": "dropped at triage",
+  "agent_model": "gpt-oss-120b",
+  "agent_evidence": "PASS Named organisation: The authors are listed as being from the Departments of Biology and Physics & Astronomy, Waterloo Institute for Nanotechnology, University of Waterloo, Canada.",
+  "checks": [
+   {
+    "test": "Named organisation",
+    "passed": true,
+    "evidence": "The authors are listed as being from the Departments of Biology and Physics & Astronomy, Waterloo Institute for Nanotechnology, University of Waterloo, Canada."
+   }
+  ],
+  "title": "A quantum-like benchmark for context-sensitive associative memory with adaptive plasticity",
+  "authors": [
+   "Yashine H. Goolam Hossen",
+   "Lea Gassab",
+   "Travis J. A. Craddock"
+  ],
+  "abstract": "Learning and memory require a balance between plasticity and stability: synaptic connections must encode new information without collapsing, saturating, or erasing previously useful structure. Associative-memory models can appear to learn successfully when fixed background connectivity already carries part of the task, making it difficult to distinguish genuine recall dynamics from structural assistance. We test this issue using an order-sensitive adaptive-plasticity benchmark for staged associative recall. The benchmark compares a quantum-like associative-memory model with matched real-valued no-phase and Markov-rate controls under the same task schedule, perturbation profiles, weak-support conditions, and plasticity settings. Here, \"quantum-like\" refers to the modeling formalism, not to a biological claim about quantum computation. We first screen weak structural support and then fix a conservative operating point for factorial comparisons across model families and plasticity mechanisms. The useful weak-support regime is narrow and non-monotonic. Weak structure alone does not rescue recall in the no-plasticity ablation, whereas most useful recall gains arise from adaptive plasticity, especially homeostatic stabilization. The Markov-rate control often achieves stronger raw recall, but the quantum-like model more consistently preserves order sensitivity and stage-dependent organization. These results do not support a universal quantum-like advantage. Instead, they show that model classes are better distinguished by a multi-objective profile combining recall, temporal organization, and context sensitivity than by any single recall score. The benchmark therefore provides a controlled framework for studying context-sensitive memory dynamics under weak support, regulated plasticity, and matched classical comparison.",
+  "date": "2026-05-30",
+  "year": 2026,
+  "venue": "arXiv preprint",
+  "categories": [
+   "q-bio.NC"
+  ],
+  "doi": "",
+  "arxiv_id": "2606.12449",
+  "landing_url": "https://arxiv.org/abs/2606.12449",
+  "pdf_url": "https://arxiv.org/pdf/2606.12449",
+  "meta_source": "arxiv-api",
+  "meta_error": ""
+ },
+ {
+  "n": 18,
+  "url": "https://arxiv.org/abs/2606.17668",
+  "domain": "arxiv.org",
+  "kind": "arxiv",
+  "agent_verdict": "dropped at triage",
+  "agent_model": "gpt-oss-120b",
+  "agent_evidence": "FAIL Named organisation: The paper lists authors from Fudan University and Shanghai Jiao Tong University, but no external company, lab, or government agency is named as the user of the method.",
+  "checks": [
+   {
+    "test": "Named organisation",
+    "passed": false,
+    "evidence": "The paper lists authors from Fudan University and Shanghai Jiao Tong University, but no external company, lab, or government agency is named as the user of the method."
+   }
+  ],
+  "title": "ASTEROID: A Spatiotemporal Information Transformer for Forecasting Multi-Step Time Series of Molecular Dynamics",
+  "authors": [
+   "Kexin Wu",
+   "Luonan Chen",
+   "Renxiao Wang"
+  ],
+  "abstract": "Molecular dynamics (MD) simulation is computationally demanding, particularly for large-scale systems requiring long-term analysis. Accurate forecast of the outcomes of a MD simulation is not only an attractive scientific challenge but also has substantial practical value. In this work, we developed a data-driven framework, termed ASTEROID (Advanced Spatiotemporal TransformER fOr Inferring Dynamics), that can directly predict multi-step atomic coordinates, avoiding conventional iterative integration. For this purpose, our ASTEROID reformulates MD trajectories as high-dimensional spatiotemporal sequences and integrates the Spatiotemporal Information (STI) Transformation equation into a Transformer architecture. The core innovation of ASTEROID lies in its ability to model multiscale spatiotemporal dependencies. In particular, for spatial dependencies, a local-global self-attention mechanism captures both short- and long-range interactions. For temporal dependencies, an encoder-decoder structure integrates global context with autoregressive forecasting. ASTEROID was evaluated on several quantum-mechanics derived molecular datasets. Our results indicate that ASTEROID achieved not only a higher level of accuracy in multi-step prediction than existing methods on various benchmarks, but also significantly reduced computational cost of conventional MD simulation. Moreover, the model supports iterative multi-step forecasting over an extended time scale. This work establishes a robust and generalizable data-driven paradigm for accelerating MD simulations.",
+  "date": "2026-06-16",
+  "year": 2026,
+  "venue": "arXiv preprint",
+  "categories": [
+   "cs.LG",
+   "cs.AI",
+   "q-bio.QM"
+  ],
+  "doi": "",
+  "arxiv_id": "2606.17668",
+  "landing_url": "https://arxiv.org/abs/2606.17668",
+  "pdf_url": "https://arxiv.org/pdf/2606.17668",
+  "meta_source": "arxiv-api",
+  "meta_error": ""
+ },
+ {
+  "n": 19,
+  "url": "https://arxiv.org/abs/2606.01611",
+  "domain": "arxiv.org",
+  "kind": "arxiv",
+  "agent_verdict": "queued",
+  "agent_model": "gpt-oss-120b",
+  "agent_evidence": "Korea Advanced Institute of Science and Technology (KAIST); Pukyong National University; PharmCADD | Accurately predict the three-dimensional structure of short peptides, which is difficult for existing computational methods. | Counter-Diabatic Quantum Approximate Optimization Algorithm (CD-QAOR)",
+  "checks": [
+   {
+    "test": "Who",
+    "passed": true,
+    "evidence": "Korea Advanced Institute of Science and Technology (KAIST); Pukyong National University; PharmCADD"
+   },
+   {
+    "test": "What",
+    "passed": true,
+    "evidence": "Accurately predict the three-dimensional structure of short peptides, which is difficult for existing computational methods."
+   },
+   {
+    "test": "How",
+    "passed": true,
+    "evidence": "Counter-Diabatic Quantum Approximate Optimization Algorithm (CD-QAOR)"
+   }
+  ],
+  "title": "Peptide Structure Prediction Using Counter-Diabatic Quantum Approximate Optimization Algorithm (CD-QAOA)",
+  "authors": [
+   "Sung Won Yun",
+   "Yeon Gyo Seo",
+   "Seong Hun Jang",
+   "Suhyun Park",
+   "Joonwoo Bae",
+   "Sangwook Wu"
+  ],
+  "abstract": "In this study, we predicted the structure of the heptapeptide APRLRFY, a neuropeptide sequence, on a tetrahedral lattice using a Quantum Approximate Optimization Algorithm (QAOA). QAOA is based on the adiabatic approximation and has been successfully applied to a wide range of optimization problems. However, relatively slow convergence during ground-state searches has frequently been reported. To overcome this limitation, we employed the Counter-Diabatic Quantum Approximate Optimization Algorithm (CD-QAOA), which introduces an additional counter-diabatic driving term into the adiabatic framework to accelerate convergence toward the ground state during peptide structure prediction. In the heptapeptide structure prediction, intermolecular interactions were modeled using two different approaches. In the first approach, only the interaction between the second residue, proline (P), and the seventh residue, tyrosine (Y), was included in the optimization. In the second approach, all residue-residue interactions within the heptapeptide were modeled using the Miyazawa-Jernigan (MJ) interaction matrix. To validate the peptide structures predicted using CD-QAOA, we additionally employed several classical computational methods, including quantum chemistry-based Hartree-Fock (HF) calculation and Density Functional Theory (DFT) calculation, conventional molecular dynamics (MD) simulation, and Hamiltonian replica exchange molecular dynamics (H-REMD) simulation. The structural similarities among the conformations obtained from these different approaches were systematically analyzed. CD-QAOA is highly effective for predicting the structures of short peptides. In particular, we demonstrate that a quantum-classical hybrid framework can significantly improve both the efficiency and accuracy of peptide structure prediction.",
+  "date": "2026-06-01",
+  "year": 2026,
+  "venue": "arXiv preprint",
+  "categories": [
+   "q-bio.BM"
+  ],
+  "doi": "",
+  "arxiv_id": "2606.01611",
+  "landing_url": "https://arxiv.org/abs/2606.01611",
+  "pdf_url": "https://arxiv.org/pdf/2606.01611",
+  "meta_source": "arxiv-api",
+  "meta_error": ""
+ },
+ {
+  "n": 20,
+  "url": "https://arxiv.org/abs/2603.25762",
+  "domain": "arxiv.org",
+  "kind": "arxiv",
+  "agent_verdict": "dropped at triage",
+  "agent_model": "gpt-oss-120b",
+  "agent_evidence": "FAIL Named organisation: The paper lists authors from University of Chinese Academy of Sciences, BGI Research, MGI Tech, etc., but does not name a specific external organisation whose problem is being addressed.",
+  "checks": [
+   {
+    "test": "Named organisation",
+    "passed": false,
+    "evidence": "The paper lists authors from University of Chinese Academy of Sciences, BGI Research, MGI Tech, etc., but does not name a specific external organisation whose problem is being addressed."
+   }
+  ],
+  "title": "QHap: Quantum-Inspired Haplotype Phasing",
+  "authors": [
+   "Rui Zhang",
+   "Xian-Zhe Tao",
+   "Yibo Chen",
+   "Jiawei Zhang",
+   "Lei He",
+   "Dongming Fang",
+   "Lin Yang",
+   "Yuhui Sun",
+   "Qinyuan Zheng",
+   "Xinmeng Shi",
+   "Yang Zhou",
+   "Wanyi Chen",
+   "Chentao Yang",
+   "Man-Hong Yung",
+   "Jun-Han Huang"
+  ],
+  "abstract": "Haplotype phasing, the process of resolving parental allele inheritance patterns in diploid genomes, is critical for precision medicine and population genetics, yet the underlying optimization is NP-hard, posing a scalability challenge. To address this, we introduce QHap, a haplotype phasing algorithm that leverages quantum-annealing-inspired optimization. By reformulating haplotype phasing as a Max-Cut problem and deploying a GPU-accelerated ballistic simulated bifurcation solver, QHap accelerates phasing while maintaining accuracy comparable to established phasing tools. On the highly polymorphic human major histocompatibility complex region, QHap demonstrates 4- to 20-fold acceleration over HapCUT2 and WhatsHap with zero switch error across multiple long-read sequencing platforms. The framework implements two strategies: a read-based method for regional phasing, and a single nucleotide polymorphism-based method that, through quality-weighted probabilistic edge construction, efficiently scales to chromosome-scale tasks. Integration of Pore-C chromatin conformation capture data increases the haplotype N50 by up to 15-fold, enabling near-chromosome-scale haplotype reconstruction. QHap demonstrates that quantum-inspired algorithms operating on classical hardware offer a promising approach to addressing the growing computational demands of sequencing data, establishing a new paradigm for applying physics-inspired optimization to fundamental challenges in computational genomics.",
+  "date": "2026-03-26",
+  "year": 2026,
+  "venue": "arXiv preprint",
+  "categories": [
+   "q-bio.GN",
+   "quant-ph"
+  ],
+  "doi": "",
+  "arxiv_id": "2603.25762",
+  "landing_url": "https://arxiv.org/abs/2603.25762",
+  "pdf_url": "https://arxiv.org/pdf/2603.25762",
+  "meta_source": "arxiv-api",
+  "meta_error": ""
+ },
+ {
+  "n": 21,
+  "url": "https://arxiv.org/abs/2602.15451",
+  "domain": "arxiv.org",
+  "kind": "arxiv",
+  "agent_verdict": "queued",
+  "agent_model": "gpt-oss-120b",
+  "agent_evidence": "Japan Tobacco Inc.; D-Wave Systems Inc. | Low frequency of drug‑like compounds generated by deep generative models for drug discovery | D-Wave Advantage quantum annealer (quantum annealing computer)",
+  "checks": [
+   {
+    "test": "Who",
+    "passed": true,
+    "evidence": "Japan Tobacco Inc.; D-Wave Systems Inc."
+   },
+   {
+    "test": "What",
+    "passed": true,
+    "evidence": "Low frequency of drug‑like compounds generated by deep generative models for drug discovery"
+   },
+   {
+    "test": "How",
+    "passed": true,
+    "evidence": "D-Wave Advantage quantum annealer (quantum annealing computer)"
+   }
+  ],
+  "title": "Molecular Design beyond Training Data with Novel Extended Objective Functionals of Generative AI Models Driven by Quantum Annealing Computer",
+  "authors": [
+   "Hayato Kunugi",
+   "Mohsen Rahmani",
+   "Yosuke Iyama",
+   "Yutaro Hirono",
+   "Akira Suma",
+   "Matthew Woolway",
+   "Vladimir Vargas-Calderón",
+   "William Kim",
+   "Kevin Chern",
+   "Mohammad Amin",
+   "Masaru Tateno"
+  ],
+  "abstract": "Deep generative modeling to stochastically design small molecules is an emerging technology for accelerating drug discovery and development. However, one major issue in molecular generative models is their lower frequency of drug-like compounds. To resolve this problem, we developed a novel framework for optimization of deep generative models integrated with a D-Wave quantum annealing computer, where our Neural Hash Function (NHF) presented herein is used both as the regularization and binarization schemes simultaneously, of which the latter is for transformation between continuous and discrete signals of the classical and quantum neural networks, respectively, in the error evaluation (i.e., objective) function. The compounds generated via the quantum-annealing generative models exhibited higher quality in both validity and drug-likeness than those generated via the fully-classical models, and was further indicated to exceed even the training data in terms of drug-likeness features, without any restraints and conditions to deliberately induce such an optimization. These results indicated an advantage of quantum annealing to aim at a stochastic generator integrated with our novel neural network architectures, for the extended performance of feature space sampling and extraction of characteristic features in drug design.",
+  "date": "2026-02-17",
+  "year": 2026,
+  "venue": "arXiv preprint",
+  "categories": [
+   "q-bio.QM",
+   "cs.AI",
+   "cs.LG",
+   "quant-ph"
+  ],
+  "doi": "",
+  "arxiv_id": "2602.15451",
+  "landing_url": "https://arxiv.org/abs/2602.15451",
+  "pdf_url": "https://arxiv.org/pdf/2602.15451",
+  "meta_source": "arxiv-api",
+  "meta_error": ""
+ },
+ {
+  "n": 22,
+  "url": "https://arxiv.org/abs/2609.09228",
+  "domain": "arxiv.org",
+  "kind": "arxiv",
+  "agent_verdict": "dropped at triage",
+  "agent_model": "gpt-oss-120b",
+  "agent_evidence": "FAIL Named organisation: The article is authored by Massimiliano Sassoli de Bianchi of Center Leo Apostel for Interdisciplinary Studies, Brussels Free University, and does not name a client organization using quantum com",
+  "checks": [
+   {
+    "test": "Named organisation",
+    "passed": false,
+    "evidence": "The article is authored by Massimiliano Sassoli de Bianchi of Center Leo Apostel for Interdisciplinary Studies, Brussels Free University, and does not name a client organization using quantum com"
+   }
+  ],
+  "title": "Revisiting the Aerts-Broekaert-Smets quantum model of the liar paradox",
+  "authors": [
+   "Massimiliano Sassoli de Bianchi"
+  ],
+  "abstract": "The quantum model of the two-sentence liar paradox proposed by Aerts, Broekaert, and Smets is an early example of the use of quantum formalism to describe cognitive dynamics. Our reconstruction is primarily pedagogical in intent, but it also leads to a number of clarifications, and to some new observations, concerning the structure of the model. Rewriting the model in Dirac notation, we make explicit the distinction between truth values originating from a decision and from semantic inference, and show that the associated enlargement of the one-sentence state space corresponds to a factorization with respect to which the non-paradoxical configurations are separable while the genuine liar state is entangled. We also derive the Hamiltonian generating the four-state cyclic evolution, express it in compact operator form, and give the resulting transition probabilities in closed form. We emphasize that the liar cycle admits a unitarily equivalent representation in the four-dimensional truth-only space, where the unmeasured liar state is separable, so the dimensional enlargement is not required by the unitary part of the dynamics; it is required, however, by the measurement structure. The enlargement is also required by the dynamics as soon as revision processes are admitted, in which states with identical truth content but different origins have different successors, the origin degree of freedom then acting as a minimal form of cognitive memory. We conclude by discussing the possible relationship between the model and more general deliberative processes.",
+  "date": "2026-09-07",
+  "year": 2026,
+  "venue": "arXiv preprint",
+  "categories": [
+   "q-bio.NC",
+   "physics.hist-ph",
+   "physics.soc-ph",
+   "quant-ph"
+  ],
+  "doi": "",
+  "arxiv_id": "2609.09228",
+  "landing_url": "https://arxiv.org/abs/2609.09228",
+  "pdf_url": "https://arxiv.org/pdf/2609.09228",
+  "meta_source": "arxiv-api",
+  "meta_error": ""
+ },
+ {
+  "n": 23,
+  "url": "https://arxiv.org/abs/2509.11046",
+  "domain": "arxiv.org",
+  "kind": "arxiv",
+  "agent_verdict": "dropped at extraction",
+  "agent_model": "gpt-oss-120b",
+  "agent_evidence": "passed triage; missing who",
+  "checks": [
+   {
+    "test": "Agent note",
+    "passed": null,
+    "evidence": "passed triage; missing who"
+   }
+  ],
+  "title": "Hybrid Quantum Neural Networks for Efficient Protein-Ligand Binding Affinity Prediction",
+  "authors": [
+   "Seon-Geun Jeong",
+   "Kyeong-Hwan Moon",
+   "Won-Joo Hwang"
+  ],
+  "abstract": "Protein-ligand binding affinity is critical in drug discovery, but experimentally determining it is time-consuming and expensive. Artificial intelligence (AI) has been used to predict binding affinity, significantly accelerating this process. However, the high-performance requirements and vast datasets involved in affinity prediction demand increasingly large AI models, requiring substantial computational resources and training time. Quantum machine learning has emerged as a promising solution to these challenges. In particular, hybrid quantum-classical models can reduce the number of parameters while maintaining or improving performance compared to classical counterparts. Despite these advantages, challenges persist: why hybrid quantum models achieve these benefits, whether quantum neural networks (QNNs) can replace classical neural networks, and whether such models are feasible on noisy intermediate-scale quantum (NISQ) devices. This study addresses these challenges by proposing a hybrid quantum neural network (HQNN) that empirically demonstrates the capability to approximate non-linear functions in the latent feature space derived from classical embedding. The primary goal of this study is to achieve a parameter-efficient model in binding affinity prediction while ensuring feasibility on NISQ devices. Numerical results indicate that HQNN achieves comparable or superior performance and parameter efficiency compared to classical neural networks, underscoring its potential as a viable replacement. This study highlights the potential of hybrid QML in computational drug discovery, offering insights into its applicability and advantages in addressing the computational challenges of protein-ligand binding affinity prediction.",
+  "date": "2025-09-14",
+  "year": 2025,
+  "venue": "arXiv preprint",
+  "categories": [
+   "cs.ET",
+   "cs.LG",
+   "q-bio.BM"
+  ],
+  "doi": "",
+  "arxiv_id": "2509.11046",
+  "landing_url": "https://arxiv.org/abs/2509.11046",
+  "pdf_url": "https://arxiv.org/pdf/2509.11046",
+  "meta_source": "arxiv-api",
+  "meta_error": ""
+ },
+ {
+  "n": 24,
+  "url": "https://arxiv.org/abs/2508.11190",
+  "domain": "arxiv.org",
+  "kind": "arxiv",
+  "agent_verdict": "dropped at triage",
+  "agent_model": "gpt-oss-120b",
+  "agent_evidence": "FAIL Named organisation: The paper lists authors from Guangzhou National Laboratory and Beijing QBoson Quantum Technology Co., Ltd., but does not name a specific company, lab or agency as the user of the quantum computin",
+  "checks": [
+   {
+    "test": "Named organisation",
+    "passed": false,
+    "evidence": "The paper lists authors from Guangzhou National Laboratory and Beijing QBoson Quantum Technology Co., Ltd., but does not name a specific company, lab or agency as the user of the quantum computin"
+   }
+  ],
+  "title": "Quantum-Boosted High-Fidelity Deep Learning",
+  "authors": [
+   "Feng-ao Wang",
+   "Shaobo Chen",
+   "Yao Xuan",
+   "Junwei Liu",
+   "Qi Gao",
+   "Hongdong Zhu",
+   "Junjie Hou",
+   "Lixin Yuan",
+   "Jinyu Cheng",
+   "Chenxin Yi",
+   "Hai Wei",
+   "Yin Ma",
+   "Tao Xu",
+   "Kai Wen",
+   "Yixue Li"
+  ],
+  "abstract": "A fundamental limitation of probabilistic deep learning is its predominant reliance on Gaussian priors. This simplistic assumption prevents models from accurately capturing the complex, non-Gaussian landscapes of natural data, particularly in demanding domains like complex biological data, severely hindering the fidelity of the model for scientific discovery. The physically-grounded Boltzmann distribution offers a more expressive alternative, but it is computationally intractable on classical computers. To date, quantum approaches have been hampered by the insufficient qubit scale and operational stability required for the iterative demands of deep learning. Here, we bridge this gap by introducing the Quantum Boltzmann Machine-Variational Autoencoder (QBM-VAE), a large-scale and long-time stable hybrid quantum-classical architecture. Our framework leverages a quantum processor for efficient sampling from the Boltzmann distribution, enabling its use as a powerful prior within a deep generative model. Applied to million-scale single-cell datasets from multiple sources, the QBM-VAE generates a latent space that better preserves complex biological structures, consistently outperforming conventional Gaussian-based deep learning models like VAE and SCVI in essential tasks such as omics data integration, cell-type classification, and trajectory inference. It also provides a typical example of introducing a physics priori into deep learning to drive the model to acquire scientific discovery capabilities that breaks through data limitations. This work provides the demonstration of a practical quantum advantage in deep learning on a large-scale scientific problem and offers a transferable blueprint for developing hybrid quantum AI models.",
+  "date": "2025-08-15",
+  "year": 2025,
+  "venue": "arXiv preprint",
+  "categories": [
+   "cs.LG",
+   "cs.AI",
+   "q-bio.GN"
+  ],
+  "doi": "",
+  "arxiv_id": "2508.11190",
+  "landing_url": "https://arxiv.org/abs/2508.11190",
+  "pdf_url": "https://arxiv.org/pdf/2508.11190",
+  "meta_source": "arxiv-api",
+  "meta_error": ""
+ },
+ {
+  "n": 25,
+  "url": "https://arxiv.org/abs/2507.08955",
+  "domain": "arxiv.org",
+  "kind": "arxiv",
+  "agent_verdict": "queued",
+  "agent_model": "gpt-oss-120b",
+  "agent_evidence": "Cleveland Clinic; IBM Quantum | Predicting protein three‑dimensional structures using a quantum algorithm to overcome limitations of classical free‑modeling methods | PolyFit and Variational Quantum Eigensolver with constraints (VQEC) executed on IBM Eagle R3 (ibm_cleveland) and Heron R2 (ibm_kingston) quantum processors",
+  "checks": [
+   {
+    "test": "Who",
+    "passed": true,
+    "evidence": "Cleveland Clinic; IBM Quantum"
+   },
+   {
+    "test": "What",
+    "passed": true,
+    "evidence": "Predicting protein three‑dimensional structures using a quantum algorithm to overcome limitations of classical free‑modeling methods"
+   },
+   {
+    "test": "How",
+    "passed": true,
+    "evidence": "PolyFit and Variational Quantum Eigensolver with constraints (VQEC) executed on IBM Eagle R3 (ibm_cleveland) and Heron R2 (ibm_kingston) quantum processors"
+   }
+  ],
+  "title": "Quantum Algorithm for Protein Structure Prediction Using the Face-Centered Cubic Lattice",
+  "authors": [
+   "Rui-Hao Li",
+   "Hakan Doga",
+   "Bryan Raubenolt",
+   "Sarah Mostame",
+   "Nicholas DiSanto",
+   "Fabio Cumbo",
+   "Jayadev Joshi",
+   "Hanna Linn",
+   "Maeve Gaffney",
+   "Alexander Holden",
+   "Vinooth Kulkarni",
+   "Vipin Chaudhary",
+   "Kenneth M. Merz",
+   "Abdullah Ash Saki",
+   "Tomas Radivoyevitch",
+   "Frank DiFilippo",
+   "Jun Qin",
+   "Omar Shehab",
+   "Daniel Blankenberg"
+  ],
+  "abstract": "In this work, we present the first implementation of the face-centered cubic (FCC) lattice model for protein structure prediction with a quantum algorithm. Our motivation to encode the FCC lattice stems from our observation that the FCC lattice is more capable in terms of modeling realistic secondary structures in proteins compared to other lattices, as demonstrated using root mean square deviation (RMSD). We utilize two quantum methods to solve this problem: a polynomial fitting approach (PolyFit) and the Variational Quantum Eigensolver with constraints (VQEC) based on the Lagrangian duality principle. Both methods are successfully deployed on Eagle R3 (ibm_cleveland) and Heron R2 (ibm_kingston) quantum computers, where we are able to recover ground state configurations for the 6-amino acid sequence KLVFFA under noise. A comparative analysis of the outcomes generated by the two QPUs reveals a significant enhancement (reaching nearly a two-fold improvement for PolyFit and a three-fold improvement for VQEC) in the prediction and sampling of the optimal solution (ground state conformations) on the newer Heron R2 architecture, highlighting the impact of quantum hardware advancements for this application.",
+  "date": "2025-07-11",
+  "year": 2025,
+  "venue": "arXiv preprint",
+  "categories": [
+   "quant-ph",
+   "q-bio.BM"
+  ],
+  "doi": "",
+  "arxiv_id": "2507.08955",
+  "landing_url": "https://arxiv.org/abs/2507.08955",
+  "pdf_url": "https://arxiv.org/pdf/2507.08955",
+  "meta_source": "arxiv-api",
+  "meta_error": ""
+ },
+ {
+  "n": 26,
+  "url": "https://arxiv.org/abs/2507.00848",
+  "domain": "arxiv.org",
+  "kind": "arxiv",
+  "agent_verdict": "dropped at triage",
+  "agent_model": "gpt-oss-120b",
+  "agent_evidence": "FAIL Named organisation: The paper lists authors from Merrimack College, University of Texas Southwestern Medical Center, University of Nebraska Medical Center, Tekurai Inc., and University of Georgia, but no external cu",
+  "checks": [
+   {
+    "test": "Named organisation",
+    "passed": false,
+    "evidence": "The paper lists authors from Merrimack College, University of Texas Southwestern Medical Center, University of Nebraska Medical Center, Tekurai Inc., and University of Georgia, but no external cu"
+   }
+  ],
+  "title": "Quantum Approximate Optimization Algorithm for Spatiotemporal Forecasting of HIV Clusters",
+  "authors": [
+   "Don Roosan",
+   "Saif Nirzhor",
+   "Rubayat Khan",
+   "Fahmida Hai",
+   "Mohammad Rifat Haidar"
+  ],
+  "abstract": "HIV epidemiological data is increasingly complex, requiring advanced computation for accurate cluster detection and forecasting. We employed quantum-accelerated machine learning to analyze HIV prevalence at the ZIP-code level using AIDSVu and synthetic SDoH data for 2022. Our approach compared classical clustering (DBSCAN, HDBSCAN) with a quantum approximate optimization algorithm (QAOA), developed a hybrid quantum-classical neural network for HIV prevalence forecasting, and used quantum Bayesian networks to explore causal links between SDoH factors and HIV incidence. The QAOA-based method achieved 92% accuracy in cluster detection within 1.6 seconds, outperforming classical algorithms. Meanwhile, the hybrid quantum-classical neural network predicted HIV prevalence with 94% accuracy, surpassing a purely classical counterpart. Quantum Bayesian analysis identified housing instability as a key driver of HIV cluster emergence and expansion, with stigma exerting a geographically variable influence. These quantum-enhanced methods deliver greater precision and efficiency in HIV surveillance while illuminating critical causal pathways. This work can guide targeted interventions, optimize resource allocation for PrEP, and address structural inequities fueling HIV transmission.",
+  "date": "2025-07-01",
+  "year": 2025,
+  "venue": "arXiv preprint",
+  "categories": [
+   "cs.LG",
+   "q-bio.MN"
+  ],
+  "doi": "",
+  "arxiv_id": "2507.00848",
+  "landing_url": "https://arxiv.org/abs/2507.00848",
+  "pdf_url": "https://arxiv.org/pdf/2507.00848",
+  "meta_source": "arxiv-api",
+  "meta_error": ""
+ },
+ {
+  "n": 27,
+  "url": "https://arxiv.org/abs/2506.15671",
+  "domain": "arxiv.org",
+  "kind": "arxiv",
+  "agent_verdict": "dropped at extraction",
+  "agent_model": "gpt-oss-120b",
+  "agent_evidence": "passed triage; missing who, what, outcome",
+  "checks": [
+   {
+    "test": "Agent note",
+    "passed": null,
+    "evidence": "passed triage; missing who, what, outcome"
+   }
+  ],
+  "title": "Quantum-inspired algorithm for simulating viral response",
+  "authors": [
+   "Daria O. Konina",
+   "Dmitry I. Korbashov",
+   "Ilya V. Kovalchuk",
+   "Aygul A. Nizamieva",
+   "Dmitry A. Chermoshentsev",
+   "Aleksey K. Fedorov"
+  ],
+  "abstract": "Understanding the properties of biological systems is an exciting avenue for applying advanced approaches to solving corresponding computational tasks. A specific class of problems that arises in the resolution of biological challenges is optimization. In this work, we present the results of a proof-of-concept study that applies a quantum-inspired optimization algorithm to simulate a viral response. We formulate an Ising-type model to describe the patterns of gene activity in host responses. Reducing the problem to the Ising form allows the use of available quantum and quantum-inspired optimization tools. We demonstrate the application of a quantum-inspired optimization algorithm to this problem. Our study paves the way for exploring the full potential of quantum and quantum-inspired optimization tools in biological applications.",
+  "date": "2025-06-18",
+  "year": 2025,
+  "venue": "arXiv preprint",
+  "categories": [
+   "q-bio.GN",
+   "q-bio.MN",
+   "quant-ph"
+  ],
+  "doi": "",
+  "arxiv_id": "2506.15671",
+  "landing_url": "https://arxiv.org/abs/2506.15671",
+  "pdf_url": "https://arxiv.org/pdf/2506.15671",
+  "meta_source": "arxiv-api",
+  "meta_error": ""
+ },
+ {
+  "n": 28,
+  "url": "https://arxiv.org/abs/2506.02213",
+  "domain": "arxiv.org",
+  "kind": "arxiv",
+  "agent_verdict": "queued",
+  "agent_model": "gpt-oss-120b",
+  "agent_evidence": "Cleveland Clinic; IBM Research; Oak Ridge National Laboratory | Predicting renal cell carcinoma patient response to immunotherapy from gene expression data using limited sample sizes | Quantum cosine classifier (QCC) and quantum ensemble cosine classifier (QEC) implemented on up to 56 qubits of quantum hardware",
+  "checks": [
+   {
+    "test": "Who",
+    "passed": true,
+    "evidence": "Cleveland Clinic; IBM Research; Oak Ridge National Laboratory"
+   },
+   {
+    "test": "What",
+    "passed": true,
+    "evidence": "Predicting renal cell carcinoma patient response to immunotherapy from gene expression data using limited sample sizes"
+   },
+   {
+    "test": "How",
+    "passed": true,
+    "evidence": "Quantum cosine classifier (QCC) and quantum ensemble cosine classifier (QEC) implemented on up to 56 qubits of quantum hardware"
+   }
+  ],
+  "title": "Quantum Ensembling Methods for Healthcare and Life Science",
+  "authors": [
+   "Kahn Rhrissorrakrai",
+   "Kathleen E. Hamilton",
+   "Prerana Bangalore Parthsarathy",
+   "Aldo Guzman-Saenz",
+   "Tyler Alban",
+   "Filippo Utro",
+   "Laxmi Parida"
+  ],
+  "abstract": "Learning on small data is a challenge frequently encountered in many real-world applications. In this work we study how effective quantum ensemble models are when trained on small data problems in healthcare and life sciences. We constructed multiple types of quantum ensembles for binary classification using up to 26 qubits in simulation and 56 qubits on quantum hardware. Our ensemble designs use minimal trainable parameters but require long-range connections between qubits. We tested these quantum ensembles on synthetic datasets and gene expression data from renal cell carcinoma patients with the task of predicting patient response to immunotherapy. From the performance observed in simulation and initial hardware experiments, we demonstrate how quantum embedding structure affects performance and discuss how to extract informative features and build models that can learn and generalize effectively. We present these exploratory results in order to assist other researchers in the design of effective learning on small data using ensembles. Incorporating quantum computing in these data constrained problems offers hope for a wide range of studies in healthcare and life sciences where biological samples are relatively scarce given the feature space to be explored.",
+  "date": "2025-06-02",
+  "year": 2025,
+  "venue": "arXiv preprint",
+  "categories": [
+   "cs.LG",
+   "q-bio.GN",
+   "q-bio.QM"
+  ],
+  "doi": "",
+  "arxiv_id": "2506.02213",
+  "landing_url": "https://arxiv.org/abs/2506.02213",
+  "pdf_url": "https://arxiv.org/pdf/2506.02213",
+  "meta_source": "arxiv-api",
+  "meta_error": ""
+ },
+ {
+  "n": 29,
+  "url": "https://arxiv.org/abs/2505.02033",
+  "domain": "arxiv.org",
+  "kind": "arxiv",
+  "agent_verdict": "queued",
+  "agent_model": "gpt-oss-120b",
+  "agent_evidence": "Yildiz Technical University; Bolu Abant Izzet Baysal University | Classifying multiple brain tumor types and healthy samples from high‑dimensional DNA microarray gene expression data | Variational Quantum Classifier (VQC)",
+  "checks": [
+   {
+    "test": "Who",
+    "passed": true,
+    "evidence": "Yildiz Technical University; Bolu Abant Izzet Baysal University"
+   },
+   {
+    "test": "What",
+    "passed": true,
+    "evidence": "Classifying multiple brain tumor types and healthy samples from high‑dimensional DNA microarray gene expression data"
+   },
+   {
+    "test": "How",
+    "passed": true,
+    "evidence": "Variational Quantum Classifier (VQC)"
+   }
+  ],
+  "title": "Quantum-Enhanced Classification of Brain Tumors Using DNA Microarray Gene Expression Profiles",
+  "authors": [
+   "Emine Akpinar",
+   "Batuhan Hangun",
+   "Murat Oduncuoglu",
+   "Oguz Altun",
+   "Onder Eyecioglu",
+   "Zeynel Yalcin"
+  ],
+  "abstract": "DNA microarray technology enables the simultaneous measurement of expression levels of thousands of genes, thereby facilitating the understanding of the molecular mechanisms underlying complex diseases such as brain tumors and the identification of diagnostic genetic signatures. To derive meaningful biological insights from the high-dimensional and complex gene features obtained through this technology and to analyze gene properties in detail, classical AI-based approaches such as machine learning and deep learning are widely employed. However, these methods face various limitations in managing high-dimensional vector spaces and modeling the intricate relationships among genes. In particular, challenges such as hyperparameter tuning, computational costs, and high processing power requirements can hinder their efficiency. To overcome these limitations, quantum computing and quantum AI approaches are gaining increasing attention. Leveraging quantum properties such as superposition and entanglement, quantum methods enable more efficient parallel processing of high-dimensional data and offer faster and more effective solutions to problems that are computationally demanding for classical methods. In this study, a novel model called \"Deep VQC\" is proposed, based on the Variational Quantum Classifier approach. Developed using microarray data containing 54,676 gene features, the model successfully classified four different types of brain tumors-ependymoma, glioblastoma, medulloblastoma, and pilocytic astrocytoma-alongside healthy samples with high accuracy. Furthermore, compared to classical ML algorithms, our model demonstrated either superior or comparable classification performance. These results highlight the potential of quantum AI methods as an effective and promising approach for the analysis and classification of complex structures such as brain tumors based on gene expression features.",
+  "date": "2025-05-04",
+  "year": 2025,
+  "venue": "arXiv preprint",
+  "categories": [
+   "cs.LG",
+   "q-bio.GN",
+   "q-bio.MN"
+  ],
+  "doi": "10.1109/ISVLSI65124.2025.11130207",
+  "arxiv_id": "2505.02033",
+  "landing_url": "https://arxiv.org/abs/2505.02033",
+  "pdf_url": "https://arxiv.org/pdf/2505.02033",
+  "meta_source": "arxiv-api",
+  "meta_error": ""
+ },
+ {
+  "n": 30,
+  "url": "https://arxiv.org/abs/2503.00080",
+  "domain": "arxiv.org",
+  "kind": "arxiv",
+  "agent_verdict": "queued",
+  "agent_model": "gpt-oss-120b",
+  "agent_evidence": "Neuro Industry, Inc.; Brookhaven National Laboratory | Improving EEG signal decoding across multiple datasets using quantum-enhanced neural networks | Hybrid neural network incorporating a variational quantum circuit (VQC)",
+  "checks": [
+   {
+    "test": "Who",
+    "passed": true,
+    "evidence": "Neuro Industry, Inc.; Brookhaven National Laboratory"
+   },
+   {
+    "test": "What",
+    "passed": true,
+    "evidence": "Improving EEG signal decoding across multiple datasets using quantum-enhanced neural networks"
+   },
+   {
+    "test": "How",
+    "passed": true,
+    "evidence": "Hybrid neural network incorporating a variational quantum circuit (VQC)"
+   }
+  ],
+  "title": "Exploring the Potential of QEEGNet for Cross-Task and Cross-Dataset Electroencephalography Encoding with Quantum Machine Learning",
+  "authors": [
+   "Chi-Sheng Chen",
+   "Samuel Yen-Chi Chen",
+   "Huan-Hsin Tseng"
+  ],
+  "abstract": "Electroencephalography (EEG) is widely used in neuroscience and clinical research for analyzing brain activity. While deep learning models such as EEGNet have shown success in decoding EEG signals, they often struggle with data complexity, inter-subject variability, and noise robustness. Recent advancements in quantum machine learning (QML) offer new opportunities to enhance EEG analysis by leveraging quantum computing's unique properties. In this study, we extend the previously proposed Quantum-EEGNet (QEEGNet), a hybrid neural network incorporating quantum layers into EEGNet, to investigate its generalization ability across multiple EEG datasets. Our evaluation spans a diverse set of cognitive and motor task datasets, assessing QEEGNet's performance in different learning scenarios. Experimental results reveal that while QEEGNet demonstrates competitive performance and maintains robustness in certain datasets, its improvements over traditional deep learning methods remain inconsistent. These findings suggest that hybrid quantum-classical architectures require further optimization to fully leverage quantum advantages in EEG processing. Despite these limitations, our study provides new insights into the applicability of QML in EEG research and highlights challenges that must be addressed for future advancements.",
+  "date": "2025-02-28",
+  "year": 2025,
+  "venue": "arXiv preprint",
+  "categories": [
+   "quant-ph",
+   "cs.LG",
+   "q-bio.NC"
+  ],
+  "doi": "",
+  "arxiv_id": "2503.00080",
+  "landing_url": "https://arxiv.org/abs/2503.00080",
+  "pdf_url": "https://arxiv.org/pdf/2503.00080",
+  "meta_source": "arxiv-api",
+  "meta_error": ""
+ },
+ {
+  "n": 31,
+  "url": "https://arxiv.org/abs/2609.01930",
+  "domain": "arxiv.org",
+  "kind": "arxiv",
+  "agent_verdict": "queued",
+  "agent_model": "gpt-oss-120b",
+  "agent_evidence": "Yonsei University; University of Waterloo; IBM | Determine the minimum set of UAV waypoints that provides at least threefold coverage of every potential target location in search-and-rescue missions. | Quantum approximate optimization algorithm (QAOA) on IBM’s 127-qubit Eagle processor",
+  "checks": [
+   {
+    "test": "Who",
+    "passed": true,
+    "evidence": "Yonsei University; University of Waterloo; IBM"
+   },
+   {
+    "test": "What",
+    "passed": true,
+    "evidence": "Determine the minimum set of UAV waypoints that provides at least threefold coverage of every potential target location in search-and-rescue missions."
+   },
+   {
+    "test": "How",
+    "passed": true,
+    "evidence": "Quantum approximate optimization algorithm (QAOA) on IBM’s 127-qubit Eagle processor"
+   }
+  ],
+  "title": "Quantum-Based k-Coverage Optimization for UAV-Aided Search and Rescue Missions",
+  "authors": [
+   "Halim Lee",
+   "Suhui Jeong",
+   "Na Young Kim",
+   "Jiwon Seo"
+  ],
+  "abstract": "In large-scale disaster scenarios, rapid localization of missing persons is a critical challenge for search-and-rescue (SAR) operations. Unmanned aerial vehicles (UAVs) equipped with radio frequency (RF) receivers can support RF-based localization by collecting signals emitted from mobile devices at spatially distributed sensing locations. This paper addresses the resulting waypoint-selection problem: determining a minimum set of UAV waypoints that provides at least threefold coverage of every potential target location. We formulate this task as an extended k-coverage problem that independently defines the UAV-navigable and target regions, and derive an exact-penalty quadratic unconstrained binary optimization (QUBO) formulation with a sufficient penalty condition that preserves feasibility and minimum waypoint cardinality. The QUBO is mapped to an Ising-form cost Hamiltonian and evaluated using the quantum approximate optimization algorithm (QAOA) on both a noise-free simulator and IBM's 127-qubit Eagle processor. On the tested simulator instances, QAOA recovers the known minimum-cardinality solutions. Across the rectangular hardware test cases, the mean 3-coverage ratio exceeded 95%. In the campus-scale evaluation, ten hardware executions achieved 99.3% mean 3-coverage with a 90% feasible-run rate, while the shortest feasible flight path was up to 37.0% shorter than those of the deterministic grid-based baselines. Additional comparisons with classical optimization and learning-based baselines are provided, together with computational and quantum-resource analyses for larger generated instances. These results establish an exact QUBO representation for RF-based SAR waypoint selection and characterize its implementation on current gate-based quantum hardware.",
+  "date": "2026-09-01",
+  "year": 2026,
+  "venue": "arXiv preprint",
+  "categories": [
+   "eess.SY"
+  ],
+  "doi": "10.1109/JIOT.2026.3729685",
+  "arxiv_id": "2609.01930",
+  "landing_url": "https://arxiv.org/abs/2609.01930",
+  "pdf_url": "https://arxiv.org/pdf/2609.01930",
+  "meta_source": "arxiv-api",
+  "meta_error": ""
+ },
+ {
+  "n": 32,
+  "url": "https://arxiv.org/abs/2605.16454",
+  "domain": "arxiv.org",
+  "kind": "arxiv",
+  "agent_verdict": "dropped at triage",
+  "agent_model": "gpt-oss-120b",
+  "agent_evidence": "FAIL Named organisation: The paper lists only the author Emir Kaan Özdemir from Istanbul Erkek High School, Ministry of National Education, with no company, lab, or agency named as a user of quantum computing.",
+  "checks": [
+   {
+    "test": "Named organisation",
+    "passed": false,
+    "evidence": "The paper lists only the author Emir Kaan Özdemir from Istanbul Erkek High School, Ministry of National Education, with no company, lab, or agency named as a user of quantum computing."
+   }
+  ],
+  "title": "QuChaTeR: A Hybrid Quantum-Chaotic Temporal Framework for Earthquake Prediction",
+  "authors": [
+   "Emir Kaan Özdemir"
+  ],
+  "abstract": "Seismic prediction remains challenging due to the highly nonlinear and chaotic dynamics of earthquake signals. While classical deep learning models such as LSTMs and CNNs capture local temporal features, and quantum models offer richer state representations, their integration with chaos-driven mechanisms is underexplored. We introduce QuChaTeR, a hybrid architecture that combines wavelet-based preprocessing, chaotic maps, and variational quantum circuits with recurrent structures to enhance temporal feature extraction. Implemented in PyTorch and PennyLane, QuChaTeR is benchmarked against classical (LSTM, GRU, RNN, 1D-CNN, Reservoir Computing) and quantum-inspired (Quantum LSTM) baselines. On real-world seismic datasets, QuChaTeR consistently converges faster and achieves superior performance across multiple evaluation criteria. Despite promising results, scalability and quantum hardware limitations remain challenges. Overall, this work demonstrates how quantum-chaotic hybridization provides a practical pathway toward more accurate and robust earthquake prediction.",
+  "date": "2026-05-14",
+  "year": 2026,
+  "venue": "arXiv preprint",
+  "categories": [
+   "cs.LG",
+   "eess.SP",
+   "quant-ph"
+  ],
+  "doi": "10.1109/ICASSP55912.2026.11460318",
+  "arxiv_id": "2605.16454",
+  "landing_url": "https://arxiv.org/abs/2605.16454",
+  "pdf_url": "https://arxiv.org/pdf/2605.16454",
+  "meta_source": "arxiv-api",
+  "meta_error": ""
+ },
+ {
+  "n": 33,
+  "url": "https://arxiv.org/abs/2606.28470",
+  "domain": "arxiv.org",
+  "kind": "arxiv",
+  "agent_verdict": "dropped at extraction",
+  "agent_model": "gpt-oss-120b",
+  "agent_evidence": "passed triage; missing who, what",
+  "checks": [
+   {
+    "test": "Agent note",
+    "passed": null,
+    "evidence": "passed triage; missing who, what"
+   }
+  ],
+  "title": "Modelling Emotional Memory in Children with Tensor Networks",
+  "authors": [
+   "Henry Groves",
+   "Lucia F. Jackson",
+   "Barbara-Anne Robertson",
+   "Jonte R. Hance"
+  ],
+  "abstract": "We demonstrate how emotional valence influences the order-dependent structure of children's recognition memory: correct recall of a sequence of emotionally-valenced toys depended not just on the valence of a given toy itself, but also on the valence of the toys shown before and after it. Whilst standard psychological models confirm that order-dependence differs across an event (a set of toys shown in sequence), accuracy is low and the model does not reflect how memory for an emotional object influences others in the set. A classical tensor network model factoring in valence is able to achieve a 77.98\\% accuracy in modelling the results of the study. While not strictly a ``quantum cognition'' model, this massive increase in accuracy shows the value of quantum-inspired methods for modelling order-dependent phenomena, such as emotional memory. Further, the task protocol we introduce presents a novel, real-world tool for exploring emotional temporal memory in children for analysis using classical and quantum-like models of cognition.",
+  "date": "2026-06-26",
+  "year": 2026,
+  "venue": "arXiv preprint",
+  "categories": [
+   "cs.LG",
+   "q-bio.NC",
+   "quant-ph"
+  ],
+  "doi": "",
+  "arxiv_id": "2606.28470",
+  "landing_url": "https://arxiv.org/abs/2606.28470",
+  "pdf_url": "https://arxiv.org/pdf/2606.28470",
+  "meta_source": "arxiv-api",
+  "meta_error": ""
+ },
+ {
+  "n": 34,
+  "url": "https://arxiv.org/abs/2512.06141",
+  "domain": "arxiv.org",
+  "kind": "arxiv",
+  "agent_verdict": "queued",
+  "agent_model": "gpt-oss-120b",
+  "agent_evidence": "inCerebro, Co., Ltd.; Korea University | Predicting protein–ligand binding free energies more accurately and cheaply for drug discovery | variational quantum eigensolver (VQE)-based electronic energy correction within a hybrid quantum‑classical workflow",
+  "checks": [
+   {
+    "test": "Who",
+    "passed": true,
+    "evidence": "inCerebro, Co., Ltd.; Korea University"
+   },
+   {
+    "test": "What",
+    "passed": true,
+    "evidence": "Predicting protein–ligand binding free energies more accurately and cheaply for drug discovery"
+   },
+   {
+    "test": "How",
+    "passed": true,
+    "evidence": "variational quantum eigensolver (VQE)-based electronic energy correction within a hybrid quantum‑classical workflow"
+   }
+  ],
+  "title": "Synergistic Computational Approaches for Accelerated Drug Discovery: Integrating Quantum Mechanics, Statistical Thermodynamics, and Quantum Computing",
+  "authors": [
+   "Farzad Molani",
+   "Art E. Cho"
+  ],
+  "abstract": "Accurately predicting protein-ligand binding free energies (BFEs) remains a central challenge in drug discovery, particularly because the most reliable methods, such as free energy perturbation (FEP), are computationally intensive and difficult to scale. Here, we introduce a hybrid quantum-classical framework that combines Mining Minima sampling with quantum mechanically refined ligand partial charges, QM/MM interaction evaluation, and variational quantum eigensolver (VQE)-based electronic energy correction. This design enables explicit treatment of polarization, charge redistribution, and electronic correlation effects that are often underestimated in purely classical scoring schemes, while retaining computational efficiency. Across 23 protein targets and 543 ligands, the method achieves a mean absolute error of about 1.10 kcal/mol with strong rank-order fidelity (Pearson R = 0.75, Spearman rho = 0.76, Kendall tau = 0.57), consistent with the performance of contemporary FEP protocols. Notably, the workflow requires only about 25 minutes per ligand on standard compute resources, resulting in an approximate 20-fold reduction in computational cost relative to alchemical free energy approaches. This level of accuracy and efficiency makes the method well-suited for high-throughput lead optimization and iterative design cycles in pharmaceutical discovery. The framework also provides a natural foundation for future integration with machine learning models to enable predictive, large-scale, and adaptive screening strategies.",
+  "date": "2025-12-05",
+  "year": 2025,
+  "venue": "arXiv preprint",
+  "categories": [
+   "physics.chem-ph",
+   "q-bio.QM",
+   "quant-ph"
+  ],
+  "doi": "",
+  "arxiv_id": "2512.06141",
+  "landing_url": "https://arxiv.org/abs/2512.06141",
+  "pdf_url": "https://arxiv.org/pdf/2512.06141",
+  "meta_source": "arxiv-api",
+  "meta_error": ""
+ },
+ {
+  "n": 35,
+  "url": "https://arxiv.org/abs/2508.21438",
+  "domain": "arxiv.org",
+  "kind": "arxiv",
+  "agent_verdict": "queued",
+  "agent_model": "gpt-oss-120b",
+  "agent_evidence": "Novo Nordisk; ORCA Computing | Early detection of anomalies in continuous biomanufacturing processes to prevent yield loss and scheduling disruptions | Hybrid quantum-classical GAN using a simulated quantum circuit and a real photonic quantum processor (ORCA Computing PT-2)",
+  "checks": [
+   {
+    "test": "Who",
+    "passed": true,
+    "evidence": "Novo Nordisk; ORCA Computing"
+   },
+   {
+    "test": "What",
+    "passed": true,
+    "evidence": "Early detection of anomalies in continuous biomanufacturing processes to prevent yield loss and scheduling disruptions"
+   },
+   {
+    "test": "How",
+    "passed": true,
+    "evidence": "Hybrid quantum-classical GAN using a simulated quantum circuit and a real photonic quantum processor (ORCA Computing PT-2)"
+   }
+  ],
+  "title": "Quantum enhanced ensemble GANs for anomaly detection in continuous biomanufacturing",
+  "authors": [
+   "Rajiv Kailasanathan",
+   "William R. Clements",
+   "Mohammad Reza Boskabadi",
+   "Shawn M. Gibford",
+   "Emmanouil Papadakis",
+   "Christopher J. Savoie",
+   "Seyed Soheil Mansouri"
+  ],
+  "abstract": "The development of continuous biomanufacturing processes requires robust and early anomaly detection, since even minor deviations can compromise yield and stability, leading to disruptions in scheduling, reduced weekly production, and diminished economic performance. These processes are inherently complex and exhibit non-linear dynamics with intricate relationships between process variables, thus making advanced methods for anomaly detection essential for efficient operation. In this work, we present a novel framework for unsupervised anomaly detection in continuous biomanufacturing based on an ensemble of generative adversarial networks (GANs). We first establish a benchmark dataset simulating both normal and anomalous operation regimes in a continuous process for the production of a small molecule. We then demonstrate the effectiveness of our GAN-based framework in detecting anomalies caused by sudden feedstock variability. Finally, we evaluate the impact of using a hybrid quantum/classical GAN approach with both a simulated quantum circuit and a real photonic quantum processor on anomaly detection performance. We find that the hybrid approach yields improved anomaly detection rates. Our work shows the potential of hybrid quantum/classical approaches for solving real-world problems in complex continuous biomanufacturing processes.",
+  "date": "2025-08-29",
+  "year": 2025,
+  "venue": "arXiv preprint",
+  "categories": [
+   "cs.LG",
+   "q-bio.OT",
+   "quant-ph"
+  ],
+  "doi": "",
+  "arxiv_id": "2508.21438",
+  "landing_url": "https://arxiv.org/abs/2508.21438",
+  "pdf_url": "https://arxiv.org/pdf/2508.21438",
+  "meta_source": "arxiv-api",
+  "meta_error": ""
+ },
+ {
+  "n": 36,
+  "url": "https://arxiv.org/abs/2508.16895",
+  "domain": "arxiv.org",
+  "kind": "arxiv",
+  "agent_verdict": "dropped at extraction",
+  "agent_model": "gpt-oss-120b",
+  "agent_evidence": "passed triage; missing who, what",
+  "checks": [
+   {
+    "test": "Agent note",
+    "passed": null,
+    "evidence": "passed triage; missing who, what"
+   }
+  ],
+  "title": "Quantum State Fidelity for Functional Neural Network Construction",
+  "authors": [
+   "Skylar Chan",
+   "Wilson Smith",
+   "Kyla Gabriel"
+  ],
+  "abstract": "Neuroscientists face challenges in analyzing high-dimensional neural recording data of dense functional networks. Without ground-truth reference data, finding the best algorithm for recovering neurologically relevant networks remains an open question. We implemented hybrid quantum algorithms to construct functional networks and compared them with the results of documented classical techniques. We demonstrated that our quantum state fidelity methods can provide competitive alternatives to classical metrics by revealing distinct functional networks. Our results suggest that quantum computing offers a viable and potentially advantageous alternative for data-driven modeling in neuroscience, underscoring its broader applicability in high-dimensional graph inference and complex system analysis.",
+  "date": "2025-08-23",
+  "year": 2025,
+  "venue": "arXiv preprint",
+  "categories": [
+   "quant-ph",
+   "cs.ET",
+   "cs.NE",
+   "math.MG",
+   "q-bio.NC"
+  ],
+  "doi": "",
+  "arxiv_id": "2508.16895",
+  "landing_url": "https://arxiv.org/abs/2508.16895",
+  "pdf_url": "https://arxiv.org/pdf/2508.16895",
+  "meta_source": "arxiv-api",
+  "meta_error": ""
+ },
+ {
+  "n": 37,
+  "url": "https://arxiv.org/abs/2508.04743",
+  "domain": "arxiv.org",
+  "kind": "arxiv",
+  "agent_verdict": "queued",
+  "agent_model": "gpt-oss-120b",
+  "agent_evidence": "Purdue University; Indian Institute of Technology Tirupati; Lancaster University | Understanding gene‑gene interactions underlying Alzheimer’s disease to inform therapeutic strategies | Quantum regression network (Alz‑QNet) using quantum machine learning",
+  "checks": [
+   {
+    "test": "Who",
+    "passed": true,
+    "evidence": "Purdue University; Indian Institute of Technology Tirupati; Lancaster University"
+   },
+   {
+    "test": "What",
+    "passed": true,
+    "evidence": "Understanding gene‑gene interactions underlying Alzheimer’s disease to inform therapeutic strategies"
+   },
+   {
+    "test": "How",
+    "passed": true,
+    "evidence": "Quantum regression network (Alz‑QNet) using quantum machine learning"
+   }
+  ],
+  "title": "Alz-QNet: A Quantum Regression Network for Studying Alzheimer's Gene Interactions",
+  "authors": [
+   "Debanjan Konar",
+   "Neerav Sreekumar",
+   "Richard Jiang",
+   "Vaneet Aggarwal"
+  ],
+  "abstract": "Understanding the molecular-level mechanisms underpinning Alzheimer's disease (AD) by studying crucial genes associated with the disease remains a challenge. Alzheimer's, being a multifactorial disease, requires understanding the gene-gene interactions underlying it for theranostics and progress. In this article, a novel attempt has been made using a quantum regression to decode how some crucial genes in the AD Amyloid Beta Precursor Protein ($APP$), Sterol regulatory element binding transcription factor 14 ($FGF14$), Yin Yang 1 ($YY1$), and Phospholipase D Family Member 3 ($PLD3$) etc. become influenced by other prominent switching genes during disease progression, which may help in gene expression-based therapy for AD. Our proposed Quantum Regression Network (Alz-QNet) introduces a pioneering approach with insights from the state-of-the-art Quantum Gene Regulatory Networks (QGRN) to unravel the gene interactions involved in AD pathology, particularly within the Entorhinal Cortex (EC), where early pathological changes occur. Using the proposed Alz-QNet framework, we explore the interactions between key genes ($APP$, $FGF14$, $YY1$, $EGR1$, $GAS7$, $AKT3$, $SREBF2$, and $PLD3$) within the CE microenvironment of AD patients, studying genetic samples from the database $GSE138852$, all of which are believed to play a crucial role in the progression of AD. Our investigation uncovers intricate gene-gene interactions, shedding light on the potential regulatory mechanisms that underlie the pathogenesis of AD, which help us to find potential gene inhibitors or regulators for theranostics.",
+  "date": "2025-08-06",
+  "year": 2025,
+  "venue": "Computers in Biology and Medicine, Volume 196, Part C, September 2025, 110837",
+  "categories": [
+   "q-bio.MN",
+   "cs.LG",
+   "q-bio.GN",
+   "quant-ph"
+  ],
+  "doi": "10.1016/j.compbiomed.2025.110837",
+  "arxiv_id": "2508.04743",
+  "landing_url": "https://arxiv.org/abs/2508.04743",
+  "pdf_url": "https://arxiv.org/pdf/2508.04743",
+  "meta_source": "arxiv-api",
+  "meta_error": ""
+ },
+ {
+  "n": 38,
+  "url": "https://arxiv.org/abs/2507.22710",
+  "domain": "arxiv.org",
+  "kind": "arxiv",
+  "agent_verdict": "queued",
+  "agent_model": "gpt-oss-20b",
+  "agent_evidence": "IBM Research; IBM Quantum | Predicting CAR T‑cell cytotoxicity from combinatorial co‑stimulatory domain libraries | Projected Quantum Kernel (PQK) using a 61‑qubit gate‑based quantum computer",
+  "checks": [
+   {
+    "test": "Who",
+    "passed": true,
+    "evidence": "IBM Research; IBM Quantum"
+   },
+   {
+    "test": "What",
+    "passed": true,
+    "evidence": "Predicting CAR T‑cell cytotoxicity from combinatorial co‑stimulatory domain libraries"
+   },
+   {
+    "test": "How",
+    "passed": true,
+    "evidence": "Projected Quantum Kernel (PQK) using a 61‑qubit gate‑based quantum computer"
+   }
+  ],
+  "title": "Enhanced Prediction of CAR T-Cell Cytotoxicity with Quantum-Kernel Methods",
+  "authors": [
+   "Filippo Utro",
+   "Meltem Tolunay",
+   "Kahn Rhrissorrakrai",
+   "Tanvi P. Gujarati",
+   "Jie Shi",
+   "Sara Capponi",
+   "Mirko Amico",
+   "Nate Earnest-Noble",
+   "Laxmi Parida"
+  ],
+  "abstract": "Chimeric antigen receptor (CAR) T-cells are T-cells engineered to recognize and kill specific tumor cells. Through their extracellular domains, CAR T-cells bind tumor cell antigens which triggers CAR T activation and proliferation. These processes are regulated by co-stimulatory domains present in the intracellular region of the CAR T-cell. Through integrating novel signaling components into the co-stimulatory domains, it is possible to modify CAR T-cell phenotype. Identifying and experimentally testing new CAR constructs based on libraries of co-stimulatory domains is nontrivial given the vast combinatorial space defined by such libraries. This leads to a highly data constrained, poorly explored combinatorial problem, where the experiments undersample all possible combinations. We propose a quantum approach using a Projected Quantum Kernel (PQK) to address this challenge. PQK operates by embedding classical data into a high dimensional Hilbert space and employs a kernel method to measure sample similarity. Using 61 qubits on a gate-based quantum computer, we demonstrate the largest PQK application to date and an enhancement in the classification performance over purely classical machine learning methods for CAR T cytotoxicity prediction. Importantly, we show improved learning for specific signaling domains and domain positions, particularly where there was lower information highlighting the potential for quantum computing in data-constrained problems.",
+  "date": "2025-07-30",
+  "year": 2025,
+  "venue": "arXiv preprint",
+  "categories": [
+   "cs.LG",
+   "q-bio.QM",
+   "quant-ph"
+  ],
+  "doi": "",
+  "arxiv_id": "2507.22710",
+  "landing_url": "https://arxiv.org/abs/2507.22710",
+  "pdf_url": "https://arxiv.org/pdf/2507.22710",
+  "meta_source": "arxiv-api",
+  "meta_error": ""
+ },
+ {
+  "n": 39,
+  "url": "https://arxiv.org/abs/2506.03199",
+  "domain": "arxiv.org",
+  "kind": "arxiv",
+  "agent_verdict": "dropped at extraction",
+  "agent_model": "gpt-oss-20b",
+  "agent_evidence": "passed triage; missing how",
+  "checks": [
+   {
+    "test": "Agent note",
+    "passed": null,
+    "evidence": "passed triage; missing how"
+   }
+  ],
+  "title": "Quantum Cognition Machine Learning for Forecasting Chromosomal Instability",
+  "authors": [
+   "Giuseppe Di Caro",
+   "Vahagn Kirakosyan",
+   "Alexander G. Abanov",
+   "Jerome R. Busemeyer",
+   "Luca Candelori",
+   "Nadine Hartmann",
+   "Ernest T. Lam",
+   "Kharen Musaelian",
+   "Ryan Samson",
+   "Harold Steinacker",
+   "Dario Villani",
+   "Martin T. Wells",
+   "Richard J. Wenstrup",
+   "Mengjia Xu"
+  ],
+  "abstract": "The accurate prediction of chromosomal instability from the morphology of circulating tumor cells (CTCs) enables real-time detection of CTCs with high metastatic potential in the context of liquid biopsy diagnostics. However, it presents a significant challenge due to the high dimensionality and complexity of single-cell digital pathology data. Here, we introduce the application of Quantum Cognition Machine Learning (QCML), a quantum-inspired computational framework, to estimate morphology-predicted chromosomal instability in CTCs from patients with metastatic breast cancer. QCML leverages quantum mechanical principles to represent data as state vectors in a Hilbert space, enabling context-aware feature modeling, dimensionality reduction, and enhanced generalization without requiring curated feature selection. QCML outperforms conventional machine learning methods when tested on out of sample verification CTCs, achieving higher accuracy in identifying predicted large-scale state transitions (pLST) status from CTC-derived morphology features. These preliminary findings support the application of QCML as a novel machine learning tool with superior performance in high-dimensional, low-sample-size biomedical contexts. QCML enables the simulation of cognition-like learning for the identification of biologically meaningful prediction of chromosomal instability from CTC morphology, offering a novel tool for CTC classification in liquid biopsy.",
+  "date": "2025-06-02",
+  "year": 2025,
+  "venue": "arXiv preprint",
+  "categories": [
+   "q-bio.QM",
+   "cs.LG",
+   "quant-ph"
+  ],
+  "doi": "",
+  "arxiv_id": "2506.03199",
+  "landing_url": "https://arxiv.org/abs/2506.03199",
+  "pdf_url": "https://arxiv.org/pdf/2506.03199",
+  "meta_source": "arxiv-api",
+  "meta_error": ""
+ },
+ {
+  "n": 40,
+  "url": "https://arxiv.org/abs/2505.23289",
+  "domain": "arxiv.org",
+  "kind": "arxiv",
+  "agent_verdict": "queued",
+  "agent_model": "gpt-oss-20b",
+  "agent_evidence": "RWTH Aachen University; University of Northern Iowa; Peter Grünberg Institute (PGI-12), Forschungszentrum Jülich; D-Wave | Efficiently sampling topologically associating chromatin domains (TADs) using an epigenetic Ising model | quantum annealing on D-Wave quantum processors",
+  "checks": [
+   {
+    "test": "Who",
+    "passed": true,
+    "evidence": "RWTH Aachen University; University of Northern Iowa; Peter Grünberg Institute (PGI-12), Forschungszentrum Jülich; D-Wave"
+   },
+   {
+    "test": "What",
+    "passed": true,
+    "evidence": "Efficiently sampling topologically associating chromatin domains (TADs) using an epigenetic Ising model"
+   },
+   {
+    "test": "How",
+    "passed": true,
+    "evidence": "quantum annealing on D-Wave quantum processors"
+   }
+  ],
+  "title": "Intermediate State Formation of Topologically Associated Chromatin Domains using Quantum Annealing",
+  "authors": [
+   "Tobias Kempe",
+   "S. M. Ali Tabei",
+   "Mohammad H. Ansari"
+  ],
+  "abstract": "Topologically Associating Chromatin Domains are spatially distinct chromatin regions that regulate transcription by segregating active and inactive genomic elements. Empirical studies show that their formation correlates with local patterns of epigenetic markers, yet the precise mechanisms linking 1D epigenetic landscapes to 3D chromatin folding remain unclear. Recent models represent chromatin as a spin system, where nucleosomes are treated as discrete-state variables coupled by interaction strengths derived from genomic and epigenetic data. Classical samplers struggle with these models due to high frustration and dense couplings. Here, we present a quantum annealing (QA) approach to efficiently sample chromatin states, embedding an epigenetic Ising model into the topology of D-Wave quantum processors. Rather than reconstructing exact TAD size distributions or insulation scores, our method reproduces statistical features, such as mean marker incidences and intra-/inter-nucleosome correlations, while generating configurations that exhibit TAD-like structural motifs. These results demonstrate QA as an alternative to explore the chromatin architecture and provide a foundation in epigenetic modeling.",
+  "date": "2025-05-29",
+  "year": 2025,
+  "venue": "Scientific Reports, 2026",
+  "categories": [
+   "quant-ph",
+   "cond-mat.soft",
+   "physics.bio-ph",
+   "q-bio.GN"
+  ],
+  "doi": "10.1038/s41598-026-55306-1",
+  "arxiv_id": "2505.23289",
+  "landing_url": "https://arxiv.org/abs/2505.23289",
+  "pdf_url": "https://arxiv.org/pdf/2505.23289",
+  "meta_source": "arxiv-api",
+  "meta_error": ""
+ },
+ {
+  "n": 41,
+  "url": "https://arxiv.org/abs/2505.08956",
+  "domain": "arxiv.org",
+  "kind": "arxiv",
+  "agent_verdict": "dropped at triage",
+  "agent_model": "gpt-oss-20b",
+  "agent_evidence": "PASS Named organisation: The authors are affiliated with Lighthouse Disruptive Innovation Group Europe, SL and MIT Media Lab.",
+  "checks": [
+   {
+    "test": "Named organisation",
+    "passed": true,
+    "evidence": "The authors are affiliated with Lighthouse Disruptive Innovation Group Europe, SL and MIT Media Lab."
+   }
+  ],
+  "title": "QMProt: A Comprehensive Dataset of Quantum Properties for Proteins",
+  "authors": [
+   "Laia Coronas Sala",
+   "Parfait Atchade-Adelemou"
+  ],
+  "abstract": "We introduce Quantum Mechanics for Proteins (QMProt), a dataset developed to support quantum computing applications in protein research. QMProt contains precise quantum-mechanical and physicochemical data, enabling accurate characterization of biomolecules and supporting advanced computational methods like molecular fragmentation and reassembly. The dataset includes 45 molecules covering all 20 essential human amino acids and their core structural elements: amino terminal groups, carboxyl terminal groups, alpha carbons, and unique side chains. QMProt primarily features organic molecules with up to 15 non-hydrogen atoms (C, N, O, S), offering comprehensive molecular Hamiltonians, ground state energies, and detailed physicochemical properties. Publicly accessible, QMProt aims to enhance reproducibility and advance quantum-enhanced simulations in molecular biology, biochemistry, and drug discovery.",
+  "date": "2025-05-13",
+  "year": 2025,
+  "venue": "arXiv preprint",
+  "categories": [
+   "quant-ph",
+   "q-bio.BM"
+  ],
+  "doi": "",
+  "arxiv_id": "2505.08956",
+  "landing_url": "https://arxiv.org/abs/2505.08956",
+  "pdf_url": "https://arxiv.org/pdf/2505.08956",
+  "meta_source": "arxiv-api",
+  "meta_error": ""
+ },
+ {
+  "n": 42,
+  "url": "https://arxiv.org/abs/2505.00777",
+  "domain": "arxiv.org",
+  "kind": "arxiv",
+  "agent_verdict": "dropped at triage",
+  "agent_model": "gpt-oss-120b",
+  "agent_evidence": "FAIL Named organisation: The paper lists authors Diederik Aerts, Jonito Aerts Arguelles and Sandro Sozzo but does not name a specific company, lab or agency as the user of quantum computing.",
+  "checks": [
+   {
+    "test": "Named organisation",
+    "passed": false,
+    "evidence": "The paper lists authors Diederik Aerts, Jonito Aerts Arguelles and Sandro Sozzo but does not name a specific company, lab or agency as the user of quantum computing."
+   }
+  ],
+  "title": "Quantum Measurement, Entanglement and the Warping Mechanism of Human Perception",
+  "authors": [
+   "Diederik Aerts",
+   "Jonito Aerts Arguëlles",
+   "Sandro Sozzo"
+  ],
+  "abstract": "We prove that the quantum measurement process contains the same warping mechanism that occurs in categorical perception, a phenomenon ubiquitous in human perception. This warping causes stimuli belonging to the same category to be perceived as more similar, while stimuli belonging to different categories are perceived as more different. As a result of a detailed study of the quantum measurement using the Bloch representation, we identify the natural metric for pure states, namely the Fubini Study metric, and the natural metric for density states, namely the trace class metric. The warping mechanism of categorical perception is then manifested, when the distances between pure states, playing the role of stimuli for the quantum measurement, are warped into the distances between density states, playing the role of percepts for quantum measurement. We work out the example of a two-dimensional quantum model, a qubit, with 'light' and 'dark' as the two eigenstates, and show how the typical contraction and dilation warping of human perception manifest themselves in this example of the quantum measurement model of light and dark.",
+  "date": "2025-05-01",
+  "year": 2025,
+  "venue": "arXiv preprint",
+  "categories": [
+   "q-bio.NC",
+   "quant-ph"
+  ],
+  "doi": "",
+  "arxiv_id": "2505.00777",
+  "landing_url": "https://arxiv.org/abs/2505.00777",
+  "pdf_url": "https://arxiv.org/pdf/2505.00777",
+  "meta_source": "arxiv-api",
+  "meta_error": ""
+ },
+ {
+  "n": 43,
+  "url": "https://arxiv.org/abs/2505.00037",
+  "domain": "arxiv.org",
+  "kind": "arxiv",
+  "agent_verdict": "queued",
+  "agent_model": "gpt-oss-120b",
+  "agent_evidence": "Cleveland Clinic | Identifying key biomarkers for COVID-19 from high-dimensional multi-omics data | Quantum Support Vector Machine (QSVM) algorithm with quantum kernels (amplitude encoding, angle encoding, ZZ feature map, projected quantum kernel)",
+  "checks": [
+   {
+    "test": "Who",
+    "passed": true,
+    "evidence": "Cleveland Clinic"
+   },
+   {
+    "test": "What",
+    "passed": true,
+    "evidence": "Identifying key biomarkers for COVID-19 from high-dimensional multi-omics data"
+   },
+   {
+    "test": "How",
+    "passed": true,
+    "evidence": "Quantum Support Vector Machine (QSVM) algorithm with quantum kernels (amplitude encoding, angle encoding, ZZ feature map, projected quantum kernel)"
+   }
+  ],
+  "title": "Can a Quantum Support Vector Machine algorithm be utilized to identify Key Biomarkers from Multi-Omics data of COVID19 patients?",
+  "authors": [
+   "Junggu Choi",
+   "Chansu Yu",
+   "Kyle L. Jung",
+   "Suan-Sin Foo",
+   "Weiqiang Chen",
+   "Suzy AA Comhair",
+   "Serpil C. Erzurum",
+   "Lara Jehi",
+   "Jae U. Jung"
+  ],
+  "abstract": "Identifying key biomarkers for COVID-19 from high-dimensional multi-omics data is critical for advancing both diagnostic and pathogenesis research. In this study, we evaluated the applicability of the Quantum Support Vector Machine (QSVM) algorithm for biomarker-based classification of COVID-19. Proteomic and metabolomic biomarkers from two independent datasets were ranked by importance using ridge regression and grouped accordingly. The top- and bottom-ranked biomarker sets were then used to train and evaluate both classical SVM (CSVM) and QSVM models, serving as predictive and negative control inputs, respectively. The QSVM was implemented with multiple quantum kernels, including amplitude encoding, angle encoding, the ZZ feature map, and the projected quantum kernel. Across various experimental settings, QSVM consistently achieved classification performance that was comparable to or exceeded that of CSVM, while reflecting the importance rankings by ridge regression. Although the experiments were conducted in numerical simulation, our findings highlight the potential of QSVM as a promising approach for multi-omics data analysis in biomedical research.",
+  "date": "2025-04-29",
+  "year": 2025,
+  "venue": "arXiv preprint",
+  "categories": [
+   "quant-ph",
+   "cs.LG",
+   "q-bio.QM"
+  ],
+  "doi": "",
+  "arxiv_id": "2505.00037",
+  "landing_url": "https://arxiv.org/abs/2505.00037",
+  "pdf_url": "https://arxiv.org/pdf/2505.00037",
+  "meta_source": "arxiv-api",
+  "meta_error": ""
+ },
+ {
+  "n": 44,
+  "url": "https://arxiv.org/abs/2502.06883",
+  "domain": "arxiv.org",
+  "kind": "arxiv",
+  "agent_verdict": "dropped at triage",
+  "agent_model": "gpt-oss-120b",
+  "agent_evidence": "FAIL Named organisation: The paper lists the authors’ affiliations (Ulm University, Tensor AI Solutions GmbH, etc.) but does not name an external organisation whose problem is being addressed.",
+  "checks": [
+   {
+    "test": "Named organisation",
+    "passed": false,
+    "evidence": "The paper lists the authors’ affiliations (Ulm University, Tensor AI Solutions GmbH, etc.) but does not name an external organisation whose problem is being addressed."
+   }
+  ],
+  "title": "QuantumDNA: A Python Package for Analyzing Quantum Charge Dynamics in DNA and Exploring Its Biological Relevance",
+  "authors": [
+   "Dennis Herb",
+   "Marco Trenti",
+   "Marilena Mantela",
+   "Constantinos Simserides",
+   "Joachim Ankerhold",
+   "Mirko Rossini"
+  ],
+  "abstract": "The study of DNA charge dynamics is a highly interdisciplinary field that bridges physics, chemistry, biology, and medicine, and plays a critical role in processes such as DNA damage detection, protein-DNA interactions, and DNA-based nanotechnology. However, despite significant advances in each of these areas, knowledge often remains inaccessible to other scientific communities, limiting the broader impact of advances across disciplines. To bridge this gap, we present QuantumDNA, an open-source Python package for simulating DNA charge transfer (CT) and excited states using quantum-physical methods. QuantumDNA combines an efficient Linear Combination of Atomic Orbitals (LCAO) approach with tight-binding (TB) models, incorporating open quantum systems techniques to account for environmental effects. This approach allows rapid yet accurate analysis of large DNA ensembles, enabling statistical studies of genetic and epigenetic phenomena. To ensure accessibility, the package features a graphical user interface (GUI), making it suitable for researchers across disciplines.",
+  "date": "2025-02-08",
+  "year": 2025,
+  "venue": "arXiv preprint",
+  "categories": [
+   "q-bio.BM",
+   "physics.bio-ph",
+   "physics.comp-ph",
+   "quant-ph"
+  ],
+  "doi": "",
+  "arxiv_id": "2502.06883",
+  "landing_url": "https://arxiv.org/abs/2502.06883",
+  "pdf_url": "https://arxiv.org/pdf/2502.06883",
+  "meta_source": "arxiv-api",
+  "meta_error": ""
+ },
+ {
+  "n": 45,
+  "url": "https://arxiv.org/abs/2412.10260",
+  "domain": "arxiv.org",
+  "kind": "arxiv",
+  "agent_verdict": "dropped at extraction",
+  "agent_model": "gpt-oss-120b",
+  "agent_evidence": "passed triage; missing how",
+  "checks": [
+   {
+    "test": "Agent note",
+    "passed": null,
+    "evidence": "passed triage; missing how"
+   }
+  ],
+  "title": "Quadratic unconstrained binary optimization and constraint programming approaches for lattice-based cyclic peptide docking",
+  "authors": [
+   "J. Kyle Brubaker",
+   "Kyle E. C. Booth",
+   "Akihiko Arakawa",
+   "Fabian Furrer",
+   "Jayeeta Ghosh",
+   "Tsutomu Sato",
+   "Helmut G. Katzgraber"
+  ],
+  "abstract": "The peptide-protein docking problem is an important problem in structural biology that facilitates rational and efficient drug design. In this work, we explore modeling and solving this problem with the quantum-amenable quadratic unconstrained binary optimization (QUBO) formalism. Our work extends recent efforts by incorporating the objectives and constraints associated with peptide cyclization and peptide-protein docking in the two-particle model on a tetrahedral lattice. We propose a ``resource efficient'' QUBO encoding for this problem, and baseline its performance with a novel constraint programming (CP) approach. We implement an end-to-end framework that enables the evaluation of our methods on instances from the Protein Data Bank (PDB). Our results show that the QUBO approach, using a classical simulated annealing solver, is able to find feasible conformations for problems with up to 6 peptide residues and 34 target protein residues, but has trouble scaling beyond this problem size. In contrast, the CP approach can solve problems with up to 13 peptide residues and 34 target protein residues. We conclude that while QUBO can be used to successfully tackle this problem, its scaling limitations and the strong performance of the CP method suggest that it may not be the best choice.",
+  "date": "2024-12-13",
+  "year": 2024,
+  "venue": "arXiv preprint",
+  "categories": [
+   "q-bio.BM",
+   "math.OC",
+   "physics.chem-ph",
+   "quant-ph"
+  ],
+  "doi": "",
+  "arxiv_id": "2412.10260",
+  "landing_url": "https://arxiv.org/abs/2412.10260",
+  "pdf_url": "https://arxiv.org/pdf/2412.10260",
+  "meta_source": "arxiv-api",
+  "meta_error": ""
+ },
+ {
+  "n": 46,
+  "url": "https://arxiv.org/abs/2407.19852",
+  "domain": "arxiv.org",
+  "kind": "arxiv",
+  "agent_verdict": "dropped at triage",
+  "agent_model": "gpt-oss-120b",
+  "agent_evidence": "FAIL Named organisation: The paper lists authors from Tianjin University of Science and Technology and Yiwei Quantum Technology Co., Ltd, but no specific client organization is named as the user of the quantum solution.",
+  "checks": [
+   {
+    "test": "Named organisation",
+    "passed": false,
+    "evidence": "The paper lists authors from Tianjin University of Science and Technology and Yiwei Quantum Technology Co., Ltd, but no specific client organization is named as the user of the quantum solution."
+   }
+  ],
+  "title": "Quantum Long Short-Term Memory for Drug Discovery",
+  "authors": [
+   "Liang Zhang",
+   "Yin Xu",
+   "Mohan Wu",
+   "Liang Wang",
+   "Hua Xu"
+  ],
+  "abstract": "Quantum computing combined with machine learning (ML) is a highly promising research area, with numerous studies demonstrating that quantum machine learning (QML) is expected to solve scientific problems more effectively than classical ML. In this work, we present Quantum Long Short-Term Memory (QLSTM), a QML architecture, and demonstrate its effectiveness in drug discovery. We evaluate QLSTM on five benchmark datasets (BBBP, BACE, SIDER, BCAP37, T-47D), and observe consistent performance gains over classical LSTM, with ROC-AUC improvements ranging from 3% to over 6%. Furthermore, QLSTM exhibits improved predictive accuracy as the number of qubits increases, and faster convergence than classical LSTM under the same training conditions. Notably, QLSTM maintains strong robustness against quantum computer noise, outperforming noise-free classical LSTM in certain settings. These findings highlight the potential of QLSTM as a scalable and noise-resilient model for scientific applications, particularly as quantum hardware continues to advance in qubit capacity and fidelity.",
+  "date": "2024-07-29",
+  "year": 2024,
+  "venue": "arXiv preprint",
+  "categories": [
+   "quant-ph",
+   "cs.LG",
+   "q-bio.BM"
+  ],
+  "doi": "",
+  "arxiv_id": "2407.19852",
+  "landing_url": "https://arxiv.org/abs/2407.19852",
+  "pdf_url": "https://arxiv.org/pdf/2407.19852",
+  "meta_source": "arxiv-api",
+  "meta_error": ""
+ },
+ {
+  "n": 47,
+  "url": "https://arxiv.org/abs/2607.20168",
+  "domain": "arxiv.org",
+  "kind": "arxiv",
+  "agent_verdict": "dropped at triage",
+  "agent_model": "gpt-oss-120b",
+  "agent_evidence": "FAIL Named organisation: The paper does not mention any specific company, lab, or government agency; it is authored by Junchi Shen and presents an academic study.",
+  "checks": [
+   {
+    "test": "Named organisation",
+    "passed": false,
+    "evidence": "The paper does not mention any specific company, lab, or government agency; it is authored by Junchi Shen and presents an academic study."
+   }
+  ],
+  "title": "Quantum Kernels and the Cross-Section of Stock Returns: Anatomy of a Vanishing Advantage",
+  "authors": [
+   "Junchi Shen"
+  ],
+  "abstract": "Do quantum kernels improve cross-sectional stock return prediction? We run a controlled horse race on the Chinese A-share market in which a quantum fidelity kernel, a projected quantum kernel, and a classical RBF control share identical training subsamples, solver, and tuning budgets, so that only the kernel is exchanged. On the main evaluation -- a point-in-time universe and 170 walk-forward windows (2012-2025) -- no quantum advantage exists: the fidelity kernel is indistinguishable from its RBF control ($Δ$IC $=+0.005$, $p=0.42$), and a $2\\times2$ design crossing kernel type with training budget (a Nystrom extension to the full ~38,000-observation windows) shows quantum kernels matching, but never beating, equal-budget linear models; after family-wise correction no pairwise difference among eleven models is significant, with point estimates favoring penalized linear regressions throughout. We then document how the opposite conclusion arises: a 60-window evaluation on a universe screened with full-sample information makes the same quantum kernel appear dominant on stability criteria and significantly better than neural baselines. Interaction characteristics from the anomalies literature help nothing, quantum or classical; a widened bandwidth grid reveals an interior optimum rather than the near-classical endpoint a coarse grid suggests; and the geometric difference, while large throughout ($g \\gg 1$), does not predict out-of-sample gains ($ρ=-0.20$). We propose protocol standards -- kernel-swap controls, budget-equalized comparisons, point-in-time universes, and multiplicity-robust inference -- for empirical claims of quantum advantage in finance.",
+  "date": "2026-07-22",
+  "year": 2026,
+  "venue": "arXiv preprint",
+  "categories": [
+   "q-fin.PR",
+   "quant-ph",
+   "stat.ML"
+  ],
+  "doi": "",
+  "arxiv_id": "2607.20168",
+  "landing_url": "https://arxiv.org/abs/2607.20168",
+  "pdf_url": "https://arxiv.org/pdf/2607.20168",
+  "meta_source": "arxiv-api",
+  "meta_error": ""
+ },
+ {
+  "n": 48,
+  "url": "https://arxiv.org/abs/2607.12990",
+  "domain": "arxiv.org",
+  "kind": "arxiv",
+  "agent_verdict": "queued",
+  "agent_model": "gpt-oss-120b",
+  "agent_evidence": "BBVA; IBM Quantum | BBVA needed to compute Credit Valuation Adjustments (CVA) more efficiently than classical Monte‑Carlo sampling allows | contrast‑aware Bayesian iterative quantum amplitude estimation (CABIQAE) on IBM Quantum hardware",
+  "checks": [
+   {
+    "test": "Who",
+    "passed": true,
+    "evidence": "BBVA; IBM Quantum"
+   },
+   {
+    "test": "What",
+    "passed": true,
+    "evidence": "BBVA needed to compute Credit Valuation Adjustments (CVA) more efficiently than classical Monte‑Carlo sampling allows"
+   },
+   {
+    "test": "How",
+    "passed": true,
+    "evidence": "contrast‑aware Bayesian iterative quantum amplitude estimation (CABIQAE) on IBM Quantum hardware"
+   }
+  ],
+  "title": "A Noise-Aware Quantum Algorithm for Credit Valuation Adjustments on Real Quantum Hardware",
+  "authors": [
+   "Guillem Borràs Espert",
+   "Francisco Gómez Casanova",
+   "Luis de Pedro Sánchez",
+   "Senaida Hernández Santana",
+   "Pablo Serrano Molinero"
+  ],
+  "abstract": "Credit Valuation Adjustment (CVA) requires repeated risk-neutral expectation estimation, making it a natural test bed for quantum amplitude estimation, whose coherent amplification can in principle reduce Monte Carlo sampling cost. Whether this advantage survives realistic financial encoding and noisy hardware remains open. We develop an end-to-end, noise-aware quantum workflow for CVA, covering market calibration, discretisation, oracle construction, hardware execution and error-budget analysis. The model combines a correlated two-asset exposure with discount and default factors, encoded through a QCBM-based joint time-market distribution and controlled payoff rotations. We introduce contrast-aware Bayesian iterative quantum amplitude estimation (CABIQAE), which incorporates experimentally calibrated Grover-contrast loss into Bayesian inference and circuit-depth selection. Hardware-calibrated experiments show that CABIQAE exploits the limited amplification available on current devices more effectively than noise-agnostic alternatives and achieves a much lower classical post-processing runtime than the noise-aware BAE baseline. The analysis further decomposes the total CVA error into statistical, encoding, discretisation and hardware contributions. The full CVA oracle remains limited by circuit depth and discretisation resolution.",
+  "date": "2026-07-14",
+  "year": 2026,
+  "venue": "arXiv preprint",
+  "categories": [
+   "quant-ph",
+   "q-fin.CP"
+  ],
+  "doi": "",
+  "arxiv_id": "2607.12990",
+  "landing_url": "https://arxiv.org/abs/2607.12990",
+  "pdf_url": "https://arxiv.org/pdf/2607.12990",
+  "meta_source": "arxiv-api",
+  "meta_error": ""
+ },
+ {
+  "n": 49,
+  "url": "https://arxiv.org/abs/2602.15474",
+  "domain": "arxiv.org",
+  "kind": "arxiv",
+  "agent_verdict": "queued",
+  "agent_model": "gpt-oss-120b",
+  "agent_evidence": "University of Salamanca | Classifying probability distributions and volatility regimes in financial time series | Quantum Reservoir Computing (QRC) implemented on a superconducting circuit with Josephson junctions",
+  "checks": [
+   {
+    "test": "Who",
+    "passed": true,
+    "evidence": "University of Salamanca"
+   },
+   {
+    "test": "What",
+    "passed": true,
+    "evidence": "Classifying probability distributions and volatility regimes in financial time series"
+   },
+   {
+    "test": "How",
+    "passed": true,
+    "evidence": "Quantum Reservoir Computing (QRC) implemented on a superconducting circuit with Josephson junctions"
+   }
+  ],
+  "title": "Quantum Reservoir Computing for Statistical Classification in a Superconducting Quantum Circuit",
+  "authors": [
+   "J. J. Prieto-Garcia",
+   "A. G. del Pozo-Martín",
+   "M. Pino"
+  ],
+  "abstract": "We analyze numerically the performance of Quantum Reservoir Computing (QRC) for statistical and financial problems. We use a reservoir composed of two superconducting islands coupled via their charge degrees of freedom. The key non-linear elements that provide the reservoir with rich and complex dynamics are the Josephson junctions that connect each island to the ground. We show that QRC implemented in this circuit can accurately classify complex probability distributions, including those with heavy tails, and identify regimes in correlated time series, such as periods of high volatility generated by standard econometric models. We find QRC to outperform some of the best classical methods when the amount of information is limited. This demonstrates its potential to be a noise-resilient quantum learning approach capable of tackling real-world problems within currently available superconducting platforms. We further discuss how to improve our QRC algorithm in real superconducting hardware to benefit from a much larger Hilbert space.",
+  "date": "2026-02-17",
+  "year": 2026,
+  "venue": "arXiv preprint",
+  "categories": [
+   "quant-ph",
+   "cond-mat.supr-con",
+   "q-fin.ST"
+  ],
+  "doi": "",
+  "arxiv_id": "2602.15474",
+  "landing_url": "https://arxiv.org/abs/2602.15474",
+  "pdf_url": "https://arxiv.org/pdf/2602.15474",
+  "meta_source": "arxiv-api",
+  "meta_error": ""
+ },
+ {
+  "n": 50,
+  "url": "https://arxiv.org/abs/2510.15903",
+  "domain": "arxiv.org",
+  "kind": "arxiv",
+  "agent_verdict": "queued",
+  "agent_model": "gpt-oss-120b",
+  "agent_evidence": "Omnis Labs | Improving performance of Automated Market Makers (AMM) and DeFi trading strategies | VQE Classifier, Quantum Neural Network (QNN), Quantum Support Vector Machine (QSVM), and hybrid models QASA Hybrid, QASA Sequence, QuantumRWKV",
+  "checks": [
+   {
+    "test": "Who",
+    "passed": true,
+    "evidence": "Omnis Labs"
+   },
+   {
+    "test": "What",
+    "passed": true,
+    "evidence": "Improving performance of Automated Market Makers (AMM) and DeFi trading strategies"
+   },
+   {
+    "test": "How",
+    "passed": true,
+    "evidence": "VQE Classifier, Quantum Neural Network (QNN), Quantum Support Vector Machine (QSVM), and hybrid models QASA Hybrid, QASA Sequence, QuantumRWKV"
+   }
+  ],
+  "title": "Quantum and Classical Machine Learning in Decentralized Finance: Comparative Evidence from Multi-Asset Backtesting of Automated Market Makers",
+  "authors": [
+   "Chi-Sheng Chen",
+   "Aidan Hung-Wen Tsai"
+  ],
+  "abstract": "This study presents a comprehensive empirical comparison between quantum machine learning (QML) and classical machine learning (CML) approaches in Automated Market Makers (AMM) and Decentralized Finance (DeFi) trading strategies through extensive backtesting on 10 models across multiple cryptocurrency assets. Our analysis encompasses classical ML models (Random Forest, Gradient Boosting, Logistic Regression), pure quantum models (VQE Classifier, QNN, QSVM), hybrid quantum-classical models (QASA Hybrid, QASA Sequence, QuantumRWKV), and transformer models. The results demonstrate that hybrid quantum models achieve superior overall performance with 11.2\\% average return and 1.42 average Sharpe ratio, while classical ML models show 9.8\\% average return and 1.47 average Sharpe ratio. The QASA Sequence hybrid model achieves the highest individual return of 13.99\\% with the best Sharpe ratio of 1.76, demonstrating the potential of quantum-classical hybrid approaches in AMM and DeFi trading strategies.",
+  "date": "2025-09-14",
+  "year": 2025,
+  "venue": "arXiv preprint",
+  "categories": [
+   "q-fin.ST",
+   "cs.LG",
+   "quant-ph"
+  ],
+  "doi": "",
+  "arxiv_id": "2510.15903",
+  "landing_url": "https://arxiv.org/abs/2510.15903",
+  "pdf_url": "https://arxiv.org/pdf/2510.15903",
+  "meta_source": "arxiv-api",
+  "meta_error": ""
+ },
+ {
+  "n": 51,
+  "url": "https://arxiv.org/abs/2509.17715",
+  "domain": "arxiv.org",
+  "kind": "arxiv",
+  "agent_verdict": "queued",
+  "agent_model": "gpt-oss-120b",
+  "agent_evidence": "HSBC Holdings Plc.; IBM Quantum | Estimating fill probabilities for corporate bond trade orders to improve algorithmic trading performance. | IBM Heron processors",
+  "checks": [
+   {
+    "test": "Who",
+    "passed": true,
+    "evidence": "HSBC Holdings Plc.; IBM Quantum"
+   },
+   {
+    "test": "What",
+    "passed": true,
+    "evidence": "Estimating fill probabilities for corporate bond trade orders to improve algorithmic trading performance."
+   },
+   {
+    "test": "How",
+    "passed": true,
+    "evidence": "IBM Heron processors"
+   }
+  ],
+  "title": "Enhanced fill probability estimates in institutional algorithmic bond trading using statistical learning algorithms with quantum computers",
+  "authors": [
+   "Axel Ciceri",
+   "Austin Cottrell",
+   "Joshua Freeland",
+   "Daniel Fry",
+   "Hirotoshi Hirai",
+   "Philip Intallura",
+   "Hwajung Kang",
+   "Chee-Kong Lee",
+   "Abhijit Mitra",
+   "Kentaro Ohno",
+   "Das Pemmaraju",
+   "Manuel Proissl",
+   "Brian Quanz",
+   "Del Rajan",
+   "Noriaki Shimada",
+   "Kavitha Yograj"
+  ],
+  "abstract": "The estimation of fill probabilities for trade orders represents a key ingredient in the optimization of algorithmic trading strategies. It is bound by the complex dynamics of financial markets with inherent uncertainties, and the limitations of models aiming to learn from multivariate financial time series that often exhibit stochastic properties with hidden temporal patterns. In this paper, we focus on algorithmic responses to trade inquiries in the corporate bond market and investigate fill probability estimation errors of common machine learning models when given real production-scale intraday trade event data, transformed by a quantum algorithm running on IBM Heron processors, as well as on noiseless quantum simulators for comparison. We introduce a framework to embed these quantum-generated data transforms as a decoupled offline component that can be selectively queried by models in low-latency institutional trade optimization settings. A trade execution backtesting method is employed to evaluate the fill prediction performance of these models in relation to their input data. We observe a relative gain of up to ~ 34% in out-of-sample test scores for those models with access to quantum hardware-transformed data over those using the original trading data or transforms by noiseless quantum simulation. These empirical results suggest that the inherent noise in current quantum hardware contributes to this effect and motivates further studies. Our work demonstrates the emerging potential of quantum computing as a complementary explorative tool in quantitative finance and encourages applied industry research towards practical applications in trading.",
+  "date": "2025-09-22",
+  "year": 2025,
+  "venue": "arXiv preprint",
+  "categories": [
+   "quant-ph",
+   "q-fin.TR"
+  ],
+  "doi": "",
+  "arxiv_id": "2509.17715",
+  "landing_url": "https://arxiv.org/abs/2509.17715",
+  "pdf_url": "https://arxiv.org/pdf/2509.17715",
+  "meta_source": "arxiv-api",
+  "meta_error": ""
+ },
+ {
+  "n": 52,
+  "url": "https://arxiv.org/abs/2505.14645",
+  "domain": "arxiv.org",
+  "kind": "arxiv",
+  "agent_verdict": "dropped at triage",
+  "agent_model": "gpt-oss-120b",
+  "agent_evidence": "PASS Named organisation: The authors are listed as being from Financial Risk Analytics, Market Intelligence, S&P Global, London, UK.",
+  "checks": [
+   {
+    "test": "Named organisation",
+    "passed": true,
+    "evidence": "The authors are listed as being from Financial Risk Analytics, Market Intelligence, S&P Global, London, UK."
+   }
+  ],
+  "title": "A quantum unstructured search algorithm for discrete optimisation: the use case of portfolio optimisation",
+  "authors": [
+   "Titos Matsakos",
+   "Adrian Lomas"
+  ],
+  "abstract": "We propose a quantum unstructured search algorithm to find the extrema or roots of discrete functions, $f(\\mathbf{x})$, such as the objective functions in combinatorial and other discrete optimisation problems. The first step of the Quantum Search for Extrema and Roots Algorithm (QSERA) is to translate conditions of the form $f(\\mathbf{x}_*) \\simeq f_*$, where $f_*$ is the extremum or zero, to an unstructured search problem for $\\mathbf{x}_*$. This is achieved by mapping $f(\\mathbf{x})$ to a function $u(z)$ to create a quantum oracle, such that $u(z_*) = 1$ and $u(z \\neq z_*) = 0$. The next step is to employ Grover's algorithm to find $z_*$, which offers a quadratic speed-up over classical algorithms. The number of operations needed to map $f(\\mathbf{x})$ to $u(z)$ determines the accuracy of the result and the circuit depth. We describe the implementation of QSERA by assembling a quantum circuit for portfolio optimisation, which can be formulated as a combinatorial problem. QSERA can handle objective functions with higher order terms than the commonly-used Quadratic Unconstrained Binary Optimisation (QUBO) framework. Moreover, while QSERA requires some a priori knowledge of the extrema of $f(\\mathbf{x})$, it can still find approximate solutions even if the conditions are not exactly satisfied.",
+  "date": "2025-05-20",
+  "year": 2025,
+  "venue": "arXiv preprint",
+  "categories": [
+   "quant-ph",
+   "q-fin.PM"
+  ],
+  "doi": "",
+  "arxiv_id": "2505.14645",
+  "landing_url": "https://arxiv.org/abs/2505.14645",
+  "pdf_url": "https://arxiv.org/pdf/2505.14645",
+  "meta_source": "arxiv-api",
+  "meta_error": ""
+ },
+ {
+  "n": 53,
+  "url": "https://arxiv.org/abs/2308.05237",
+  "domain": "arxiv.org",
+  "kind": "arxiv",
+  "agent_verdict": "dropped at triage",
+  "agent_model": "gpt-oss-120b",
+  "agent_evidence": "FAIL Named organisation: The paper does not name a specific company, lab, or government agency that applied the quantum models; it only lists the authors' affiliations.",
+  "checks": [
+   {
+    "test": "Named organisation",
+    "passed": false,
+    "evidence": "The paper does not name a specific company, lab, or government agency that applied the quantum models; it only lists the authors' affiliations."
+   }
+  ],
+  "title": "Financial Fraud Detection: A Comparative Study of Quantum Machine Learning Models",
+  "authors": [
+   "Nouhaila Innan",
+   "Muhammad Al-Zafar Khan",
+   "Mohamed Bennai"
+  ],
+  "abstract": "In this research, a comparative study of four Quantum Machine Learning (QML) models was conducted for fraud detection in finance. We proved that the Quantum Support Vector Classifier model achieved the highest performance, with F1 scores of 0.98 for fraud and non-fraud classes. Other models like the Variational Quantum Classifier, Estimator Quantum Neural Network (QNN), and Sampler QNN demonstrate promising results, propelling the potential of QML classification for financial applications. While they exhibit certain limitations, the insights attained pave the way for future enhancements and optimisation strategies. However, challenges exist, including the need for more efficient Quantum algorithms and larger and more complex datasets. The article provides solutions to overcome current limitations and contributes new insights to the field of Quantum Machine Learning in fraud detection, with important implications for its future development.",
+  "date": "2023-08-09",
+  "year": 2023,
+  "venue": "arXiv preprint",
+  "categories": [
+   "quant-ph",
+   "cs.LG",
+   "q-fin.GN"
+  ],
+  "doi": "10.1142/S0219749923500442",
+  "arxiv_id": "2308.05237",
+  "landing_url": "https://arxiv.org/abs/2308.05237",
+  "pdf_url": "https://arxiv.org/pdf/2308.05237",
+  "meta_source": "arxiv-api",
+  "meta_error": ""
+ },
+ {
+  "n": 54,
+  "url": "https://arxiv.org/abs/2305.19865",
+  "domain": "arxiv.org",
+  "kind": "arxiv",
+  "agent_verdict": "dropped at triage",
+  "agent_model": "gpt-oss-120b",
+  "agent_evidence": "FAIL Named organisation: The paper proposes a quantum Proof‑of‑Work scheme but does not name a specific company, lab or government agency as the user of the technology.",
+  "checks": [
+   {
+    "test": "Named organisation",
+    "passed": false,
+    "evidence": "The paper proposes a quantum Proof‑of‑Work scheme but does not name a specific company, lab or government agency as the user of the technology."
+   }
+  ],
+  "title": "Proof-of-work consensus by quantum sampling",
+  "authors": [
+   "Deepesh Singh",
+   "Gopikrishnan Muraleedharan",
+   "Boxiang Fu",
+   "Chen-Mou Cheng",
+   "Nicolas Roussy Newton",
+   "Peter P. Rohde",
+   "Gavin K. Brennen"
+  ],
+  "abstract": "Since its advent in 2011, boson sampling has been a preferred candidate for demonstrating quantum advantage because of its simplicity and near-term requirements compared to other quantum algorithms. We propose to use a variant, called coarse-grained boson-sampling (CGBS), as a quantum Proof-of-Work (PoW) scheme for blockchain consensus. The users perform boson sampling using input states that depend on the current block information and commit their samples to the network. Afterwards, CGBS strategies are determined which can be used to both validate samples and reward successful miners. By combining rewards for miners committing honest samples together with penalties for miners committing dishonest samples, a Nash equilibrium is found that incentivizes honest nodes. We provide numerical evidence that these validation tests are hard to spoof classically without knowing the binning scheme ahead of time and show the robustness of our protocol to small partial distinguishability of photons. The scheme works for both Fock state boson sampling and Gaussian boson sampling and provides dramatic speedup and energy savings relative to computation by classical hardware.",
+  "date": "2023-05-31",
+  "year": 2023,
+  "venue": "Quantum Sci. Technol. 10 025020 (2025)",
+  "categories": [
+   "quant-ph",
+   "q-fin.GN"
+  ],
+  "doi": "10.1088/2058-9565/adae2b",
+  "arxiv_id": "2305.19865",
+  "landing_url": "https://arxiv.org/abs/2305.19865",
+  "pdf_url": "https://arxiv.org/pdf/2305.19865",
+  "meta_source": "arxiv-api",
+  "meta_error": ""
+ },
+ {
+  "n": 55,
+  "url": "https://hal.science/hal-05046884v1",
+  "domain": "hal.science",
+  "kind": "hal",
+  "agent_verdict": "dropped at triage",
+  "agent_model": "gpt-oss-120b",
+  "agent_evidence": "FAIL Named organisation: The page refers to 'several institutions' and 'healthcare providers' without naming a specific organisation.",
+  "checks": [
+   {
+    "test": "Named organisation",
+    "passed": false,
+    "evidence": "The page refers to 'several institutions' and 'healthcare providers' without naming a specific organisation."
+   }
+  ],
+  "title": "Quantum-enhanced Federated Learning for Ethical Medical Image Analysis",
+  "authors": [
+   "Haeder Talib Mahde Alahmar"
+  ],
+  "abstract": "Quantum-Enhanced Federated Learning for Real-Time Medical Image Analysis with Ethical AI Governance is a nascent approach combining the principles of federated learning and quantum computing to transform the medical image analysis sector with due regard to the most critical ethical principles. Reflecting on the definition, federated learning is an approach that allows several institutions to jointly train machine learning models without the need to share any patient's data. Therefore, FL is the industry-institution strategic tool that allows for a higher level of privacy security in healthcare. On the other hand, by embracing quantum computing, the developed approach includes more sophisticated computational skills, permitting improved data performance and enhanced model accurateness, a pivotal factor for real-time medical diagnosis. Consequently, the significance of the approach lies in the potential to boost the medical image analysis sector. Quantum-enhanced FL will help comply with the most rigid ethical requirements by involving decentralized data performance and exploiting various datasets characteristic of healthcare providers. This will be particularly pivotal since the current state deems quick and precise medical decisions as of the essence, precisely when imaging tools are developed for early disease detection and recognition. Additionally, the integration presents an opportunity to address the challenges naturally associated with FL, i.e., model accurateness and data heterogeneities. Therefore, quantum algorithms are incorporated to perform training in much more optimized ways than classical alternatives. However, ethical AI governance will remain challenging with the current FL-quantum integration. As the type continues developing, the issues will concern AI consideration, algorithmic perfidies, and accountable decision types so that proper directives are in line. Research continues to advance, but stakeholders must address these ethical considerations to fully leverage the promise of quantum-enhanced federated learning to revolutionize medical image analysis. Thus, a quantum-fed network of neural networks can lead the way in developing solutions that combine the efficiency of quantum computing and the importance of ethical approaches in data management. Responsible and effective utilizing this technology requires continued collaboration between researchers, healthcare providers, and policymakers. \"Simulations show our quantum FL model improves tumor segmentation accuracy by 12% (Dice score) over classical federated learning while maintaining stronger privacy guarantees.",
+  "date": "2025-04-24",
+  "year": 2025,
+  "venue": "Asian Journal of Research in Computer Science",
+  "categories": [
+   "info"
+  ],
+  "doi": "10.9734/ajrcos/2025/v18i5653",
+  "arxiv_id": "",
+  "landing_url": "https://hal.science/hal-05046884v1",
+  "pdf_url": "",
+  "meta_source": "hal-api",
+  "meta_error": ""
+ },
+ {
+  "n": 56,
+  "url": "https://hal.science/hal-05408143v1",
+  "domain": "hal.science",
+  "kind": "hal",
+  "agent_verdict": "dropped at triage",
+  "agent_model": "gpt-oss-120b",
+  "agent_evidence": "FAIL Named organisation: The page does not mention a specific company, lab, or agency as the user of the quantum computing approach.",
+  "checks": [
+   {
+    "test": "Named organisation",
+    "passed": false,
+    "evidence": "The page does not mention a specific company, lab, or agency as the user of the quantum computing approach."
+   }
+  ],
+  "title": "Practical protein-pocket hydration-site prediction for drug discovery on a quantum computer",
+  "authors": [
+   "Daniele Loco",
+   "Kisa Barkemeyer",
+   "Andre R. R. Carvalho",
+   "Jean-Philip Piquemal"
+  ],
+  "abstract": "Demonstrating the practical utility of Noisy Intermediate-Scale Quantum (NISQ) hardware for recurrent tasks in Computer-Aided Drug Discovery is of paramount importance. We tackle this challenge by performing three-dimensional protein pockets hydration-site prediction on a quantum computer. Formulating the water placement problem as a Quadratic Unconstrained Binary Optimization (QUBO), we use a hybrid approach coupling a classical three-dimensional reference-interaction site model (3D-RISM) to an efficient quantum optimization solver, to run various hardware experiments up to 123 qubits. Matching the precision of classical approaches, our results reproduced experimental predictions on real-life protein-ligand complexes. Furthermore, through a detailed resource estimation analysis, we show that accuracy can be systematically improved with increasing number of qubits, indicating that full quantum utility is in reach. Finally, we provide evidence that advantageous situations could be found for systems where classical optimization struggles to provide optimal solutions. The method has potential for assisting simulations of protein-ligand complexes for drug lead optimization and setup of docking calculations.",
+  "date": "2026",
+  "year": 2026,
+  "venue": "Physical Review Research",
+  "categories": [
+   "phys",
+   "qphy",
+   "chim",
+   "chem"
+  ],
+  "doi": "10.1103/gyqr-mv1h",
+  "arxiv_id": "",
+  "landing_url": "https://hal.science/hal-05408143v1",
+  "pdf_url": "https://hal.science/hal-05408143/document",
+  "meta_source": "hal-api",
+  "meta_error": ""
+ },
+ {
+  "n": 57,
+  "url": "https://hal.science/hal-05472180v3",
+  "domain": "hal.science",
+  "kind": "hal",
+  "agent_verdict": "dropped at triage",
+  "agent_model": "gpt-oss-120b",
+  "agent_evidence": "FAIL Named organisation: The article does not name any specific company, laboratory, or government agency as the user of quantum computing.",
+  "checks": [
+   {
+    "test": "Named organisation",
+    "passed": false,
+    "evidence": "The article does not name any specific company, laboratory, or government agency as the user of quantum computing."
+   }
+  ],
+  "title": "Performance uncertainty in medical image analysis: a large-scale investigation of confidence intervals",
+  "authors": [
+   "Pascaline André",
+   "Charles Heitz",
+   "Evangelia Christodoulou",
+   "Annika Reinke",
+   "Carole H Sudre",
+   "Michela Antonelli",
+   "Patrick Godau",
+   "M Jorge Cardoso",
+   "Antoine Gilson",
+   "Sophie Tezenas Du Montcel",
+   "Gaël Varoquaux",
+   "Lena Maier-Hein",
+   "Olivier Colliot"
+  ],
+  "abstract": "Performance uncertainty quantification is essential for reliable validation and eventual clinical translation of medical imaging artificial intelligence (AI). Confidence intervals (CIs) play a central role in this process by indicating how precise a reported performance estimate is. Yet, due to the limited amount of work examining CI behavior in medical imaging, the community remains largely unaware of how many diverse CI methods exist and how they behave in specific settings. The purpose of this study is to close this gap. To this end, we conducted a large-scale empirical analysis across a total of 24 segmentation and classification tasks, using 19 trained models per task group, a broad spectrum of commonly used performance metrics, multiple aggregation strategies, and several widely adopted CI methods. Reliability (coverage) and precision (width) of each CI method were estimated across all settings to characterize their dependence on study characteristics. Our analysis revealed five principal findings: 1) the sample size required for reliable CIs varies from a few dozens to several thousands of cases depending on study parameters; 2) CI behavior is strongly affected by the choice of performance metric; 3) aggregation strategy substantially influences the reliability of CIs, e.g. they require more observations for macro than for micro; 4) the machine learning problem (segmentation versus classification) modulates these effects; 5) different CI methods are not equally reliable and precise depending on the use case. Finally, we derived practical implications of this study in the form of a decision tree which shall prove useful to the community. This paves the way for future consensus guidelines on reporting performance uncertainty.",
+  "date": "2026-09-02",
+  "year": 2026,
+  "venue": "HAL UNDEFINED",
+  "categories": [
+   "stat",
+   "info",
+   "info",
+   "info-ai"
+  ],
+  "doi": "",
+  "arxiv_id": "",
+  "landing_url": "https://hal.science/hal-05472180v3",
+  "pdf_url": "https://hal.science/hal-05472180/document",
+  "meta_source": "hal-api",
+  "meta_error": ""
+ },
+ {
+  "n": 58,
+  "url": "https://hal.science/hal-05728179v1",
+  "domain": "hal.science",
+  "kind": "hal",
+  "agent_verdict": "dropped at triage",
+  "agent_model": "gpt-oss-120b",
+  "agent_evidence": "FAIL Named organisation: The abstract begins with \"This study explores Quantum Natural Language Processing (QNLP)...\" and does not mention any specific company, lab, or agency.",
+  "checks": [
+   {
+    "test": "Named organisation",
+    "passed": false,
+    "evidence": "The abstract begins with \"This study explores Quantum Natural Language Processing (QNLP)...\" and does not mention any specific company, lab, or agency."
+   }
+  ],
+  "title": "Quantum-Informed Recursive Optimization for Literary Semantics and Natural Language Generation: A Compositional Analysis of Dante’s Divine Comedy",
+  "authors": [
+   "Javier Julian Enriquez"
+  ],
+  "abstract": "This study explores Quantum Natural Language Processing (QNLP) by examining how quantum computation may enhance Natural Language Generation (NLG). It proposes a theoretical framework for transforming complex literary texts, with Dante Alighieri’s Divine Comedy as the central example, into recursive algebraic structures suitable for quantum-informed processing. Drawing on category theory, tensor algebra, compositional distributional semantics, and hybrid quantum-classical optimization, the framework models grammatical and semantic relations in ways that may improve long-range coherence, ambiguity resolution, and context-sensitive text generation. The principal objective is to formulate a rigorous pathway from literary analysis to quantum-compatible semantic representation and recursive optimization for NLG.",
+  "date": "2026-08-26",
+  "year": 2026,
+  "venue": "HAL UNDEFINED",
+  "categories": [
+   "math",
+   "info",
+   "info-ai",
+   "info"
+  ],
+  "doi": "10.13140/RG.2.2.31785.35680",
+  "arxiv_id": "",
+  "landing_url": "https://hal.science/hal-05728179v1",
+  "pdf_url": "",
+  "meta_source": "hal-api",
+  "meta_error": ""
+ },
+ {
+  "n": 59,
+  "url": "https://hal.science/hal-05568055v1",
+  "domain": "hal.science",
+  "kind": "hal",
+  "agent_verdict": "dropped at triage",
+  "agent_model": "gpt-oss-120b",
+  "agent_evidence": "FAIL Named organisation: The paper refers to \"transmission system operators\" without naming a specific company, lab, or agency.",
+  "checks": [
+   {
+    "test": "Named organisation",
+    "passed": false,
+    "evidence": "The paper refers to \"transmission system operators\" without naming a specific company, lab, or agency."
+   }
+  ],
+  "title": "Quantum approach for electrical system maintenance scheduling problem",
+  "authors": [
+   "Qinyan Zhou",
+   "Djahou N Tognon",
+   "Sofiane Chalal",
+   "Noureddine Henka",
+   "Sami Tazi",
+   "Fikri Hafid",
+   "Titouan Carette"
+  ],
+  "abstract": "Maintenance scheduling is essential to ensure the reliability of power transmission systems while limiting operational risk and respecting technical and resource constraints. Increasing system complexity due to asset aging and renewable integration challenges classical optimization approaches traditionally used by transmission system operators. This work focuses on the optimization stage of a risk-based maintenance planning framework, where predefined risk indicators guide the construction of feasible schedules. After discussing the limitations of classical mixed-integer programming formulations in terms of scalability and computational effort, we investigate the applicability of quantum optimization methods to the maintenance scheduling problem. In particular, we explore the use of the Quantum Approximate Optimization Algorithm (QAOA) and Grover Adaptive Search to minimize operational risk under realistic constraints. While current quantum hardware limits practical deployment, this study provides insights into the potential of quantum approaches as complementary tools for future large-scale power system maintenance planning.",
+  "date": "2026-03-26",
+  "year": 2026,
+  "venue": "HAL UNDEFINED",
+  "categories": [
+   "info",
+   "math",
+   "phys"
+  ],
+  "doi": "",
+  "arxiv_id": "",
+  "landing_url": "https://hal.science/hal-05568055v1",
+  "pdf_url": "https://hal.science/hal-05568055/document",
+  "meta_source": "hal-api",
+  "meta_error": ""
+ },
+ {
+  "n": 60,
+  "url": "https://hal.science/hal-05557136v1",
+  "domain": "hal.science",
+  "kind": "hal",
+  "agent_verdict": "dropped at triage",
+  "agent_model": "gpt-oss-120b",
+  "agent_evidence": "FAIL Named organisation: The paper does not mention any specific company, lab, or government agency, referring only to \"global telecommunications\" and generic terms.",
+  "checks": [
+   {
+    "test": "Named organisation",
+    "passed": false,
+    "evidence": "The paper does not mention any specific company, lab, or government agency, referring only to \"global telecommunications\" and generic terms."
+   }
+  ],
+  "title": "Post-Quantum 5G Slicing Security Framework Integrating AI-Driven Threat Mitigation in Global Telecommunications",
+  "authors": [
+   "Valerie Ojinika Ejiofor",
+   "Temitope Ibrahim Lawal",
+   "Pelumi Damola Adeyinka",
+   "Akinde Michael Ogunmolu",
+   "Adebayo Yusuf Balogun"
+  ],
+  "abstract": "The rapid deployment of fifth-generation (5G) networks and the adoption of network slicing have significantly enhanced connectivity and service customization, but they have also expanded the cyber-attack surface of telecommunications infrastructure. At the same time, emerging quantum computing capabilities threaten the security of widely used classical cryptographic schemes such as RSA and Elliptic Curve Cryptography. Despite growing concerns, existing security frameworks for 5G slicing rarely integrate post-quantum cryptography with intelligent threat detection mechanisms. This study addresses this gap by developing a quantum-resistant security architecture for 5G network slicing that combines post-quantum cryptography and artificial intelligence–based anomaly detection. The framework incorporates NIST-standardized algorithms including CRYSTALS‑Kyber for secure key exchange and CRYSTALS‑Dilithium and FALCON for authentication. A hybrid post-quantum/classical TLS scheme was implemented to support secure key establishment with minimal latency overhead of 1.65 ms. Additionally, an AI-driven anomaly detection model using a stacked ensemble of Isolation Forest and XGBoost monitored slice orchestration behavior to detect cyber threats. Simulation results demonstrated high detection performance with a macro F1-score of 0.962 and AUC-ROC of 0.985. The proposed framework offers a practical and scalable approach for securing next-generation telecommunications infrastructure against both current cyber threats and future quantum attacks.",
+  "date": "2026-03-17",
+  "year": 2026,
+  "venue": "Journal of Engineering Research and Reports",
+  "categories": [
+   "spi"
+  ],
+  "doi": "",
+  "arxiv_id": "",
+  "landing_url": "https://hal.science/hal-05557136v1",
+  "pdf_url": "",
+  "meta_source": "hal-api",
+  "meta_error": ""
+ },
+ {
+  "n": 61,
+  "url": "https://hal.science/hal-05586763v1",
+  "domain": "hal.science",
+  "kind": "hal",
+  "agent_verdict": "dropped at triage",
+  "agent_model": "gpt-oss-120b",
+  "agent_evidence": "FAIL Named organisation: The page does not name any company, lab, or agency as a user of quantum computing.",
+  "checks": [
+   {
+    "test": "Named organisation",
+    "passed": false,
+    "evidence": "The page does not name any company, lab, or agency as a user of quantum computing."
+   }
+  ],
+  "title": "Applying machine-learning and deep-learning to predict depression from brain MRI and identify depression-related brain biology",
+  "authors": [
+   "Jiayue-Clara Jiang",
+   "Camille Brianceau",
+   "Elise Delzant",
+   "Romain Colle",
+   "Hugo Bottemanne",
+   "Emmanuelle Corruble",
+   "Naomi Wray",
+   "Olivier Colliot",
+   "Sonia Shah",
+   "Baptiste Couvy-Duchesne"
+  ],
+  "abstract": "The accuracy of grey-matter predictors of depression has remained limited. In this study, brain-based predictors of major depressive disorder (MDD) were trained using machine-learning (Best Linear Unbiased Predictors [BLUP]) and deep-learning (ResNet3D) techniques applied to high-dimensional (voxel-wise) grey-matter structure extracted from T1-weighted structural MRI. The training sample comprised 987 MDD cases and 3934 controls from the UK Biobank. Predictors were evaluated in an independent sub-cohort of 483 MDD cases and 1939 controls from the UK Biobank and replicated in a clinical cohort (DEP-ARREST CLIN) of 64 cases and 32 controls. In the UK Biobank, the BLUP predictor showed a significant association with MDD status (AUC = 0.57; OR = 1.28 [1.15-1.43]; p-value = 1.1×10 -5 ), which was confirmed in both males and females. By partitioning the BLUP predictor by brain regions of interest (ROI), we found nominal significance supporting the contribution of previously identified MDD-related ROIs (e.g. hippocampus and amygdala), though none passed multiple testing correction. The BLUP predictor overlapped partially with a polygenic score (PGS) of major depression (AUC = 0.65) but also captured a nominally significant signal that was not captured by the genetic score (combined AUC = 0.66, p-value = 0.024 when compared to PGS alone). No association passed multiple testing correction in the DEP-ARREST CLIN cohort, likely due to the small sample size. In contrast, the deep-learning predictor was not associated with MDD after multiple testing corrections. We estimated the morphometricity of MDD to be 0.061, implying limited potential of a brain-based predictor based on grey-matter structure (maximal AUC = 0.64). While the modest AUC values reiterate the challenge of developing brain-based MDD predictors for clinical applications, our predictors inform future research to explore brain-based relationships between MDD and comorbidities.",
+  "date": "2026-02-25",
+  "year": 2026,
+  "venue": "Translational Psychiatry",
+  "categories": [
+   "info",
+   "stat"
+  ],
+  "doi": "10.1038/s41398-026-03889-8",
+  "arxiv_id": "",
+  "landing_url": "https://hal.science/hal-05586763v1",
+  "pdf_url": "https://hal.science/hal-05586763/document",
+  "meta_source": "hal-api",
+  "meta_error": ""
+ },
+ {
+  "n": 62,
+  "url": "https://hal.science/hal-05349492v1",
+  "domain": "hal.science",
+  "kind": "hal",
+  "agent_verdict": "dropped at triage",
+  "agent_model": "gpt-oss-120b",
+  "agent_evidence": "FAIL Named organisation: The paper lists authors and institutions but does not name a specific organisation using quantum computing.",
+  "checks": [
+   {
+    "test": "Named organisation",
+    "passed": false,
+    "evidence": "The paper lists authors and institutions but does not name a specific organisation using quantum computing."
+   }
+  ],
+  "title": "Comparing Longitudinal Preprocessing Pipelines for Brain Volume Consistency in T1-Weighted MRI Test-Retest Scans",
+  "authors": [
+   "Matthieu Joulot",
+   "Olivier Colliot",
+   "Ninon Burgos"
+  ],
+  "abstract": "Neurodegenerative diseases require longitudinal assessment to track disease progression, with brain volume change from T1-weighted MRI serving as a key biomarker that demands robust and precise processing methods. Although several longitudinal preprocessing pipelines exist, there is no consensus on which offers the highest reliability. In this study, we evaluate six widely used open-source tools for cross-sectional and longitudinal preprocessing of T1-weighted MRI: FreeSurfer, SAMSEG, ANTs, ANTsPyNet, SPM12, and CAT12. We assess their robustness using test-retest data from the MIRIAD cohort, in which no meaningful anatomical change is expected between repeated scans. Our results show that, overall, longitudinal preprocessing methods demonstrate greater robustness than their cross-sectional counterparts. However, this pattern is not consistent across all tools: some longitudinal implementations do not outperform their cross-sectional versions, and the magnitude of improvement varies by method and brain region. We conclude that while the existing longitudinal preprocessing approaches can improve consistency in brain volume estimation, these benefits are method-dependent.",
+  "date": "2026-02-15",
+  "year": 2026,
+  "venue": "SPIE Medical Imaging 2026",
+  "categories": [
+   "info",
+   "info-im"
+  ],
+  "doi": "10.1117/12.3086037",
+  "arxiv_id": "",
+  "landing_url": "https://hal.science/hal-05349492v1",
+  "pdf_url": "https://inria.hal.science/hal-05349492/document",
+  "meta_source": "hal-api",
+  "meta_error": ""
+ },
+ {
+  "n": 63,
+  "url": "https://hal.science/hal-05329724v1",
+  "domain": "hal.science",
+  "kind": "hal",
+  "agent_verdict": "dropped at triage",
+  "agent_model": "gpt-oss-120b",
+  "agent_evidence": "FAIL Named organisation: The paper does not name any specific company, lab, or agency as the user of quantum computing.",
+  "checks": [
+   {
+    "test": "Named organisation",
+    "passed": false,
+    "evidence": "The paper does not name any specific company, lab, or agency as the user of quantum computing."
+   }
+  ],
+  "title": "Advanced Nanocomposite-based Electrochemical Biosensors for Sensitive Detection of Pharmaceutical Drugs",
+  "authors": [
+   "Yasemin Torlak",
+   "Elif Esra Altuner",
+   "Yener Tekeli",
+   "Tuba Tekeli"
+  ],
+  "abstract": "Advanced electrochemical sensors offer great opportunities to detect active pharmaceutical ingredients using interactions between nanomaterials and target analytes. Miniaturization of these sensors, wireless data transmission, and sensitivity are important research areas. The integration of quantum computing and artificial intelligence can provide significant improvements in areas such as electrochemical sensing, materials science, and nanofiber fabrication. Furthermore, electrochemical sensors and related techniques (such as voltammetry, amperometry, impedance, and chronoamperometry) and the roles of different electrode types in pharmaceutical drug analysis are discussed. Other methods used to detect these drugs include optical and microfabricated methods. The advantages and disadvantages of these different techniques are illustrated and evaluated with future perspectives. These technologies enable personalized medicine that rapidly assesses drug efficacy and patient-specific responses, while also enabling the development of sustainable electronic systems and more efficient sensors. Research on artificial intelligence is also increasing in the pharmaceutical industry. This study highlights the advantages and future promise of various technological applications of AI technology in drug design and development, which have varying effects. Furthermore, it offers potential in the medical field, particularly through rapid testing and the study of drug interactions using electrochemical sensor technology. Electrochemical biosensors, in particular, are crucial in biological imaging, electrochemical analysis, and drug delivery due to their high specificity, selectivity, and intercycling stability. This review focuses on recent advances in electrochemical devices for healthcare applications, detailing their fabrication, analytical performance, and clinical applications.",
+  "date": "2025-10-23",
+  "year": 2025,
+  "venue": "Journal of Pharmaceutical Research International",
+  "categories": [
+   "info",
+   "info-im"
+  ],
+  "doi": "",
+  "arxiv_id": "",
+  "landing_url": "https://hal.science/hal-05329724v1",
+  "pdf_url": "",
+  "meta_source": "hal-api",
+  "meta_error": ""
+ },
+ {
+  "n": 64,
+  "url": "https://hal.science/hal-05283497v1",
+  "domain": "hal.science",
+  "kind": "hal",
+  "agent_verdict": "dropped at triage",
+  "agent_model": "gpt-oss-120b",
+  "agent_evidence": "FAIL Named organisation: The paper does not name any specific company, lab, or government agency as a user of quantum computing.",
+  "checks": [
+   {
+    "test": "Named organisation",
+    "passed": false,
+    "evidence": "The paper does not name any specific company, lab, or government agency as a user of quantum computing."
+   }
+  ],
+  "title": "Automatic Segmentation of Primary Central Nervous System Lymphoma at Clinical Routine Postcontrast T1-weighted MRI",
+  "authors": [
+   "Guanghui Fu",
+   "Lucia Nichelli",
+   "Darío Herrán de la Gala",
+   "Sophie Loizillon",
+   "Camile Bousfiha",
+   "Romain Valabregue",
+   "Agusti Alentorn",
+   "Khê Hoang-Xuan",
+   "Bertrand Mathon",
+   "Carole Soussain",
+   "Jean Pierre Marolleau",
+   "Jérôme Paillassa",
+   "Luc Taillandier",
+   "Philippe Agapé",
+   "Anna Schmitt",
+   "Olivier Chinot",
+   "Guido Ahle",
+   "Didier Dormont",
+   "Caroline Houillier",
+   "Stéphane Lehéricy",
+   "Olivier Colliot"
+  ],
+  "abstract": "Purpose To develop and validate a deep learning model for automatic segmentation of primary central nervous system lymphoma (PCNSL) at postcontrast T1-weighted MRI. Materials and Methods Data were retrospectively collected from patients with pathologically proven immunocompetent PCNSL between September 2010 and February 2022. Postcontrast T1-weighted MRI scans were used to train and validate a deep learning model based on the nnU-Net framework. Manual segmentation by neuroradiologists served as the reference standard. The model was trained using an internal dataset from a single center and tested on both internal and external test sets from seven additional centers. Performance was assessed using Dice score, mean average surface distance, and F1 score. Statistical comparisons were performed using Mann-Whitney U test and bootstrap resampling for CIs. Results The study included 135 patients (68 female, 66 male, and one of unspecified sex; internal dataset: mean age ±SD, 67.0 years ± 12.0; external dataset: mean age, 75.5 years ± 13.6). The model achieved a mean Dice score of 0.84 (95% CI: 0.79, 0.88) on the internal test set (n = 44) and 0.88 (95% CI: 0.84, 0.91) on the external test set (n = 48), with no evidence of a difference between test sets (P = .59). Performance varied by lesion type; accuracy was highest in homogeneous discrete lesions, and performance was slightly decreased when numerous poorly defined infracentimetric lesions occurred. Strong volumetric correlation was observed between automatic and manual segmentations (internal: r = 0.99, P < .001; external: r = 0.98, P < .001). Conclusion A deep learning model achieved accurate and robust automatic segmentation of PCNSL across multiple clinical centers with different MRI acquisition parameters.",
+  "date": "2025-09-01",
+  "year": 2025,
+  "venue": "Radiology: Imaging Cancer",
+  "categories": [
+   "sdv",
+   "can",
+   "info",
+   "info-ai"
+  ],
+  "doi": "10.1148/rycan.240446",
+  "arxiv_id": "",
+  "landing_url": "https://hal.science/hal-05283497v1",
+  "pdf_url": "https://u-picardie.hal.science/hal-05283497/document",
+  "meta_source": "hal-api",
+  "meta_error": ""
+ },
+ {
+  "n": 65,
+  "url": "https://arxiv.org/abs/2504.01567",
+  "domain": "arxiv.org",
+  "kind": "arxiv",
+  "agent_verdict": "queued",
+  "agent_model": "gpt-oss-120b",
+  "agent_evidence": "Airbus; IonQ | Optimizing aircraft loading to maximize payload while respecting weight, balance and structural constraints | Multi-Angle Layered Variational Quantum Algorithm (MAL-VQA) executed on IonQ ion‑trap quantum processors Aria and Forte",
+  "checks": [
+   {
+    "test": "Who",
+    "passed": true,
+    "evidence": "Airbus; IonQ"
+   },
+   {
+    "test": "What",
+    "passed": true,
+    "evidence": "Optimizing aircraft loading to maximize payload while respecting weight, balance and structural constraints"
+   },
+   {
+    "test": "How",
+    "passed": true,
+    "evidence": "Multi-Angle Layered Variational Quantum Algorithm (MAL-VQA) executed on IonQ ion‑trap quantum processors Aria and Forte"
+   }
+  ],
+  "title": "Quantum Computing for Optimizing Aircraft Loading",
+  "authors": [
+   "Ananth Kaushik",
+   "Sang Hyub Kim",
+   "Willie Aboumrad",
+   "Martin Roetteler",
+   "Albana Topi",
+   "Richard Ashworth"
+  ],
+  "abstract": "The aircraft loading optimization problem is a computationally hard problem with the best known classical algorithm scaling exponentially with the number of objects. We propose a quantum approach based on a multi-angle variant of the QAOA algorithm (Multi-Angle Layered Variational Quantum Algorithm (MAL-VQA)) designed to utilize a smaller number of two qubit gates in the quantum circuit as compared to the standard QAOA algorithm so that the quantum optimization algorithm can be run on near-term ion-trap quantum processing units (QPU). We also describe a novel cost function implementation that can handle many different types of inequality constraints without the overhead of introducing slack variables in the quantum circuit so that larger problems with complex constraints may be represented on near-term QPUs which have low qubit counts. We demonstrate the performance of the algorithm on different instances of the aircraft loading problem by execution on IonQ QPUs Aria and Forte. Our experiments obtain the optimal solutions for all the problem instances studied ranging from 12 qubits to 28 qubits. This shows the potential scalability of the method to significantly larger problem sizes with the improvement of quantum hardware in the near future as well as the robustness of the quantum algorithm against varying initial guesses and varying constraints of different problem instances.",
+  "date": "2025-04-02",
+  "year": 2025,
+  "venue": "arXiv preprint",
+  "categories": [
+   "quant-ph",
+   "cs.ET"
+  ],
+  "doi": "",
+  "arxiv_id": "2504.01567",
+  "landing_url": "https://arxiv.org/abs/2504.01567",
+  "pdf_url": "https://arxiv.org/pdf/2504.01567",
+  "meta_source": "arxiv-api",
+  "meta_error": ""
+ },
+ {
+  "n": 66,
+  "url": "https://arxiv.org/abs/2609.21115",
+  "domain": "arxiv.org",
+  "kind": "arxiv",
+  "agent_verdict": "queued",
+  "agent_model": "gpt-oss-120b",
+  "agent_evidence": "IBM Research | Improving molecular profiling from routine histopathology for cancers where sequencing is unavailable, tissue is limited, or training cohorts are small | IBM quantum processors (quantum conditional optimal transport generating a doubly stochastic attention matrix)",
+  "checks": [
+   {
+    "test": "Who",
+    "passed": true,
+    "evidence": "IBM Research"
+   },
+   {
+    "test": "What",
+    "passed": true,
+    "evidence": "Improving molecular profiling from routine histopathology for cancers where sequencing is unavailable, tissue is limited, or training cohorts are small"
+   },
+   {
+    "test": "How",
+    "passed": true,
+    "evidence": "IBM quantum processors (quantum conditional optimal transport generating a doubly stochastic attention matrix)"
+   }
+  ],
+  "title": "Hybrid quantum-classical attention for histopathology-based molecular profiling in data-limited cancers",
+  "authors": [
+   "Kahn Rhrissorrakrai",
+   "Aritra Bose",
+   "Aldo Guzman-Saenz",
+   "Filippo Utro",
+   "Laxmi Parida"
+  ],
+  "abstract": "Molecular profiling from routine histopathology could expand access to precision oncology when sequencing is unavailable, tissue is limited, or training cohorts are small. We developed a hybrid quantum-classical strategy that replaces softmax attention in a transformer for histopathology-based gene expression prediction with a quantum-derived doubly stochastic matrix (QDSM). Across 29 cancer cohorts from The Cancer Genome Atlas and an independent pancreatic cancer cohort from the Clinical Proteomic Tumor Analysis Consortium, QDSM attention produced selective gains, with the largest relative improvements in smaller, data-limited cohorts, including adrenocortical carcinoma and uveal melanoma. Rather than improving transcriptome-wide performance uniformly, QDSM redistributed predictive accuracy across genes and pathways, improving biologically relevant targets in some tumor contexts while worsening others. In adrenocortical carcinoma, preferentially improved genes were enriched for adverse overall-survival associations, linking enhanced molecular inference to prognostically relevant biology. In pancreatic cancer transfer experiments, QDSM improved selected metabolic and lineage-associated genes but did not consistently improve performance under cross-cohort shift. Leave-one-cancer-out mixed-effects analysis showed that baseline molecular features predicted part of the gene-level benefit, while residuals identified cancer-specific programs that improved more or less than expected. Separate experiments on IBM quantum processors recovered the doubly stochastic matrix primitive underlying the attention mechanism. These findings position QDSM attention as a context- and target-dependent strategy for image-based molecular profiling and molecular triage when direct testing is unavailable, incomplete, or impractical.",
+  "date": "2026-09-17",
+  "year": 2026,
+  "venue": "arXiv preprint",
+  "categories": [
+   "quant-ph",
+   "q-bio.GN"
+  ],
+  "doi": "",
+  "arxiv_id": "2609.21115",
+  "landing_url": "https://arxiv.org/abs/2609.21115",
+  "pdf_url": "https://arxiv.org/pdf/2609.21115",
+  "meta_source": "arxiv-api",
+  "meta_error": ""
+ },
+ {
+  "n": 67,
+  "url": "https://arxiv.org/abs/2609.26750",
+  "domain": "arxiv.org",
+  "kind": "arxiv",
+  "agent_verdict": "dropped at triage",
+  "agent_model": "gpt-oss-120b",
+  "agent_evidence": "FAIL Named organisation: The paper lists authors from the Institute for Quantum Computing, University of Waterloo, Perimeter Institute, and the Dahlem Center, but no external organisation is identified as a user of quant",
+  "checks": [
+   {
+    "test": "Named organisation",
+    "passed": false,
+    "evidence": "The paper lists authors from the Institute for Quantum Computing, University of Waterloo, Perimeter Institute, and the Dahlem Center, but no external organisation is identified as a user of quant"
+   }
+  ],
+  "title": "Quantum Broadcast Channels with Mutually Confidential Messages",
+  "authors": [
+   "Paula Belzig",
+   "Sukanya Ghosal",
+   "Farzin Salek",
+   "Graeme Smith"
+  ],
+  "abstract": "We study the transmission of two independent confidential classical messages over a quantum broadcast channel, one for each receiver. Each message must remain secret from the other receiver, including when that receiver knows its own message. For classical inputs and quantum outputs, we establish the classical Marton-type inner bound under average reliability and conditional strong secrecy. The encoder selects pairs of codewords from independently generated codebooks using normalized likelihood weights. We prove reliability through a change-of-distribution argument. Our main technical result is a bipartite classical-quantum resolvability theorem that accounts for the dependence created by pair selection and establishes secrecy for the same encoder. We also obtain a multi-letter capacity characterization and extend it to arbitrary quantum inputs under secrecy against the other receiver, together with the Stinespring environment. We recover confidential capacity regions for deterministic classical and degraded classical-quantum channels, with an explicit evaluation for the classical Blackwell channel. For coherent isometric extensions of injective deterministic classical broadcast channels, we show that the confidential classical capacity region equals that of the corresponding classical channel. We then compare confidential classical communication with quantum transmission. For the coherent isometric extension of the Blackwell channel, we determine the unassisted quantum-capacity region and show that some achievable confidential classical rate pairs lie outside it. The Platypus channel provides another example of this separation.",
+  "date": "2026-09-22",
+  "year": 2026,
+  "venue": "arXiv preprint",
+  "categories": [
+   "quant-ph",
+   "cs.IT"
+  ],
+  "doi": "",
+  "arxiv_id": "2609.26750",
+  "landing_url": "https://arxiv.org/abs/2609.26750",
+  "pdf_url": "https://arxiv.org/pdf/2609.26750",
+  "meta_source": "arxiv-api",
+  "meta_error": ""
+ },
+ {
+  "n": 68,
+  "url": "https://arxiv.org/abs/2503.15403",
+  "domain": "arxiv.org",
+  "kind": "arxiv",
+  "agent_verdict": "dropped at extraction",
+  "agent_model": "gpt-oss-120b",
+  "agent_evidence": "passed triage; missing who",
+  "checks": [
+   {
+    "test": "Agent note",
+    "passed": null,
+    "evidence": "passed triage; missing who"
+   }
+  ],
+  "title": "HQNN-FSP: A Hybrid Classical-Quantum Neural Network for Regression-Based Financial Stock Market Prediction",
+  "authors": [
+   "Prashant Kumar Choudhary",
+   "Nouhaila Innan",
+   "Muhammad Shafique",
+   "Rajeev Singh"
+  ],
+  "abstract": "Financial time-series forecasting remains a challenging task due to complex temporal dependencies and market fluctuations. This study explores the potential of hybrid quantum-classical approaches to assist in financial trend prediction by leveraging quantum resources for improved feature representation and learning. A custom Quantum Neural Network (QNN) regressor is introduced, designed with a novel ansatz tailored for financial applications. Two hybrid optimization strategies are proposed: (1) a sequential approach where classical recurrent models (RNN/LSTM) extract temporal dependencies before quantum processing, and (2) a joint learning framework that optimizes classical and quantum parameters simultaneously. Systematic evaluation using TimeSeriesSplit, k-fold cross-validation, and predictive error analysis highlights the ability of these hybrid models to integrate quantum computing into financial forecasting workflows. The findings demonstrate how quantum-assisted learning can contribute to financial modeling, offering insights into the practical role of quantum resources in time-series analysis.",
+  "date": "2025-03-19",
+  "year": 2025,
+  "venue": "Quantum Mach. Intell. 8, 55 (2026)",
+  "categories": [
+   "q-fin.ST",
+   "cs.LG",
+   "quant-ph"
+  ],
+  "doi": "10.1007/s42484-026-00390-9",
+  "arxiv_id": "2503.15403",
+  "landing_url": "https://arxiv.org/abs/2503.15403",
+  "pdf_url": "https://arxiv.org/pdf/2503.15403",
+  "meta_source": "arxiv-api",
+  "meta_error": ""
+ },
+ {
+  "n": 69,
+  "url": "https://arxiv.org/abs/2308.13642",
+  "domain": "arxiv.org",
+  "kind": "arxiv",
+  "agent_verdict": "dropped at triage",
+  "agent_model": "gpt-oss-120b",
+  "agent_evidence": "PASS Named organisation: The authors are listed as Naman Srivastava, Gaurang Belekar, Neel Shahakar, Aswath Babu H. from IIIT Dharwad.",
+  "checks": [
+   {
+    "test": "Named organisation",
+    "passed": true,
+    "evidence": "The authors are listed as Naman Srivastava, Gaurang Belekar, Neel Shahakar, Aswath Babu H. from IIIT Dharwad."
+   }
+  ],
+  "title": "The Potential of Quantum Techniques for Stock Price Prediction",
+  "authors": [
+   "Naman S",
+   "Gaurang B",
+   "Neel S",
+   "Aswath Babu H"
+  ],
+  "abstract": "We explored the potential applications of various Quantum Algorithms for stock price prediction by conducting a series of experimental simulations using both Classical as well as Quantum Hardware. Firstly, we extracted various stock price indicators, such as Moving Averages (MA), Average True Range (ATR), and Aroon, to gain insights into market trends and stock price movements. Next, we employed Quantum Annealing (QA) for feature selection and Principal Component Analysis (PCA) for dimensionality reduction. Further, we transformed the stock price prediction task essentially into a classification problem. We trained the Quantum Support Vector Machine (QSVM) to predict price movements (whether up or down) contrasted their performance with classical models and analyzed their accuracy on a dataset formulated using Quantum Annealing and PCA individually. We focused on the stock price prediction and binary classification of stock prices for four different companies, namely Apple, Visa, Johnson and Jonson, and Honeywell. We primarily used the real-time stock data of the raw stock prices of these companies. We compared various Quantum Computing techniques with their classical counterparts in terms of accuracy and F-score of the prediction model. Through these experimental simulations, we shed light on the potential advantages and limitations of Quantum Algorithms in stock price prediction and contribute to the growing body of knowledge at the intersection of Quantum Computing and Finance.",
+  "date": "2023-08-25",
+  "year": 2023,
+  "venue": "arXiv preprint",
+  "categories": [
+   "q-fin.CP"
+  ],
+  "doi": "",
+  "arxiv_id": "2308.13642",
+  "landing_url": "https://arxiv.org/abs/2308.13642",
+  "pdf_url": "https://arxiv.org/pdf/2308.13642",
+  "meta_source": "arxiv-api",
+  "meta_error": ""
+ },
+ {
+  "n": 70,
+  "url": "https://arxiv.org/abs/2609.09226",
+  "domain": "arxiv.org",
+  "kind": "arxiv",
+  "agent_verdict": "dropped at triage",
+  "agent_model": "gpt-oss-120b",
+  "agent_evidence": "FAIL Named organisation: The paper lists authors from several institutions (e.g., University of Science and Technology of China, Red Horse Investments Group) but does not name a specific organisation as the user of quant",
+  "checks": [
+   {
+    "test": "Named organisation",
+    "passed": false,
+    "evidence": "The paper lists authors from several institutions (e.g., University of Science and Technology of China, Red Horse Investments Group) but does not name a specific organisation as the user of quant"
+   }
+  ],
+  "title": "Adaptive Entangled Neurons in the Brain and Natural Intelligence Simulations for Artificial General Intelligence",
+  "authors": [
+   "Haochen Li",
+   "Xinshuai Guo",
+   "Jingdong Ouyang",
+   "Wei Zhang",
+   "Leilei Shi"
+  ],
+  "abstract": "Understanding the brain's mechanisms is crucial in neuroscience, particularly for simulating natural intelligence and advancing artificial general intelligence (AGI). Liu et al. (2024) and Deco et al. (2025) propose that quantum entanglement may underlie the synchronization of millions of neurons, introducing the Liu-Chen-Ao (LCA) hypothesis of entangled nerve fibers. However, directly testing this idea remains challenging. Here we employ a nonlocal many-body wave equation, introducing a generalized probability-wave framework to model collective behaviors among adaptive, interacting agents, particles, or neurons. This approach enables testable eigenmodes, offering an indirect means of examining the LCA hypothesis by observing patterns in collective trading behaviors. These patterns, rooted in behavioral psychology, are thought to mirror the internal brain's decision-making and underlying mechanisms. Our analysis of Chinese intraday stock market data shows that adaptive entangled game modes explain 82%-94% of decision patterns, sharply contrasting neoclassical finance predictions assuming independent rational agents. Additionally, 2-12% of actions adapt to news, events, and environmental changes, marked by rapid equilibrium shifts, while truly independent behaviors make up less than 5%. These results empirically support the LCA hypothesis and underscore the need to simulate the brain's mechanisms and generate adaptive, entangled modules for AGI. They also expose the shortcomings of conventional artificial neural networks (ANNs) that depend on vast, opaque parameters. By combining ANN-based AI with probability-wave-based entangled brain simulations, machine learning enables the creation of human-like processing units (HPUs). Such HPUs promise more efficient and robust AGI, particularly for embodied intelligence and robotics.",
+  "date": "2026-09-07",
+  "year": 2026,
+  "venue": "arXiv preprint",
+  "categories": [
+   "cs.AI",
+   "physics.soc-ph",
+   "q-bio.NC",
+   "q-fin.GN",
+   "quant-ph"
+  ],
+  "doi": "",
+  "arxiv_id": "2609.09226",
+  "landing_url": "https://arxiv.org/abs/2609.09226",
+  "pdf_url": "https://arxiv.org/pdf/2609.09226",
+  "meta_source": "arxiv-api",
+  "meta_error": ""
+ },
+ {
+  "n": 71,
+  "url": "https://arxiv.org/abs/2308.01305",
+  "domain": "arxiv.org",
+  "kind": "arxiv",
+  "agent_verdict": "dropped at triage",
+  "agent_model": "gpt-oss-120b",
+  "agent_evidence": "FAIL Named organisation: The paper lists the authors' affiliations (FastEagle Holdings and Imperial College) but does not name a specific organization that is applying quantum computing to a problem.",
+  "checks": [
+   {
+    "test": "Named organisation",
+    "passed": false,
+    "evidence": "The paper lists the authors' affiliations (FastEagle Holdings and Imperial College) but does not name a specific organization that is applying quantum computing to a problem."
+   }
+  ],
+  "title": "A quantum double-or-nothing game: The Kelly Criterion for Spins",
+  "authors": [
+   "Bernhard K Meister",
+   "Henry C W Price"
+  ],
+  "abstract": "A sequence of spin-1/2 particles polarised in one of two possible directions is presented to an experimenter, who can wager in a double-or-nothing game on the outcomes of measurements in freely chosen polarisation directions. Wealth is accrued through astute betting. As information is gained from the stream of particles, the measurement directions are progressively adjusted, and the portfolio growth rate is raised. The optimal quantum strategy is determined numerically and shown to differ from the classical strategy, which is associated with the Kelly criterion. The paper contributes to the development of quantum finance, as aspects of portfolio optimisation are extended to the quantum realm.",
+  "date": "2023-08-02",
+  "year": 2023,
+  "venue": "arXiv preprint",
+  "categories": [
+   "quant-ph",
+   "q-fin.PM"
+  ],
+  "doi": "",
+  "arxiv_id": "2308.01305",
+  "landing_url": "https://arxiv.org/abs/2308.01305",
+  "pdf_url": "https://arxiv.org/pdf/2308.01305",
+  "meta_source": "arxiv-api",
+  "meta_error": ""
+ }
+]

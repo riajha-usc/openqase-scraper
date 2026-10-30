@@ -1,0 +1,532 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Link review</title>
+<style>
+  :root {
+    --bg:#f6f7f9; --panel:#fff; --ink:#1b1f24; --muted:#687078; --line:#e1e4e8; --accent:#2a5bd7; --accent-bg:#e8eefc;
+    --sel:#eef3ff; --yes:#1e8e3e; --yes-bg:#e6f4ea; --no:#c5221f; --no-bg:#fce8e6; --lead:#7a3fb5; --lead-bg:#f1e8fb;
+    --warn:#8a6d00; --warn-bg:#fef7e0; --gray-bg:#eceff2; --mono: ui-monospace, Menlo, Consolas, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#14171b; --panel:#1c2026; --ink:#e6e8eb; --muted:#9aa3ad; --line:#2d333b; --accent:#7ea2ff; --accent-bg:#1f2c4d;
+      --sel:#222c40; --yes:#5fcf7a; --yes-bg:#163421; --no:#ff7b73; --no-bg:#43201e; --lead:#c79bf0; --lead-bg:#32224a;
+      --warn:#e8c45b; --warn-bg:#3a3010; --gray-bg:#262c34; }
+  }
+  * { box-sizing:border-box; }
+  html, body { height:100%; }
+  body { margin:0; font:14px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif; color:var(--ink); background:var(--bg); }
+  button, input, select { font:inherit; color:inherit; }
+  a { color:var(--accent); }
+  kbd { font:12px var(--mono); padding:1px 5px; border:1px solid var(--line); border-bottom-width:2px; border-radius:4px; background:var(--panel); }
+  .badge { display:inline-block; font-size:11.5px; font-weight:600; padding:1px 7px; border-radius:999px; background:var(--gray-bg); color:var(--muted); white-space:nowrap; }
+  .badge.yes { background:var(--yes-bg); color:var(--yes); } .badge.no { background:var(--no-bg); color:var(--no); }
+  .badge.lead { background:var(--lead-bg); color:var(--lead); } .badge.maybe { background:var(--warn-bg); color:var(--warn); }
+  .badge.queued { background:var(--yes-bg); color:var(--yes); } .badge.triage { background:var(--no-bg); color:var(--no); }
+  .badge.extraction { background:var(--warn-bg); color:var(--warn); } .badge.duplicate { background:var(--lead-bg); color:var(--lead); }
+  .badge.kind { font-family:var(--mono); font-weight:500; }
+  .pass { color:var(--yes); font-weight:700; } .fail { color:var(--no); font-weight:700; }
+  .muted { color:var(--muted); }
+
+  /* ------------------------------------------------------------------ top bar */
+  header { position:sticky; top:0; z-index:5; background:var(--panel); border-bottom:1px solid var(--line); padding:8px 16px; display:flex; gap:16px; align-items:center; flex-wrap:wrap; }
+  header h1 { font-size:15px; margin:0; font-weight:650; }
+  .progress { display:flex; align-items:center; gap:10px; font-size:13px; color:var(--muted); }
+  .bar { width:160px; height:8px; border-radius:999px; background:var(--gray-bg); overflow:hidden; display:flex; }
+  .bar i { display:block; height:100%; } .bar .y { background:var(--yes); } .bar .n { background:var(--no); } .bar .l { background:var(--lead); } .bar .m { background:var(--warn); }
+  header .spacer { flex:1; }
+  header .help { color:var(--muted); font-size:12.5px; }
+  header .help kbd { margin:0 2px; }
+
+  /* ------------------------------------------------------------------ list view */
+  #list { padding:12px 16px 80px; }
+  .filters { display:flex; gap:8px; flex-wrap:wrap; align-items:center; margin-bottom:10px; }
+  .filters input[type=search] { padding:6px 10px; border:1px solid var(--line); border-radius:6px; background:var(--panel); width:280px; }
+  .chipgroup { display:flex; gap:4px; align-items:center; flex-wrap:wrap; padding:2px 6px; border-left:2px solid var(--line); }
+  .chipgroup .lbl { font-size:11px; text-transform:uppercase; letter-spacing:.05em; color:var(--muted); margin-right:2px; }
+  .chip { border:1px solid var(--line); background:var(--panel); border-radius:999px; padding:2px 9px; font-size:12.5px; cursor:pointer; color:var(--muted); }
+  .chip.on { background:var(--accent-bg); border-color:var(--accent); color:var(--accent); font-weight:600; }
+  .chip small { opacity:.7; margin-left:3px; }
+  .filters select { padding:5px 8px; border:1px solid var(--line); border-radius:6px; background:var(--panel); }
+  table { width:100%; border-collapse:collapse; background:var(--panel); border:1px solid var(--line); border-radius:8px; overflow:hidden; }
+  th { text-align:left; font-size:11.5px; text-transform:uppercase; letter-spacing:.05em; color:var(--muted); padding:8px 10px; border-bottom:1px solid var(--line); cursor:pointer; user-select:none; white-space:nowrap; }
+  th.sorted { color:var(--accent); }
+  td { padding:8px 10px; border-bottom:1px solid var(--line); vertical-align:top; }
+  tr.row { cursor:pointer; }
+  tr.row:hover { background:color-mix(in srgb, var(--sel) 50%, transparent); }
+  tr.row.sel { background:var(--sel); box-shadow: inset 3px 0 0 var(--accent); }
+  td.num { color:var(--muted); font-family:var(--mono); font-size:12px; width:40px; }
+  td.title b { font-weight:600; }
+  td.title .sub { color:var(--muted); font-size:12.5px; margin-top:2px; }
+  td.date { white-space:nowrap; font-family:var(--mono); font-size:12.5px; color:var(--muted); width:100px; }
+  td.src, td.agent, td.label { white-space:nowrap; }
+  td.agent .checks { font-size:11px; color:var(--muted); margin-top:2px; }
+  tr.expand td { background:color-mix(in srgb, var(--sel) 40%, var(--panel)); padding:10px 14px 14px 60px; }
+  .abstract { max-width:900px; }
+  .checklist { margin:8px 0 0; padding:0; list-style:none; font-size:13px; }
+  .checklist li { margin:3px 0; }
+  .empty { padding:40px; text-align:center; color:var(--muted); }
+
+  /* ------------------------------------------------------------------ detail view */
+  #detail { display:none; height:calc(100vh - 46px); flex-direction:column; }
+  #detail.show { display:flex; }
+  .dhead { display:flex; gap:12px; align-items:center; padding:8px 16px; border-bottom:1px solid var(--line); background:var(--panel); }
+  .dhead .back { border:1px solid var(--line); background:var(--panel); border-radius:6px; padding:4px 10px; cursor:pointer; }
+  .dhead .pos { font-family:var(--mono); font-size:12.5px; color:var(--muted); white-space:nowrap; }
+  .dhead h2 { font-size:15px; margin:0; font-weight:600; flex:1; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+  .dbody { flex:1; display:grid; grid-template-columns: minmax(360px, 34%) 1fr; min-height:0; }
+  .info { overflow:auto; padding:14px 18px; border-right:1px solid var(--line); background:var(--panel); }
+  .info h3 { font-size:18px; line-height:1.3; margin:0 0 6px; }
+  .info .meta { color:var(--muted); font-size:13px; margin-bottom:10px; }
+  .info .meta div { margin:2px 0; }
+  .info .abstract { margin:10px 0; font-size:14px; line-height:1.55; }
+  .info section { margin-top:14px; }
+  .info section h4 { font-size:11.5px; text-transform:uppercase; letter-spacing:.05em; color:var(--muted); margin:0 0 6px; }
+  .info .url { word-break:break-all; font-size:12.5px; }
+  .preview { display:flex; flex-direction:column; min-height:0; }
+  .tabs { display:flex; gap:2px; padding:6px 10px 0; border-bottom:1px solid var(--line); background:var(--panel); align-items:center; }
+  .tab { padding:6px 12px; border:1px solid transparent; border-bottom:none; border-radius:6px 6px 0 0; cursor:pointer; color:var(--muted); background:transparent; }
+  .tab.on { border-color:var(--line); background:var(--bg); color:var(--ink); font-weight:600; margin-bottom:-1px; }
+  .tab kbd { margin-right:6px; }
+  .tabs .right { margin-left:auto; font-size:12.5px; color:var(--muted); padding-right:4px; }
+  .pane { flex:1; min-height:0; position:relative; }
+  .pane iframe { width:100%; height:100%; border:none; background:#fff; }
+  .pane pre { margin:0; height:100%; overflow:auto; padding:16px 22px; white-space:pre-wrap; font:13px/1.55 var(--mono); }
+  .pane .notice { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; color:var(--muted); padding:30px; text-align:center; }
+  .leads { height:100%; overflow:auto; padding:12px 16px; }
+  .leads table { font-size:13px; }
+  .leads td { padding:5px 8px; }
+  .actions { display:flex; gap:10px; align-items:center; padding:10px 16px; border-top:1px solid var(--line); background:var(--panel); flex-wrap:wrap; }
+  .actions button.v { padding:7px 14px; border-radius:6px; border:1px solid var(--line); background:var(--panel); cursor:pointer; font-weight:600; }
+  .actions button.v kbd { margin-right:6px; }
+  .actions button.v.yes.on, .actions button.v.yes:hover { background:var(--yes-bg); border-color:var(--yes); color:var(--yes); }
+  .actions button.v.no.on, .actions button.v.no:hover { background:var(--no-bg); border-color:var(--no); color:var(--no); }
+  .actions button.v.lead.on, .actions button.v.lead:hover { background:var(--lead-bg); border-color:var(--lead); color:var(--lead); }
+  .actions button.v.maybe.on, .actions button.v.maybe:hover { background:var(--warn-bg); border-color:var(--warn); color:var(--warn); }
+  .actions input.note { flex:1; min-width:200px; padding:7px 10px; border:1px solid var(--line); border-radius:6px; background:var(--bg); }
+  .actions .setting { font-size:12.5px; color:var(--muted); cursor:pointer; }
+  .toast { position:fixed; left:50%; bottom:70px; transform:translateX(-50%); background:var(--ink); color:var(--bg); padding:8px 14px; border-radius:8px; font-size:13px; opacity:0; transition:opacity .15s; pointer-events:none; z-index:20; }
+  .toast.show { opacity:.95; }
+
+  /* ------------------------------------------------------------------ help overlay */
+  #helpov { position:fixed; inset:0; background:rgba(0,0,0,.45); display:none; align-items:center; justify-content:center; z-index:30; }
+  #helpov.show { display:flex; }
+  .helpbox { background:var(--panel); border-radius:12px; padding:22px 26px; width:min(720px, 92vw); max-height:88vh; overflow:auto; }
+  .helpbox h2 { margin:0 0 10px; font-size:16px; }
+  .helpbox .cols { display:grid; grid-template-columns:1fr 1fr; gap:4px 24px; }
+  .helpbox dl { margin:0; } .helpbox dt { font-weight:600; margin-top:10px; font-size:12px; text-transform:uppercase; letter-spacing:.05em; color:var(--muted); }
+  .helpbox dd { margin:4px 0; display:flex; gap:10px; align-items:baseline; }
+  .helpbox dd span.k { min-width:90px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Link review</h1>
+  <div class="progress"><span id="progress-text"></span><div class="bar" id="progress-bar"></div></div>
+  <span class="spacer"></span>
+  <span class="help" id="hint"><kbd>k</kbd> next · <kbd>j</kbd> back · <kbd>⏎</kbd> open · <kbd>y</kbd> yes · <kbd>n</kbd> no · <kbd>l</kbd> lead · <kbd>m</kbd> maybe · <kbd>?</kbd> all keys</span>
+</header>
+
+<div id="list">
+  <div class="filters">
+    <input type="search" id="q" placeholder="Search title, authors, abstract, venue, URL  ( / )">
+    <div class="chipgroup" id="f-status"><span class="lbl">Mine</span></div>
+    <div class="chipgroup" id="f-agent"><span class="lbl">Agent</span></div>
+    <div class="chipgroup" id="f-kind"><span class="lbl">Source</span></div>
+    <div class="chipgroup" id="f-year"><span class="lbl">Year</span></div>
+    <div class="chipgroup" id="f-cat"><span class="lbl">Topic</span></div>
+    <select id="sort">
+      <option value="n">Sheet order</option>
+      <option value="date-desc">Newest first</option>
+      <option value="date-asc">Oldest first</option>
+      <option value="title">Title A–Z</option>
+      <option value="agent">Agent verdict</option>
+      <option value="kind">Source</option>
+      <option value="label">My label</option>
+    </select>
+    <button class="chip" id="clear-filters" title="Clear all filters">clear</button>
+  </div>
+  <table>
+    <thead><tr>
+      <th data-sort="n">#</th><th data-sort="title">Title</th><th data-sort="kind">Source</th>
+      <th data-sort="date-desc">Date</th><th data-sort="agent">Agent</th><th data-sort="label">Mine</th>
+    </tr></thead>
+    <tbody id="rows"></tbody>
+  </table>
+  <div class="empty" id="list-empty" style="display:none">Nothing matches these filters.</div>
+</div>
+
+<div id="detail">
+  <div class="dhead">
+    <button class="back" id="back" title="Back to list (Esc)">← list</button>
+    <span class="pos" id="pos"></span>
+    <h2 id="dtitle"></h2>
+    <a id="open-orig" href="#" target="_blank" rel="noopener" title="Open original (o)">open original ↗</a>
+  </div>
+  <div class="dbody">
+    <div class="info" id="info"></div>
+    <div class="preview">
+      <div class="tabs" id="tabs">
+        <button class="tab" data-tab="pdf"><kbd>1</kbd>PDF</button>
+        <button class="tab" data-tab="text"><kbd>2</kbd>Text</button>
+        <button class="tab" data-tab="page"><kbd>3</kbd>Page</button>
+        <button class="tab" data-tab="leads"><kbd>4</kbd>Leads <span id="leads-n" class="badge"></span></button>
+        <span class="right" id="pane-note"></span>
+      </div>
+      <div class="pane" id="pane"></div>
+    </div>
+  </div>
+  <div class="actions">
+    <button class="v yes" data-label="yes"><kbd>y</kbd>Yes, a case study</button>
+    <button class="v no" data-label="no"><kbd>n</kbd>No</button>
+    <button class="v lead" data-label="lead"><kbd>l</kbd>Lead source</button>
+    <button class="v maybe" data-label="maybe"><kbd>m</kbd>Maybe</button>
+    <button class="v" data-label="" title="Clear my label (u)"><kbd>u</kbd>Clear</button>
+    <input class="note" id="note" placeholder="Note (c to focus, Enter to save)">
+    <span class="setting" id="after-mark" title="Toggle with t"></span>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<div id="helpov">
+  <div class="helpbox">
+    <h2>Keyboard</h2>
+    <div class="cols">
+      <dl>
+        <dt>List</dt>
+        <dd><span class="k"><kbd>k</kbd> / <kbd>j</kbd></span> next / previous row (also arrows)</dd>
+        <dd><span class="k"><kbd>⏎</kbd></span> open the selected link</dd>
+        <dd><span class="k"><kbd>space</kbd></span> show / hide its abstract and the agent's checks</dd>
+        <dd><span class="k"><kbd>y</kbd> <kbd>n</kbd> <kbd>l</kbd> <kbd>m</kbd></span> label it right here, then jump to the next unlabelled row</dd>
+        <dd><span class="k"><kbd>u</kbd></span> clear my label</dd>
+        <dd><span class="k"><kbd>/</kbd></span> search · <kbd>esc</kbd> leaves the box</dd>
+        <dd><span class="k"><kbd>f</kbd></span> cycle the Mine filter: all → unlabelled → yes → no → lead → maybe</dd>
+        <dd><span class="k"><kbd>s</kbd></span> cycle the sort order</dd>
+        <dd><span class="k"><kbd>g</kbd> / <kbd>G</kbd></span> first / last row</dd>
+        <dd><span class="k"><kbd>o</kbd></span> open the original page in a new tab</dd>
+      </dl>
+      <dl>
+        <dt>Detail</dt>
+        <dd><span class="k"><kbd>y</kbd> <kbd>n</kbd> <kbd>l</kbd> <kbd>m</kbd></span> label, then move on (see the toggle bottom right)</dd>
+        <dd><span class="k"><kbd>k</kbd> / <kbd>j</kbd></span> next / previous link without labelling</dd>
+        <dd><span class="k"><kbd>1</kbd>–<kbd>4</kbd></span> PDF · Text · Page · Leads</dd>
+        <dd><span class="k"><kbd>c</kbd></span> write a note · <kbd>⏎</kbd> saves, <kbd>esc</kbd> leaves</dd>
+        <dd><span class="k"><kbd>x</kbd></span> (re)extract leads for this link</dd>
+        <dd><span class="k"><kbd>t</kbd></span> after labelling: next unlabelled ↔ back to list</dd>
+        <dd><span class="k"><kbd>esc</kbd></span> back to the list</dd>
+        <dt>Labels</dt>
+        <dd><b>yes</b> the page itself is a quantum computing case study</dd>
+        <dd><b>no</b> it is not</dd>
+        <dd><b>lead source</b> not one itself, but it cites or links to some; its references are pulled into the leads list</dd>
+        <dd><b>yes</b> also gets its references pulled, quietly in the background: a case study often cites other case studies. The leads TSV says which label each source carried.</dd>
+        <dd><b>maybe</b> undecided; filter on it later to come back</dd>
+      </dl>
+    </div>
+    <p class="muted" style="margin:14px 0 0; font-size:12.5px" id="files"></p>
+  </div>
+</div>
+
+<script>
+(() => {
+  // ------------------------------------------------------------------ state
+  const S = {
+    items: [], filtered: [], sel: 0, view: 'list', tab: 'pdf', expanded: null,
+    q: '', status: 'all', agent: new Set(), kind: new Set(), year: new Set(), cat: new Set(),
+    sort: 'n', afterMark: localStorage.getItem('afterMark') || 'next', files: {},
+  };
+  const $ = (id) => document.getElementById(id);
+  const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const agentKey = (v) => v.startsWith('queued') ? 'queued' : v.includes('triage') ? 'triage' : v.includes('extraction') ? 'extraction'
+                        : v.includes('duplicate') ? 'duplicate' : v.includes('unreachable') ? 'unreachable' : 'other';
+  const agentShort = {queued:'queued', triage:'dropped: triage', extraction:'dropped: extraction', duplicate:'duplicate', unreachable:'unreachable', other:'other'};
+  const topic = (it) => it.kind === 'arxiv' ? (it.categories[0] || '').split('.')[0] : it.kind === 'hal' ? (it.categories[0] || 'hal') : it.kind;
+
+  async function load() {
+    const data = await (await fetch('/api/items')).json();
+    S.items = data.items; S.files = data.files;
+    $('files').textContent = `Labels are written to ${data.files.labels} on every keypress; leads to ${data.files.leads}.`;
+    buildChips(); apply();
+    // #<n>/<tab> in the URL reopens that item after a reload
+    const m = location.hash.match(/^#(\d+)(?:\/(pdf|text|page|leads))?$/);
+    if (m) {
+      let idx = S.filtered.findIndex((it) => it.n === +m[1]);
+      if (idx < 0 && S.items.some((it) => it.n === +m[1])) { S.status = 'all'; apply(); idx = S.filtered.findIndex((it) => it.n === +m[1]); }
+      if (idx >= 0) { S.sel = idx; S.tab = m[2] || S.tab; openDetail(); }
+    }
+  }
+  function syncHash() {
+    const want = S.view === 'detail' && cur() ? `#${cur().n}/${S.tab}` : '';
+    if (location.hash !== want) history.replaceState(null, '', want || location.pathname);
+  }
+
+  // ------------------------------------------------------------------ filters
+  function counts(fn) { const m = new Map(); for (const it of S.items) { const k = fn(it); if (k) m.set(k, (m.get(k) || 0) + 1); } return m; }
+  function chips(el, set, m, order) {
+    el.querySelectorAll('.chip').forEach((c) => c.remove());
+    for (const k of order) {
+      const b = document.createElement('button'); b.className = 'chip' + (set.has(k) ? ' on' : '');
+      b.innerHTML = `${esc(k)}<small>${m.get(k)}</small>`;
+      b.onclick = () => { set.has(k) ? set.delete(k) : set.add(k); apply(); };
+      el.appendChild(b);
+    }
+  }
+  function buildChips() {
+    const st = $('f-status'); st.querySelectorAll('.chip').forEach((c) => c.remove());
+    const lab = counts((it) => it.label || 'unlabelled');
+    for (const k of ['all', 'unlabelled', 'yes', 'no', 'lead', 'maybe']) {
+      const b = document.createElement('button'); b.className = 'chip' + (S.status === k ? ' on' : '');
+      const n = k === 'all' ? S.items.length : (lab.get(k) || 0);
+      b.innerHTML = `${k}<small>${n}</small>`; b.onclick = () => { S.status = k; apply(); }; st.appendChild(b);
+    }
+    const ag = counts((it) => agentKey(it.agent_verdict));
+    chips($('f-agent'), S.agent, new Map([...ag].map(([k, v]) => [agentShort[k], v])), ['queued', 'dropped: triage', 'dropped: extraction', 'duplicate', 'unreachable'].filter((k) => [...ag.keys()].map((x) => agentShort[x]).includes(k)));
+    const kd = counts((it) => it.kind); chips($('f-kind'), S.kind, kd, [...kd.keys()].sort((a, b) => kd.get(b) - kd.get(a)));
+    const yr = counts((it) => it.year ? String(it.year) : '?'); chips($('f-year'), S.year, yr, [...yr.keys()].sort().reverse());
+    const ct = counts(topic); chips($('f-cat'), S.cat, ct, [...ct.keys()].sort((a, b) => ct.get(b) - ct.get(a)));
+    $('sort').value = S.sort;
+  }
+  function matches(it) {
+    if (S.status === 'unlabelled' ? it.label : (S.status !== 'all' && it.label !== S.status)) return false;
+    if (S.agent.size && !S.agent.has(agentShort[agentKey(it.agent_verdict)])) return false;
+    if (S.kind.size && !S.kind.has(it.kind)) return false;
+    if (S.year.size && !S.year.has(it.year ? String(it.year) : '?')) return false;
+    if (S.cat.size && !S.cat.has(topic(it))) return false;
+    if (S.q) {
+      const hay = `${it.title} ${it.authors.join(' ')} ${it.abstract} ${it.venue} ${it.url} ${it.agent_evidence} ${it.note}`.toLowerCase();
+      if (!S.q.toLowerCase().split(/\s+/).every((w) => hay.includes(w))) return false;
+    }
+    return true;
+  }
+  const agentOrder = {queued: 0, extraction: 1, duplicate: 2, triage: 3, unreachable: 4, other: 5};
+  const labelOrder = {'': 0, maybe: 1, yes: 2, lead: 3, no: 4};
+  function cmp(a, b) {
+    switch (S.sort) {
+      case 'date-desc': return (b.date || '').localeCompare(a.date || '') || a.n - b.n;
+      case 'date-asc': return (a.date || 'z').localeCompare(b.date || 'z') || a.n - b.n;
+      case 'title': return a.title.localeCompare(b.title);
+      case 'agent': return agentOrder[agentKey(a.agent_verdict)] - agentOrder[agentKey(b.agent_verdict)] || a.n - b.n;
+      case 'kind': return a.kind.localeCompare(b.kind) || a.domain.localeCompare(b.domain) || a.n - b.n;
+      case 'label': return labelOrder[a.label] - labelOrder[b.label] || a.n - b.n;
+      default: return a.n - b.n;
+    }
+  }
+  function apply(keepN) {
+    const cur = keepN ?? S.filtered[S.sel]?.n;
+    S.filtered = S.items.filter(matches).sort(cmp);
+    const idx = S.filtered.findIndex((it) => it.n === cur);
+    S.sel = idx >= 0 ? idx : Math.min(S.sel, Math.max(0, S.filtered.length - 1));
+    buildChips(); renderProgress(); renderList();
+    if (S.view === 'detail') renderDetail();
+  }
+
+  // ------------------------------------------------------------------ list rendering
+  function renderProgress() {
+    const t = S.items.length, y = S.items.filter((i) => i.label === 'yes').length, n = S.items.filter((i) => i.label === 'no').length,
+      l = S.items.filter((i) => i.label === 'lead').length, m = S.items.filter((i) => i.label === 'maybe').length, done = y + n + l + m;
+    $('progress-text').textContent = `${done}/${t} labelled · ${y} yes · ${n} no · ${l} lead${m ? ` · ${m} maybe` : ''}`;
+    $('progress-bar').innerHTML = `<i class="y" style="width:${y / t * 100}%"></i><i class="l" style="width:${l / t * 100}%"></i><i class="m" style="width:${m / t * 100}%"></i><i class="n" style="width:${n / t * 100}%"></i>`;
+  }
+  function checksHtml(it) {
+    if (!it.checks.length) return '';
+    return `<ul class="checklist">${it.checks.map((c) => `<li>${c.passed === true ? '<span class="pass">PASS</span> ' : c.passed === false ? '<span class="fail">FAIL</span> ' : ''}<b>${esc(c.test)}:</b> ${esc(c.evidence)}</li>`).join('')}</ul>`;
+  }
+  function renderList() {
+    const tb = $('rows'); const parts = [];
+    S.filtered.forEach((it, i) => {
+      const ak = agentKey(it.agent_verdict);
+      const fails = it.checks.filter((c) => c.passed === false).map((c) => c.test).join(', ');
+      parts.push(`<tr class="row ${i === S.sel ? 'sel' : ''}" data-i="${i}">
+        <td class="num">${it.n}</td>
+        <td class="title"><b>${esc(it.title || it.url)}</b><div class="sub">${esc(it.authors.slice(0, 3).join(', '))}${it.authors.length > 3 ? ' et al.' : ''}${it.authors.length ? ' · ' : ''}${esc(it.venue)}${it.meta_error && !it.title ? ' · <span class="fail">could not fetch</span>' : ''}</div></td>
+        <td class="src"><span class="badge kind">${esc(it.kind)}</span> <span class="muted">${esc(it.domain)}</span></td>
+        <td class="date">${esc(it.date || (it.year ?? ''))}</td>
+        <td class="agent"><span class="badge ${ak}">${agentShort[ak]}</span>${fails ? `<div class="checks">fails: ${esc(fails)}</div>` : ''}</td>
+        <td class="label">${it.label ? `<span class="badge ${it.label}">${it.label}</span>` : '<span class="muted">—</span>'}${it.label === 'lead' && it.leads_count ? ` <span class="muted">${it.leads_count}</span>` : ''}${it.note ? ` <span class="muted" title="${esc(it.note)}">✎</span>` : ''}</td>
+      </tr>`);
+      if (S.expanded === it.n) parts.push(`<tr class="expand"><td colspan="6"><div class="abstract">${esc(it.abstract) || '<span class="muted">no abstract</span>'}</div>${checksHtml(it)}${it.note ? `<div style="margin-top:8px"><b>Note:</b> ${esc(it.note)}</div>` : ''}</td></tr>`);
+    });
+    tb.innerHTML = parts.join('');
+    $('list-empty').style.display = S.filtered.length ? 'none' : 'block';
+    tb.querySelectorAll('tr.row').forEach((tr) => {
+      tr.onclick = () => { S.sel = +tr.dataset.i; openDetail(); };
+    });
+    document.querySelectorAll('th[data-sort]').forEach((th) => th.classList.toggle('sorted', th.dataset.sort === S.sort || (th.dataset.sort === 'date-desc' && S.sort === 'date-asc')));
+    scrollSel();
+  }
+  function scrollSel() {
+    const tr = $('rows').querySelector('tr.sel'); if (tr) tr.scrollIntoView({block: 'nearest'});
+  }
+  function setSel(i) { S.sel = Math.max(0, Math.min(S.filtered.length - 1, i)); if (S.view === 'list') renderList(); else renderDetail(); }
+
+  // ------------------------------------------------------------------ detail rendering
+  function cur() { return S.filtered[S.sel]; }
+  function openDetail() { if (!cur()) return; S.view = 'detail'; $('list').style.display = 'none'; $('detail').classList.add('show'); renderDetail(); }
+  function closeDetail() { S.view = 'list'; $('detail').classList.remove('show'); $('list').style.display = 'block'; syncHash(); renderList(); window.scrollTo({top: 0}); scrollSel(); }
+  let lastDetailN = null;
+  function renderDetail() {
+    const it = cur(); if (!it) { closeDetail(); return; }
+    $('pos').textContent = `${S.sel + 1} / ${S.filtered.length}  ·  #${it.n}`;
+    $('dtitle').textContent = it.title || it.url;
+    $('open-orig').href = it.landing_url || it.url;
+    const ak = agentKey(it.agent_verdict);
+    $('info').innerHTML = `
+      <h3>${esc(it.title || it.url)}</h3>
+      <div class="meta">
+        ${it.authors.length ? `<div>${esc(it.authors.join(', '))}</div>` : ''}
+        <div>${esc(it.venue)}${it.date ? ' · ' + esc(it.date) : it.year ? ' · ' + it.year : ''}${it.categories.length ? ' · ' + esc(it.categories.slice(0, 3).join(', ')) : ''}</div>
+        <div class="url"><a href="${esc(it.landing_url || it.url)}" target="_blank" rel="noopener">${esc(it.url)}</a>${it.doi ? ` · doi:${esc(it.doi)}` : ''}</div>
+        ${it.meta_error ? `<div class="fail">${esc(it.meta_error)}</div>` : ''}
+      </div>
+      <div class="abstract">${esc(it.abstract) || '<span class="muted">No abstract available; read the text tab.</span>'}</div>
+      <section><h4>Agent <span class="badge ${ak}">${agentShort[ak]}</span> <span class="muted">${esc(it.agent_model)}</span></h4>${checksHtml(it) || '<span class="muted">no evidence recorded</span>'}</section>
+      <section><h4>My label</h4>${it.label ? `<span class="badge ${it.label}">${it.label}</span> <span class="muted">${esc((it.decided_at || '').slice(0, 16).replace('T', ' '))}</span>` : '<span class="muted">not yet</span>'}${it.note ? `<div style="margin-top:4px">${esc(it.note)}</div>` : ''}</section>`;
+    document.querySelectorAll('.actions button.v').forEach((b) => b.classList.toggle('on', b.dataset.label === it.label && it.label !== ''));
+    if (document.activeElement !== $('note')) $('note').value = it.note || '';
+    $('after-mark').textContent = S.afterMark === 'next' ? 'after labelling: next unlabelled (t)' : 'after labelling: back to list (t)';
+    $('leads-n').textContent = it.leads_count || (it.leads_status === 'running' ? '…' : '');
+    if (lastDetailN !== it.n) { lastDetailN = it.n; if (S.tab === 'leads' && it.label !== 'lead' && it.label !== 'yes') S.tab = 'pdf'; }
+    renderPane();
+  }
+  let paneToken = 0;
+  async function renderPane() {
+    const it = cur(); if (!it) return;
+    const token = ++paneToken;
+    syncHash();
+    document.querySelectorAll('.tab').forEach((t) => t.classList.toggle('on', t.dataset.tab === S.tab));
+    const pane = $('pane'); const note = $('pane-note'); note.textContent = '';
+    if (S.tab === 'pdf') {
+      // Publishers that block server-side downloads (HAL's bot check, for one) usually still serve the PDF to a
+      // real browser, so fall back to embedding the publisher's PDF URL directly.
+      const direct = () => { note.textContent = 'embedded straight from the publisher (the server could not download it)'; pane.innerHTML = `<iframe src="${esc(it.pdf_url)}" title="PDF" referrerpolicy="no-referrer"></iframe>`; };
+      const none = () => { pane.innerHTML = `<div class="notice">No PDF could be fetched for this link.<br>Try the Text or Page tab, or open the original.</div>`; };
+      if (it.has_pdf === false) { it.pdf_url ? direct() : none(); return; }
+      pane.innerHTML = `<div class="notice">Loading PDF…</div>`;
+      const r = await fetch(`/api/items/${it.n}/pdf`, {method: 'HEAD'});
+      if (token !== paneToken) return;
+      if (!r.ok) { it.has_pdf = false; it.pdf_url ? direct() : none(); return; }
+      it.has_pdf = true;
+      pane.innerHTML = `<iframe src="/api/items/${it.n}/pdf#view=FitH" title="PDF"></iframe>`;
+    } else if (S.tab === 'text') {
+      pane.innerHTML = `<div class="notice">Loading text…</div>`;
+      const text = await (await fetch(`/api/items/${it.n}/text`)).text();
+      if (token !== paneToken) return;
+      note.textContent = `${text.length.toLocaleString()} characters`;
+      pane.innerHTML = `<pre></pre>`; pane.querySelector('pre').textContent = text;
+    } else if (S.tab === 'page') {
+      note.textContent = 'some publishers refuse to be embedded; use "open original" then';
+      pane.innerHTML = `<iframe src="${esc(it.landing_url || it.url)}" title="Original page" referrerpolicy="no-referrer"></iframe>`;
+    } else {
+      renderLeads(token);
+    }
+  }
+  async function renderLeads(token) {
+    const it = cur(); const pane = $('pane');
+    const data = await (await fetch(`/api/items/${it.n}/leads`)).json();
+    if (token !== paneToken) return;
+    it.leads_status = data.status; it.leads_count = data.entry ? data.entry.leads.length : 0; $('leads-n').textContent = it.leads_count || (data.status === 'running' ? '…' : '');
+    if (data.status === 'running') { pane.innerHTML = `<div class="notice">Looking up the reference list and scanning the text for DOIs, arXiv ids and links…</div>`; setTimeout(() => { if (token === paneToken && S.tab === 'leads') renderLeads(token); }, 2500); return; }
+    if (data.status === 'none') { pane.innerHTML = `<div class="notice">No leads extracted yet.<br>Label this link yes (y) or lead source (l), or press x to extract anyway.</div>`; return; }
+    if (data.status.startsWith('error')) { pane.innerHTML = `<div class="notice">${esc(data.status)}<br>Press x to retry.</div>`; return; }
+    const e = data.entry;
+    const rows = e.leads.map((l) => `<tr><td><a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.title || l.url)}</a>${l.title ? `<div class="muted" style="font-size:12px">${esc(l.url)}</div>` : ''}</td><td>${l.year ?? ''}</td><td>${esc(l.venue || '')}</td><td class="muted">${esc(l.via)}</td></tr>`).join('');
+    pane.innerHTML = `<div class="leads"><p class="muted" style="margin:0 0 8px">${e.leads.length} leads found ${esc((e.found_at || '').slice(0, 16).replace('T', ' '))}${e.error ? ` · <span class="fail">${esc(e.error)}</span>` : ''} · press <kbd>x</kbd> to re-extract · saved to the leads TSV</p>
+      <table><thead><tr><th>Lead</th><th>Year</th><th>Venue</th><th>Found via</th></tr></thead><tbody>${rows || '<tr><td colspan="4" class="muted">nothing found</td></tr>'}</tbody></table></div>`;
+  }
+
+  // ------------------------------------------------------------------ actions
+  function toast(msg) { const t = $('toast'); t.textContent = msg; t.classList.add('show'); clearTimeout(t._h); t._h = setTimeout(() => t.classList.remove('show'), 1400); }
+  async function mark(label) {
+    const it = cur(); if (!it) return;
+    const body = {label};
+    if (S.view === 'detail' && $('note').value !== (it.note || '')) body.note = $('note').value;
+    const updated = await (await fetch(`/api/items/${it.n}/verdict`, {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(body)})).json();
+    Object.assign(it, updated);
+    toast(label ? `#${it.n} → ${label}` : `#${it.n} label cleared`);
+    if (!label) { apply(it.n); return; }
+    if (label === 'lead' && S.view === 'detail') { S.tab = 'leads'; }
+    advance(it.n);
+  }
+  function advance(fromN) {
+    const before = S.filtered.map((i) => i.n);
+    const pos = before.indexOf(fromN);
+    S.filtered = S.items.filter(matches).sort(cmp);
+    let next = -1;
+    for (let k = pos + 1; k < before.length && next < 0; k++) { const j = S.filtered.findIndex((i) => i.n === before[k] && !i.label); if (j >= 0) next = j; }
+    if (next < 0) next = S.filtered.findIndex((i) => !i.label);
+    const stillThere = S.filtered.findIndex((i) => i.n === fromN);
+    if (S.view === 'detail' && S.afterMark === 'list') { S.sel = stillThere >= 0 ? stillThere : Math.min(pos, S.filtered.length - 1); closeDetail(); buildChips(); renderProgress(); return; }
+    if (S.view === 'detail' && S.tab === 'leads' && cur()?.n === fromN && cur().label === 'lead') { S.sel = stillThere; apply(fromN); return; } // stay to watch the leads come in
+    if (next >= 0) S.sel = next; else S.sel = stillThere >= 0 ? stillThere : Math.min(pos, Math.max(0, S.filtered.length - 1));
+    if (next < 0 && S.view === 'detail') { toast('No unlabelled links left in this view'); }
+    buildChips(); renderProgress();
+    if (S.view === 'list') renderList(); else renderDetail();
+  }
+  async function saveNote() {
+    const it = cur(); if (!it) return;
+    const updated = await (await fetch(`/api/items/${it.n}/verdict`, {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify({note: $('note').value})})).json();
+    Object.assign(it, updated); toast('note saved'); renderDetail();
+  }
+  async function rerunLeads() {
+    const it = cur(); if (!it) return;
+    await fetch(`/api/items/${it.n}/leads`, {method: 'POST'}); it.leads_status = 'running'; S.tab = 'leads'; renderPane();
+  }
+
+  // ------------------------------------------------------------------ keys
+  const sorts = ['n', 'date-desc', 'date-asc', 'title', 'agent', 'kind', 'label'];
+  const statuses = ['all', 'unlabelled', 'yes', 'no', 'lead', 'maybe'];
+  document.addEventListener('keydown', (e) => {
+    const typing = ['INPUT', 'SELECT', 'TEXTAREA'].includes(document.activeElement?.tagName);
+    if ($('helpov').classList.contains('show')) { if (e.key === 'Escape' || e.key === '?') { $('helpov').classList.remove('show'); e.preventDefault(); } return; }
+    if (typing) {
+      if (e.key === 'Escape') { document.activeElement.blur(); e.preventDefault(); }
+      else if (e.key === 'Enter' && document.activeElement === $('note')) { saveNote().then(() => $('note').blur()); e.preventDefault(); }
+      return;
+    }
+    if (e.metaKey || e.ctrlKey || e.altKey) return;
+    const inList = S.view === 'list';
+    switch (e.key) {
+      case 'k': case 'ArrowDown': setSel(S.sel + 1); break;
+      case 'j': case 'ArrowUp': setSel(S.sel - 1); break;
+      case 'g': setSel(0); break;
+      case 'G': setSel(S.filtered.length - 1); break;
+      case 'Enter': if (inList) openDetail(); else if (S.tab === 'pdf') { S.tab = 'text'; renderPane(); } break;
+      case 'Escape': if (!inList) closeDetail(); else if (S.q) { S.q = ''; $('q').value = ''; apply(); } else if (S.expanded) { S.expanded = null; renderList(); } break;
+      case ' ': if (inList && cur()) { S.expanded = S.expanded === cur().n ? null : cur().n; renderList(); } else return; break;
+      case 'y': mark('yes'); break;
+      case 'n': mark('no'); break;
+      case 'l': mark('lead'); break;
+      case 'm': mark('maybe'); break;
+      case 'u': mark(''); break;
+      case 'o': if (cur()) window.open(cur().landing_url || cur().url, '_blank'); break;
+      case '/': $('q').focus(); $('q').select(); break;
+      case 'f': S.status = statuses[(statuses.indexOf(S.status) + 1) % statuses.length]; apply(); toast(`Mine: ${S.status}`); break;
+      case 's': S.sort = sorts[(sorts.indexOf(S.sort) + 1) % sorts.length]; apply(); toast(`sort: ${$('sort').selectedOptions[0].textContent}`); break;
+      case '1': case '2': case '3': case '4': if (!inList) { S.tab = ['pdf', 'text', 'page', 'leads'][+e.key - 1]; renderPane(); } break;
+      case 'c': if (!inList) { $('note').focus(); } else { openDetail(); setTimeout(() => $('note').focus(), 0); } break;
+      case 'x': if (!inList) rerunLeads(); break;
+      case 't': S.afterMark = S.afterMark === 'next' ? 'list' : 'next'; localStorage.setItem('afterMark', S.afterMark); if (!inList) renderDetail(); toast(S.afterMark === 'next' ? 'after labelling: next unlabelled' : 'after labelling: back to list'); break;
+      case '?': $('helpov').classList.add('show'); break;
+      default: return;
+    }
+    e.preventDefault();
+  });
+
+  // ------------------------------------------------------------------ wiring
+  $('q').addEventListener('input', () => { S.q = $('q').value; apply(); });
+  $('sort').addEventListener('change', () => { S.sort = $('sort').value; apply(); });
+  $('clear-filters').onclick = () => { S.q = ''; $('q').value = ''; S.status = 'all'; [S.agent, S.kind, S.year, S.cat].forEach((s) => s.clear()); apply(); };
+  document.querySelectorAll('th[data-sort]').forEach((th) => th.onclick = () => { S.sort = th.dataset.sort === 'date-desc' && S.sort === 'date-desc' ? 'date-asc' : th.dataset.sort; apply(); });
+  $('back').onclick = closeDetail;
+  $('tabs').querySelectorAll('.tab').forEach((t) => t.onclick = () => { S.tab = t.dataset.tab; renderPane(); });
+  document.querySelectorAll('.actions button.v').forEach((b) => b.onclick = () => mark(b.dataset.label));
+  $('after-mark').onclick = () => document.dispatchEvent(new KeyboardEvent('keydown', {key: 't'}));
+  $('helpov').onclick = (e) => { if (e.target === $('helpov')) $('helpov').classList.remove('show'); };
+  $('hint').onclick = () => $('helpov').classList.add('show');
+  load();
+})();
+</script>
+</body>
+</html>
