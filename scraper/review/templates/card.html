@@ -79,6 +79,7 @@
   <div class="card">
     <h1>{{ record.organisation or "Unknown organisation" }}
       <span class="badge p{{ record.provenance }}">provenance {{ record.provenance }}</span>
+      {% if record.triage.work_type %}<span class="badge">{{ "Industry deployment" if record.triage.work_type == "industry_deployment" else "Applied research" }}</span>{% endif %}
     </h1>
     <h2>{{ record.problem }}</h2>
     {% if record.possible_duplicate_of %}

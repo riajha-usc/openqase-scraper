@@ -85,3 +85,10 @@ def test_extraction_keeps_triage_organisation_and_problem():
     assert fixed.who == "Airbus" and fixed.what == "aircraft loading" and fixed.complete
     kept = reconcile(Extraction(who="BBVA", what="CVA", how="QAE", outcome="ok", title="t", confidence=0.9), "Other", "x")
     assert kept.who == "BBVA" and kept.what == "CVA"
+
+
+def test_work_type_is_optional_and_recorded():
+    base = dict(named_organisation=True, specific_problem=True, work_done_with_result=True, source_type="first_party",
+                named_organisation_evidence="a", specific_problem_evidence="b", work_done_evidence="c")
+    assert TriageResult(**base).work_type is None
+    assert TriageResult(**base, work_type="applied_research").passes

@@ -12,7 +12,7 @@ PROVENANCE_BY_SOURCE_TYPE = {"first_party": 3, "specialist": 2, "general": 1}
 class TriageResult(BaseModel):
     """The three-part triage test applied inline during discovery."""
 
-    named_organisation: bool = Field(description="Test 1: a specific company, lab or agency is named as the user of quantum computing")
+    named_organisation: bool = Field(description="Test 1: a specific company, university, lab or agency is named as doing or using the quantum work; a research paper's own institution counts")
     organisation: Optional[str] = Field(default=None, description="The organisation name if test 1 passes")
     named_organisation_evidence: str = Field(description="One sentence of evidence for test 1, quoting the page where possible")
     specific_problem: bool = Field(description="Test 2: a concrete operational problem is named")
@@ -22,6 +22,8 @@ class TriageResult(BaseModel):
     result_summary: Optional[str] = Field(default=None, description="One sentence on the reported outcome if test 3 passes")
     work_done_evidence: str = Field(description="One sentence of evidence for test 3")
     source_type: SourceType = Field(description="first_party, specialist, or general")
+    work_type: Optional[Literal["industry_deployment", "applied_research"]] = Field(
+        default=None, description="Set only if all three tests pass. Recorded for the reviewer; never a reason to fail")
     reasoning: str = Field(default="", description="Optional one-line overall note")
 
     TEST_LABELS: ClassVar[dict[str, str]] = {
