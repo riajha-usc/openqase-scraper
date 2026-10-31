@@ -23,15 +23,8 @@ def run(urls: list[str] = typer.Argument(..., help="One or more page URLs (or lo
         provenance: Optional[int] = typer.Option(None, min=1, max=3, help="Override the provenance score"),
         rerun: bool = typer.Option(False, help="Forget earlier results for these URLs and process them again")):
     """Run the agent over specific URLs, e.g. the maintainers' test links."""
-    from scraper import db
-    from scraper.fetch import normalize_url
     from scraper.pipeline import Runner
-    if rerun:
-        conn = db.connect()
-        for url in urls:
-            conn.execute("DELETE FROM candidates WHERE url = ?", (normalize_url(url),))
-        conn.commit()
-    Runner().run_urls(urls, source_name=source_name, provenance=provenance)
+    Runner().run_urls(urls, source_name=source_name, provenance=provenance, rerun=rerun)
     stats()
 
 

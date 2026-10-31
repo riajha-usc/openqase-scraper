@@ -98,3 +98,19 @@ def test_page_text_column_is_added_and_stored(tmp_path: Path):
     conn = db.connect(tmp_path / "t.db")
     db.upsert_candidate(conn, url="https://x.test/p", status="queued", page_text="full paper text")
     assert conn.execute("SELECT page_text FROM candidates").fetchone()[0] == "full paper text"
+
+
+def test_rerun_keeps_old_row_when_the_llm_call_fails(tmp_path: Path, monkeypatch):
+    from scraper import graph
+    from scraper.pipeline import Runner
+    from scraper.sources import Seed
+
+    def rate_limited(*args, **kwargs):
+        raise RuntimeError("Provider rate limit")
+
+    monkeypatch.setattr(graph, "triage", rate_limited)
+    runner = Runner(db_path=tmp_path / "t.db", published=[], quiet=True)
+    db.upsert_candidate(runner.conn, url="https://x.test/p", status="triaged_out", page_text="old text")
+    result = runner.process(Seed(url="https://x.test/p", source_name="spreadsheet", text="new text"), rerun=True)
+    assert result["status"] == "llm_error"
+    assert runner.conn.execute("SELECT status FROM candidates").fetchone()[0] == "triaged_out"

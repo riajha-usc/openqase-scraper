@@ -18,13 +18,14 @@ class Runner:
         self.graph = build_graph(self.conn, self.published)
         self.quiet = quiet
 
-    def process(self, seed: Seed) -> dict:
+    def process(self, seed: Seed, rerun: bool = False) -> dict:
         state = {
             "url": seed.url,
             "source_name": seed.source_name,
             "provenance_override": seed.provenance,
             "prefetched_title": seed.title,
             "prefetched_text": seed.text,
+            "rerun": rerun,
         }
         try:
             final = self.graph.invoke(state)
@@ -52,8 +53,9 @@ class Runner:
             print(f"[{status}] {seed.url}{detail}")
         return final
 
-    def run_urls(self, urls: Iterable[str], source_name: str = "manual", provenance: Optional[int] = None) -> list[dict]:
-        return [self.process(Seed(url=url, source_name=source_name, provenance=provenance)) for url in urls]
+    def run_urls(self, urls: Iterable[str], source_name: str = "manual", provenance: Optional[int] = None,
+                 rerun: bool = False) -> list[dict]:
+        return [self.process(Seed(url=url, source_name=source_name, provenance=provenance), rerun=rerun) for url in urls]
 
     def rejudge(self, source_name: str) -> list[dict]:
         """Re-run triage and extraction on stored page text: no fetching, so prompt changes are cheap to test."""
@@ -61,10 +63,8 @@ class Runner:
                                  "WHERE source_name = ? AND page_text IS NOT NULL", (source_name,)).fetchall()
         results = []
         for row in rows:
-            self.conn.execute("DELETE FROM candidates WHERE url = ?", (row["url"],))
-            self.conn.commit()
             results.append(self.process(Seed(url=row["url"], source_name=source_name, title=row["title"],
-                                             text=row["page_text"])))
+                                             text=row["page_text"]), rerun=True))
         return results
 
     def run_sources(self, names: Optional[list[str]] = None, limit: int = 20) -> list[dict]:

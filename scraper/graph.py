@@ -36,6 +36,7 @@ class CandidateState(TypedDict, total=False):
     reason: str
     already_seen: bool
     candidate_id: int
+    rerun: bool
 
 
 def build_graph(conn: sqlite3.Connection, published: list[dict]):
@@ -43,7 +44,7 @@ def build_graph(conn: sqlite3.Connection, published: list[dict]):
 
     def check_url(state: CandidateState) -> CandidateState:
         url = normalize_url(state["url"])
-        if db.url_known(conn, url):
+        if db.url_known(conn, url) and not state.get("rerun"):
             return {"url": url, "already_seen": True}
         if url in published_urls:
             return {"url": url, "status": "duplicate", "reason": "source URL already cited by a published OpenQase case study"}
@@ -85,6 +86,8 @@ def build_graph(conn: sqlite3.Connection, published: list[dict]):
     def store(state: CandidateState) -> CandidateState:
         triage_data = state.get("triage") or {}
         extraction = state.get("extraction") or {}
+        if state.get("rerun"):  # replace the old row only now that this run has a result
+            conn.execute("DELETE FROM candidates WHERE url = ?", (state["url"],))
         candidate_id = db.upsert_candidate(
             conn,
             url=state["url"],
