@@ -65,9 +65,10 @@ the eval framework for the AI agent training track.
 ## MCP server for AI agents (parked)
 
 `python -m mcp_server` starts a Model Context Protocol server exposing the public catalogue as tools
-(`search_openqase`, `get_case_study`, `list_case_studies`, `list_items`, `get_item`). Read-only, no
-credentials. Client setup and the tool reference are in [docs/mcp.md](docs/mcp.md). The maintainers
-parked this on 22 Oct 2026 to keep the focus on the scraper; it works and is kept for later.
+(`search_openqase`, `get_case_study`, `list_case_studies`, `list_items`, `get_item`, `content_types`).
+Read-only, no credentials. Client setup and the tool reference are in [docs/mcp.md](docs/mcp.md).
+Parked until the mid-program demo on 3 Nov 2026 to keep the focus on the scraper; it works and is
+kept for later.
 
 ## Storage
 
